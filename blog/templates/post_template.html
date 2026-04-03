@@ -3,19 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{title}} | Xibalba Intel</title>
+    <title>{{title}} | Xibalba Blog</title>
     <link rel="icon" href="../favicon.ico" sizes="any">
     <link rel="stylesheet" href="../css/style.css">
     <style>
-        .intel-body p { margin-bottom: 1.5rem; color: var(--text-secondary); }
-        .intel-body h2 { margin: 2.5rem 0 1rem; color: #fff; }
-        .intel-body pre { background: rgba(0,0,0,0.5); padding: 1.5rem; border-radius: 8px; border: 1px solid var(--border-glass); margin: 2rem 0; overflow-x: auto; }
-        .intel-body code { font-family: monospace; color: var(--cyan-core); }
-        .intel-body img { max-width: 100%; border-radius: 8px; margin: 2rem 0; border: 1px solid var(--border-glass); }
-        .intel-body ul, .intel-body ol { color: var(--text-secondary); margin-left: 1.5rem; margin-bottom: 2rem; line-height: 2; }
+        .blog-body p { margin-bottom: 1.5rem; color: var(--text-secondary); }
+        .blog-body h2 { margin: 2.5rem 0 1rem; color: #fff; }
+        .blog-body pre { background: rgba(0,0,0,0.5); padding: 1.5rem; border-radius: 8px; border: 1px solid var(--border-glass); margin: 2rem 0; overflow-x: auto; }
+        .blog-body code { font-family: monospace; color: var(--cyan-core); }
+        .blog-body img { max-width: 100%; border-radius: 8px; margin: 2rem 0; border: 1px solid var(--border-glass); }
+        .blog-body ul, .blog-body ol { color: var(--text-secondary); margin-left: 1.5rem; margin-bottom: 2rem; line-height: 2; }
     </style>
 </head>
-<body>
+<body class="theme-industrial">
 
     <nav>
         <div class="container">
@@ -23,12 +23,15 @@
                 <img src="../XibalbaSolutionsLogo.png" alt="Xibalba Solutions">
             </a>
             <div class="nav-links">
-                <a href="../index.html">Foundry</a>
+                <a href="../index.html">Home</a>
                 <a href="../ai-agents.html">Agents</a>
                 <a href="../blog.html" class="active">Blog</a>
                 <a href="../local-ai.html">Privacy</a>
                 <a href="../pricing.html">Support</a>
                 <a href="../contact.html" class="btn-outline">Contact</a>
+                <button id="theme-toggle" class="btn-icon" aria-label="Toggle Theme" style="background: none; border: 1px solid var(--border-main); color: var(--accent-core); padding: 0.5rem; cursor: pointer; border-radius: 4px; display: flex; align-items: center; justify-content: center; margin-left: 1rem;">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+                </button>
             </div>
         </div>
     </nav>
@@ -40,7 +43,7 @@
         </div>
     </header>
 
-    <main class="container content-section intel-body" style="max-width: 800px; margin: 0 auto;">
+    <main class="container content-section blog-body" style="max-width: 800px; margin: 0 auto;">
         {{content}}
 
         <div style="margin-top: 4rem; padding: 2rem; border: 1px solid var(--violet-glow); border-radius: 8px; background: rgba(139, 92, 246, 0.05);">
@@ -53,11 +56,13 @@
     <footer>
         <div class="container">
             <div class="footer-bottom">
-                &copy; 2026 Xibalba Solutions. Dispatches from the Shadow.
+                &copy; 2026 Xibalba Solutions. Dispatches from the Lab.
             </div>
         </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>mermaid.initialize({startOnLoad:true, theme: 'dark'});</script>
     <script src="../js/main.js"></script>
 </body>
 </html>

@@ -3,68 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sovereign Local AI & HIPAA Compliance | Xibalba Solutions</title>
+    <title>Privacy | Xibalba Solutions</title>
+    <meta name="description" content="Sanctum Guard: HIPAA-compliant, air-gapped sovereign AI infrastructure. Edge PII redaction and hardware-level isolation for mission-critical data.">
     <link rel="icon" href="./favicon.ico" sizes="any">
     <link rel="stylesheet" href="./css/style.css">
 </head>
-<body>
+<body class="theme-obsidian">
 
     <nav>
-        <div class="container">
+        <div class="nav-container">
             <a href="index.html" class="logo">
                 <img src="./XibalbaSolutionsLogo.png" alt="Xibalba Solutions">
             </a>
+            <button class="hamburger" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
             <div class="nav-links">
-                <a href="index.html">Foundry</a>
+                <a href="index.html">Home</a>
                 <a href="ai-agents.html">Agents</a>
                 <a href="blog.html">Blog</a>
                 <a href="local-ai.html" class="active">Privacy</a>
                 <a href="pricing.html">Support</a>
                 <a href="contact.html" class="btn-outline">Contact</a>
+                <button id="theme-toggle" class="btn-icon" aria-label="Toggle Theme" style="background: none; border: 1px solid var(--border-main); color: var(--accent-core); padding: 0.5rem; cursor: pointer; border-radius: 4px; display: flex; align-items: center; justify-content: center; margin-left: 1rem;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg></button>
             </div>
         </div>
     </nav>
 
     <header class="page-header">
-        <div class="container">
-            <h1>Sovereign <span class="gradient-text">Local Intelligence</span></h1>
-            <p>Intelligence without exposure. I deploy mission-critical LLMs on your hardware, ensuring 100% data residency and HIPAA/GDPR compliance.</p>
+        <div class="container animate-in">
+            <h1>Sanctum <span class="gradient-text">Guard</span></h1>
+            <p style="max-width: 600px; margin: 0 auto; color: var(--text-secondary); font-size: 1.1rem;">Privacy is not a feature; it is an architectural requirement. We build HIPAA-compliant, air-gapped sovereign AI stacks.</p>
         </div>
     </header>
 
     <main class="container content-section">
-        <div class="split-layout">
+        <div style="display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 6rem; align-items: start;">
             <div class="animate-in">
-                <h2 style="margin-bottom: 1.5rem;">Why <span class="gradient-text">Local?</span></h2>
-                <p style="color: var(--text-secondary);">The cloud is a liability for high-stakes industries. My "Sanctum Guard" approach moves the compute to the data, not the other way around. No public training loops. No third-party API outages. No data leaks.</p>
-                <div style="margin-top: 3rem;">
-                    <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
-                        <div style="width: 40px; height: 40px; background: rgba(6, 182, 212, 0.1); border: 1px solid var(--cyan-core); display: flex; align-items: center; justify-content: center; border-radius: 4px; color: var(--cyan-core);">🏥</div>
-                        <div>
-                            <h4 style="font-size: 0.95rem;">HIPAA Ready</h4>
-                            <p style="font-size: 0.85rem; color: var(--text-muted); margin: 0;">Audit-ready logs and air-gapped runtimes.</p>
-                        </div>
-                    </div>
-                    <div style="display: flex; align-items: center; gap: 1rem;">
-                        <div style="width: 40px; height: 40px; background: rgba(139, 92, 246, 0.1); border: 1px solid var(--violet-core); display: flex; align-items: center; justify-content: center; border-radius: 4px; color: var(--violet-core);">🔒</div>
-                        <div>
-                            <h4 style="font-size: 0.95rem;">Absolute Privacy</h4>
-                            <p style="font-size: 0.85rem; color: var(--text-muted); margin: 0;">Data never leaves your physical perimeter.</p>
-                        </div>
+                <h2 style="font-size: 3rem; line-height: 1.1; margin-bottom: 2rem;">The Sovereignty Protocol</h2>
+                <p style="margin-bottom: 2rem; color: var(--text-secondary); font-size: 1.1rem;">Most AI integrations are a privacy nightmare. Every prompt sent to a centralized model is a data leak. <strong>Sanctum Guard</strong> is our proprietary architecture for ensuring that mission-critical PII (Personally Identifiable Information) never leaves your premises.</p>
+                
+                <div style="margin: 4rem 0;">
+                    <div style="font-size: 0.75rem; color: var(--accent-core); text-transform: uppercase; letter-spacing: 0.2rem; margin-bottom: 2rem;">// STATUS: SOVEREIGN</div>
+                    <div class="feature-card" style="padding: 3rem; background: rgba(0, 242, 255, 0.05); border-color: var(--accent-core); border-radius: 32px;">
+                        <h4 style="margin-bottom: 1.5rem; color: var(--accent-core);">The Privacy Stack</h4>
+                        <ul style="list-style: none; line-height: 2.2; color: var(--text-primary);">
+                            <li><span style="font-weight: 700;">01. LOCAL INFERENCE:</span> 100% processing on local hardware or private VPC.</li>
+                            <li><span style="font-weight: 700;">02. REDACTION LAYER:</span> Pre-inference PII scrubbing for hybrid models.</li>
+                            <li><span style="font-weight: 700;">03. DATA RESIDENCY:</span> No logs, no telemetry, no leaks.</li>
+                        </ul>
                     </div>
                 </div>
             </div>
-            <div class="feature-card animate-in" style="border-left: 4px solid var(--cyan-core);">
-                <h3 style="margin-bottom: 1rem;">The Sanctum Guard Stack</h3>
-                <ul style="list-style: none; font-family: monospace; font-size: 0.85rem; color: var(--text-secondary); line-height: 2;">
-                    <li>[01] LOCAL_VDB_ORCHESTRATION</li>
-                    <li>[02] QUANTIZED_HERMES_INF</li>
-                    <li>[03] EDGE_PII_REDACTION</li>
-                    <li>[04] ENCRYPTED_GRPC_BRIDGE</li>
-                    <li>[05] HARDWARE_LEVEL_ISOLATION</li>
-                </ul>
-                <div style="margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--border-glass); text-align: center;">
-                    <span style="font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.2em; color: var(--cyan-core);">// Status: Sovereign</span>
+
+            <div class="feature-card animate-in" style="background: linear-gradient(135deg, var(--secondary-glow) 0%, transparent 100%); padding: 4rem; border-radius: 32px; text-align: center;">
+                <div style="font-size: 5rem; margin-bottom: 2.5rem; filter: drop-shadow(0 0 30px var(--secondary-glow));">🛡️</div>
+                <h3 style="margin-bottom: 1.5rem;">Secure Foundations</h3>
+                <p style="color: var(--text-secondary); margin-bottom: 2.5rem;">Built for HIPAA, GDPR, and DOD-level security requirements. We don't just "enable" privacy; we architect it into the core of every agent.</p>
+                <div style="border-top: 1px solid var(--border-main); padding-top: 2rem; margin-top: 2rem;">
+                    <p style="font-size: 0.8rem; color: var(--accent-core); text-transform: uppercase; font-weight: bold;">Verifiable Compliance</p>
                 </div>
             </div>
         </div>
@@ -73,7 +72,7 @@
     <footer>
         <div class="container">
             <div class="footer-bottom">
-                &copy; 2026 Xibalba Solutions. Local AI Architecture.
+                &copy; 2026 Xibalba Solutions. Specialist AI Foundries.
             </div>
         </div>
     </footer>

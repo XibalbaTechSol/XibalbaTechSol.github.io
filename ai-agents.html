@@ -3,118 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Custom Hermes & OpenClaw Agents | Xibalba Solutions</title>
+    <title>Systems | Xibalba Solutions</title>
+    <meta name="description" content="Explore our agentic architectures: Hermes 3 recursive reasoning engine, OpenClaw omnichannel runtimes, and sovereign learning loop systems.">
     <link rel="icon" href="./favicon.ico" sizes="any">
     <link rel="stylesheet" href="./css/style.css">
 </head>
-<body>
+<body class="theme-obsidian">
 
     <nav>
-        <div class="container">
+        <div class="nav-container">
             <a href="index.html" class="logo">
                 <img src="./XibalbaSolutionsLogo.png" alt="Xibalba Solutions">
             </a>
+            <button class="hamburger" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
             <div class="nav-links">
-                <a href="index.html">Foundry</a>
+                <a href="index.html">Home</a>
                 <a href="ai-agents.html" class="active">Agents</a>
                 <a href="blog.html">Blog</a>
                 <a href="local-ai.html">Privacy</a>
                 <a href="pricing.html">Support</a>
                 <a href="contact.html" class="btn-outline">Contact</a>
+                <button id="theme-toggle" class="btn-icon" aria-label="Toggle Theme" style="background: none; border: 1px solid var(--border-main); color: var(--accent-core); padding: 0.5rem; cursor: pointer; border-radius: 4px; display: flex; align-items: center; justify-content: center; margin-left: 1rem;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg></button>
             </div>
         </div>
     </nav>
 
     <header class="page-header">
-        <div class="container">
-            <h1>Specialized <span class="gradient-text">Autonomous Agents</span></h1>
-            <p>I build custom execution runtimes for any niche use case. From clinical research to algorithmic trading, I engineer the brains that work while you sleep.</p>
+        <div class="container animate-in">
+            <h1>Agentic <span class="gradient-text">Architectures</span></h1>
+            <p style="max-width: 600px; margin: 0 auto; color: var(--text-secondary); font-size: 1.1rem;">The brains that work while you sleep. We engineer high-fidelity reasoning engines and omnichannel execution runtimes.</p>
         </div>
     </header>
 
     <main class="container content-section">
-        <!-- Technical Foundation -->
-        <div class="split-layout">
-            <div class="animate-in">
-                <h2 style="margin-bottom: 1.5rem;">The <span class="gradient-text">Hermes 3</span> Engine</h2>
-                <p style="color: var(--text-secondary);">Generic models are prone to sycophancy and shallow reasoning. I fine-tune and orchestrate Hermes 3—the world's leading open-reasoning model family—to handle complex, long-horizon tasks with precision.</p>
-                <div style="margin-top: 2rem; border-left: 2px solid var(--cyan-core); padding-left: 1.5rem;">
-                    <h4 style="font-size: 0.9rem; color: var(--text-primary);">Key Capabilities:</h4>
-                    <ul style="list-style: none; color: var(--text-muted); font-size: 0.9rem; margin-top: 0.5rem; line-height: 1.8;">
-                        <li>• Recursive self-correction loops</li>
-                        <li>• High-assurance tool calling</li>
-                        <li>• Multi-modal context integration</li>
+        <!-- Hermes 3 Engine -->
+        <section class="animate-in" style="margin-bottom: 10rem;">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: center;">
+                <div>
+                    <h2 style="font-size: 3rem; line-height: 1.1; margin-bottom: 2rem;">The Hermes 3 Engine</h2>
+                    <p style="margin-bottom: 2rem; color: var(--text-secondary); font-size: 1.1rem;">I specialize in the orchestration of <strong>Hermes 3</strong>—the flagship of open-reasoning models. Built for organizations that cannot risk centralized "safety" layers interfering with technical truth, Hermes provides a transparent, jailbreak-free reasoning engine for mission-critical workflows.</p>
+                    
+                    <h3 style="margin-bottom: 1.5rem; color: var(--accent-core);">Key Capabilities:</h3>
+                    <ul style="list-style: none; line-height: 2.2; color: var(--text-primary);">
+                        <li><span style="color: var(--accent-core); margin-right: 1rem;">•</span> Recursive self-correction loops</li>
+                        <li><span style="color: var(--accent-core); margin-right: 1rem;">•</span> High-assurance tool calling</li>
+                        <li><span style="color: var(--accent-core); margin-right: 1rem;">•</span> Multi-modal context integration</li>
                     </ul>
                 </div>
-            </div>
-            <div class="feature-card animate-in" style="background: rgba(0,0,0,0.4); border: 1px solid var(--violet-glow);">
-                <h3 style="color: var(--violet-core); font-size: 1rem; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1.5rem;">// Learning Loop Architecture</h3>
-                <div style="display: flex; flex-direction: column; gap: 1rem;">
-                    <div style="padding: 1rem; border: 1px solid var(--border-glass); border-radius: 4px; font-family: monospace; font-size: 0.8rem; color: var(--cyan-core);">
-                        STEP 01: OBSERVATION_COLLECTION
-                    </div>
-                    <div style="padding: 1rem; border: 1px solid var(--cyan-core); border-radius: 4px; font-family: monospace; font-size: 0.8rem; color: #fff;">
-                        STEP 02: RECURSIVE_REASONING_PASS
-                    </div>
-                    <div style="padding: 1rem; border: 1px solid var(--border-glass); border-radius: 4px; font-family: monospace; font-size: 0.8rem; color: var(--violet-core);">
-                        STEP 03: AUTONOMOUS_ACTION_EXEC
+                <div class="feature-card" style="padding: 4rem; background: var(--glass-bg); border-radius: 32px; border-color: var(--secondary-core);">
+                    <h3 style="margin-bottom: 2.5rem; text-align: center; color: var(--secondary-core);">LEARNING LOOP ARCHITECTURE</h3>
+                    <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+                        <div style="padding: 2rem; background: rgba(112, 0, 255, 0.05); border: 1px solid var(--secondary-core); border-radius: 16px; text-align: center;">
+                            <span style="font-weight: 700; color: var(--secondary-core);">01</span> OBSERVE & COLLECT
+                        </div>
+                        <div style="display: flex; justify-content: center; color: var(--secondary-core); font-size: 1.5rem;">↓</div>
+                        <div style="padding: 2rem; background: rgba(0, 242, 255, 0.05); border: 1px solid var(--accent-core); border-radius: 16px; text-align: center;">
+                            <span style="font-weight: 700; color: var(--accent-core);">02</span> RECURSIVE REASONING PASS
+                        </div>
+                        <div style="display: flex; justify-content: center; color: var(--accent-core); font-size: 1.5rem;">↓</div>
+                        <div style="padding: 2rem; background: rgba(112, 0, 255, 0.05); border: 1px solid var(--secondary-core); border-radius: 16px; text-align: center;">
+                            <span style="font-weight: 700; color: var(--secondary-core);">03</span> AUTONOMOUS ACTION EXEC
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <!-- OpenClaw Section -->
-        <div style="margin-top: 8rem; padding: 4rem; background: var(--bg-card); border: 1px solid var(--border-glass); border-radius: 16px;">
-            <div style="text-align: center; max-width: 800px; margin: 0 auto;">
-                <h2 style="margin-bottom: 1.5rem;">OpenClaw <span class="gradient-text">Integration</span></h2>
-                <p style="color: var(--text-secondary);">I am a specialist in the OpenClaw framework, deploying agents that live across your entire tech stack. Your intelligence is available wherever you work.</p>
-                
-                <!-- Multi-Channel Logos -->
-                <div style="display: flex; justify-content: center; gap: 3rem; margin: 3rem 0; align-items: center;">
-                    <!-- Slack -->
-                    <div style="text-align: center; opacity: 0.8; transition: opacity 0.3s;" onmouseover="this.style.opacity=1" onmouseout="this.style.opacity=0.8">
-                        <svg width="40" height="40" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M25 55C25 49.4772 29.4772 45 35 45H45V55C45 60.5228 40.5228 65 35 65C29.4772 65 25 60.5228 25 55Z" fill="#36C5F0"/>
-                            <path d="M25 35C25 29.4772 29.4772 25 35 25C40.5228 25 45 29.4772 45 35V45H35C29.4772 45 25 40.5228 25 35Z" fill="#2EB67D"/>
-                            <path d="M75 45C75 50.5228 70.5228 55 65 55H55V45C55 39.4772 59.4772 35 65 35C70.5228 35 75 39.4772 75 45Z" fill="#E01E5A"/>
-                            <path d="M75 65C75 70.5228 70.5228 75 65 75C59.4772 75 55 70.5228 55 65V55H65C70.5228 55 75 59.4772 75 65Z" fill="#ECB22E"/>
-                        </svg>
-                        <div style="font-size: 0.7rem; color: var(--text-muted); margin-top: 0.5rem; letter-spacing: 0.1em;">SLACK</div>
+        <!-- OpenClaw Bridge -->
+        <section class="animate-in" style="padding: 8rem 0; border-top: 1px solid var(--border-main);">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: center;">
+                 <div class="feature-card" style="padding: 0; overflow: hidden; border-radius: 32px; border-color: var(--accent-core);">
+                    <div style="background: linear-gradient(135deg, var(--accent-glow) 0%, transparent 100%); padding: 6rem; text-align: center;">
+                        <div style="font-size: 4rem; opacity: 0.8;">🔌</div>
+                        <h4 style="margin-top: 2rem; font-size: 2rem;">OMNICHANNEL</h4>
                     </div>
-                    <!-- Telegram -->
-                    <div style="text-align: center; opacity: 0.8; transition: opacity 0.3s;" onmouseover="this.style.opacity=1" onmouseout="this.style.opacity=0.8">
-                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 24C18.6274 24 24 18.6274 24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 18.6274 5.37258 24 12 24Z" fill="#2CA5E0"/>
-                            <path d="M18.35 6.65L3.38 12.43C2.36 12.84 2.36 13.41 3.19 13.72L7.03 14.92L15.92 9.31C16.34 9.06 16.72 9.19 16.4 9.47L9.2 15.97L8.93 19.92C9.32 19.92 9.49 19.74 9.71 19.51L11.59 17.69L15.5 20.58C16.22 21.01 16.74 20.78 16.92 19.92L19.48 8.08C19.74 7.04 19.09 6.57 18.35 6.65Z" fill="white"/>
-                        </svg>
-                        <div style="font-size: 0.7rem; color: var(--text-muted); margin-top: 0.5rem; letter-spacing: 0.1em;">TELEGRAM</div>
-                    </div>
-                    <!-- WhatsApp -->
-                    <div style="text-align: center; opacity: 0.8; transition: opacity 0.3s;" onmouseover="this.style.opacity=1" onmouseout="this.style.opacity=0.8">
-                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12.011 0C5.384 0 0.01 5.372 0 11.998C0 14.114 0.552 16.18 1.605 18.003L0 24L6.135 22.39C7.887 23.434 9.923 23.998 12.011 24C18.638 24 24.01 18.628 24.011 12.002C24.011 5.376 18.638 0 12.011 0Z" fill="#25D366"/>
-                            <path d="M17.507 14.307C17.204 14.156 15.716 13.42 15.438 13.319C15.16 13.218 14.958 13.167 14.756 13.47C14.554 13.773 13.973 14.455 13.796 14.657C13.619 14.859 13.442 14.884 13.139 14.733C12.836 14.582 11.858 14.262 10.701 13.389C9.799 12.584 9.191 11.59 9.014 11.287C8.837 10.984 8.995 10.82 9.146 10.67C9.282 10.535 9.448 10.353 9.599 10.176C9.75 9.999 9.8 9.873 9.901 9.671C10.002 9.469 9.951 9.3 9.875 9.148C9.799 8.996 9.218 7.557 8.976 6.976C8.74 6.41 8.504 6.486 8.327 6.477C8.16 6.468 7.968 6.468 7.776 6.468C7.584 6.468 7.271 6.54 7.008 6.823C6.745 7.106 6 7.838 6 9.332C6 10.826 7.084 12.265 7.236 12.467C7.388 12.669 9.373 15.722 12.407 17.031C13.128 17.342 13.689 17.526 14.127 17.665C14.851 17.894 15.51 17.861 16.029 17.777C16.608 17.683 17.813 17.041 18.066 16.334C18.319 15.627 18.319 15.021 18.243 14.895C18.167 14.769 17.81 14.458 17.507 14.307Z" fill="white"/>
-                        </svg>
-                        <div style="font-size: 0.7rem; color: var(--text-muted); margin-top: 0.5rem; letter-spacing: 0.1em;">WHATSAPP</div>
-                    </div>
-                </div>
-
-                <div style="display: flex; justify-content: center; gap: 2rem; margin-top: 3rem;">
-                    <div style="text-align: center;">
-                        <div style="font-size: 2rem; margin-bottom: 0.5rem;">🔗</div>
-                        <h4 style="font-size: 0.8rem; color: var(--text-muted);">OMNICHANNEL</h4>
-                    </div>
-                    <div style="text-align: center;">
-                        <div style="font-size: 2rem; margin-bottom: 0.5rem;">💾</div>
-                        <h4 style="font-size: 0.8rem; color: var(--text-muted);">PERSISTENT MEMORY</h4>
-                    </div>
-                    <div style="text-align: center;">
-                        <div style="font-size: 2rem; margin-bottom: 0.5rem;">⚡</div>
-                        <h4 style="font-size: 0.8rem; color: var(--text-muted);">ZERO-LATENCY</h4>
-                    </div>
-                </div>
+                 </div>
+                 <div>
+                    <h2 style="font-size: 3rem; line-height: 1.1; margin-bottom: 2rem;">OpenClaw Runtimes</h2>
+                    <p style="margin-bottom: 2rem; color: var(--text-secondary); font-size: 1.1rem;">If Hermes is the brain, <strong>OpenClaw</strong> is the nervous system. It is the bridge between reasoning and reality. I deploy custom OpenClaw runtimes that enable your agents to interact securely with Slack, Discord, custom databases, and air-gapped internal systems.</p>
+                    <h3 style="margin-bottom: 1.5rem; color: var(--accent-core); font-size: 1.2rem;">Execution Enclaves:</h3>
+                    <ul style="list-style: none; line-height: 2; color: var(--text-primary); margin-bottom: 2rem;">
+                        <li><span style="color: var(--accent-core); margin-right: 0.5rem;">•</span> <strong>Docker Sandbox:</strong> Ephemeral containers for secure code execution.</li>
+                        <li><span style="color: var(--accent-core); margin-right: 0.5rem;">•</span> <strong>Signal Stream:</strong> Real-time asynchronous telemetry parsing.</li>
+                        <li><span style="color: var(--accent-core); margin-right: 0.5rem;">•</span> <strong>Database Hooks:</strong> Strict read/write access controls.</li>
+                    </ul>
+                    <a href="blog/2026-04-05-hermes-vs-openclaw.html" style="color: var(--accent-core); text-decoration: none; font-weight: 600; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.2em;">Explore Runtimes →</a>
+                 </div>
             </div>
-        </div>
+        </section>
     </main>
 
     <footer>

@@ -11,8 +11,8 @@ def test_blog_flow():
         listing_path = os.path.abspath("xibalba-solutions-site/blog.html")
         page.goto(f"file://{listing_path}")
         
-        assert "Technical Intel" in page.locator("h1").text_content()
-        first_post_link = page.locator("text=Read Full Intel →").first
+        assert "Technical Blog" in page.locator("h1").text_content()
+        first_post_link = page.locator("text=Read Full Post →").first
         assert first_post_link.is_visible()
         
         # 2. Test Navigation to Post
@@ -27,8 +27,8 @@ def test_blog_flow():
         assert "Hermes 3" in page.content()
         assert "Internal Trace Loop" in page.content() # Verify code block
         
-        # 3. Verify Navigation Back to Foundry
-        foundry_link = page.locator("nav a", has_text="Foundry")
+        # 3. Verify Navigation Back to Home
+        foundry_link = page.locator("nav a", has_text="Home")
         foundry_link.click()
         assert "Intelligence" in page.locator("h1").text_content()
         

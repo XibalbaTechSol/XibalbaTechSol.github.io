@@ -55,7 +55,7 @@ def parse_markdown(md_content):
     return meta, content
 
 def build_blog():
-    print("--- Xibalba Intel Foundry: Building Blog ---")
+    print("--- Xibalba Blog Generator: Building Blog ---")
     
     if not os.path.exists(TEMPLATE_PATH):
         print(f"Error: Template not found at {TEMPLATE_PATH}")
@@ -114,7 +114,7 @@ def update_index(posts):
                     <div style="color: var(--cyan-core); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.2em; margin-bottom: 1rem;">// {post.get('date', 'N/A')} - {post.get('category', 'GENERAL')}</div>
                     <h2 style="font-size: 2rem; margin-bottom: 1.5rem;">{post.get('title', 'Untitled Post')}</h2>
                     <p style="color: var(--text-secondary); margin-bottom: 2rem;">{post.get('excerpt', '')}</p>
-                    <a href="blog/{post.get('slug')}" style="color: var(--violet-core); text-decoration: none; font-weight: 600; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.1em;">Read Full Intel →</a>
+                    <a href="blog/{post.get('slug')}" style="color: var(--violet-core); text-decoration: none; font-weight: 600; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.1em;">Read Full Post →</a>
                 </div>
             </article>
         """

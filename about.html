@@ -3,49 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Mission | Xibalba Solutions</title>
+    <title>Mission | Xibalba Solutions</title>
+    <meta name="description" content="High-fidelity technical studio specializing in autonomous intelligence orchestration, data sovereignty, and trustless integrity metrics.">
     <link rel="icon" href="./favicon.ico" sizes="any">
     <link rel="stylesheet" href="./css/style.css">
 </head>
-<body>
+<body class="theme-obsidian">
 
     <nav>
-        <div class="container">
+        <div class="nav-container">
             <a href="index.html" class="logo">
                 <img src="./XibalbaSolutionsLogo.png" alt="Xibalba Solutions">
             </a>
+            <button class="hamburger" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
             <div class="nav-links">
-                <a href="index.html">Foundry</a>
+                <a href="index.html">Home</a>
                 <a href="ai-agents.html">Agents</a>
                 <a href="blog.html">Blog</a>
-                <a href="local-ai.html">Privacy</a>
+                <a href="local-ai.html" class="active">Privacy</a>
                 <a href="pricing.html">Support</a>
                 <a href="contact.html" class="btn-outline">Contact</a>
+                <button id="theme-toggle" class="btn-icon" aria-label="Toggle Theme" style="background: none; border: 1px solid var(--border-main); color: var(--accent-core); padding: 0.5rem; cursor: pointer; border-radius: 4px; display: flex; align-items: center; justify-content: center; margin-left: 1rem;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg></button>
             </div>
         </div>
     </nav>
 
     <header class="page-header">
-        <div class="container">
+        <div class="container animate-in">
             <h1>Engineering <span class="gradient-text">Sovereignty</span></h1>
-            <p>Xibalba Solutions is a solo technical foundry led by Jacob Vickers. I build the infrastructure for a future where intelligence is personal, private, and powerful.</p>
+            <p style="max-width: 600px; margin: 0 auto; color: var(--text-secondary); font-size: 1.1rem;">Xibalba Solutions is a high-fidelity technical studio specializing in the orchestration of autonomous intelligence and sovereign infrastructure.</p>
         </div>
     </header>
 
     <main class="container content-section">
-        <div class="split-layout">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: start;">
             <div class="animate-in">
-                <h2 style="margin-bottom: 1.5rem;">The Founder's Intent</h2>
-                <p style="color: var(--text-secondary);">The current AI boom is built on borrowed brains and leaky pipes. Most "solutions" are just thin layers over OpenAI. I am here to build something different: **Sovereign Intelligence**.</p>
-                <p style="color: var(--text-secondary); margin-top: 1rem;">With a background in mathematics and distributed systems, I specialize in the low-level orchestration of LLMs. I don't just connect APIs; I engineer local runtimes, secure hardware bridges, and custom feedback loops that allow models to learn from your specific edge cases without ever leaving your network.</p>
+                <h2 style="font-size: 3rem; line-height: 1.1; margin-bottom: 2rem;">The Founder's Intent</h2>
+                <p style="margin-bottom: 2rem; color: var(--text-secondary);">The current AI boom is built on borrowed brains and leaky pipes. Most "solutions" are just thin wrappers over centralized APIs. I founded Xibalba Solutions to build something different: <strong>Sovereign Intelligence</strong>.</p>
+                <p style="color: var(--text-secondary);">With a background in mathematics, distributed systems, and local LLM orchestration, I specialize in the low-level infrastructure of agentic ecosystems. I don't just connect APIs; I engineer local runtimes, secure hardware bridges, and high-fidelity feedback loops that allowed models to learn from your specific data—with 100% data residency.</p>
             </div>
-            <div class="feature-card animate-in" style="background: linear-gradient(135deg, rgba(6, 182, 212, 0.05) 0%, transparent 100%);">
-                <h3 style="color: var(--cyan-core); margin-bottom: 1.5rem;">Core Values</h3>
-                <ul style="list-style: none; line-height: 2.5; font-size: 0.9rem;">
-                    <li><span style="color: var(--violet-core);">01</span> Privacy as a First Principle</li>
-                    <li><span style="color: var(--violet-core);">02</span> Technical Depth over Marketing</li>
-                    <li><span style="color: var(--violet-core);">03</span> Absolute Data Sovereignty</li>
-                    <li><span style="color: var(--violet-core);">04</span> High-Fidelity Interaction</li>
+            <div class="feature-card animate-in" style="background: linear-gradient(135deg, var(--secondary-glow) 0%, transparent 100%); padding: 4rem; border-radius: 32px;">
+                <h3 style="margin-bottom: 2rem; font-size: 1.8rem;">Core Pillars</h3>
+                <ul style="list-style: none; font-size: 1.1rem; line-height: 2.8; color: var(--text-primary);">
+                    <li><span class="gradient-text" style="font-weight: 700; margin-right: 1.5rem;">01</span> Absolute Data Sovereignty</li>
+                    <li><span class="gradient-text" style="font-weight: 700; margin-right: 1.5rem;">02</span> Technical Depth over Marketing</li>
+                    <li><span class="gradient-text" style="font-weight: 700; margin-right: 1.5rem;">03</span> High-Fidelity Design Language</li>
+                    <li><span class="gradient-text" style="font-weight: 700; margin-right: 1.5rem;">04</span> Trustless Integrity Metrics</li>
                 </ul>
             </div>
         </div>

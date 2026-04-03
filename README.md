@@ -52,7 +52,7 @@ The site is built with a high-fidelity, privacy-first aesthetic, featuring immer
 
 ### Blog Management
 
-The "Intel" section is managed via a custom technical foundry script. 
+The "Blog" section is managed via a custom technical studio script. 
 
 1.  **Add a new post:**
     Create a new `.md` file in `blog/src/` with the following frontmatter:

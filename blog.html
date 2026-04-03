@@ -3,58 +3,127 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Intel | Xibalba Solutions</title>
+    <title>Dispatches | Xibalba Solutions</title>
+    <meta name="description" content="Technical perspectives on autonomous intelligence, sovereign infrastructure, and the future of agentic ecosystems.">
     <link rel="icon" href="./favicon.ico" sizes="any">
     <link rel="stylesheet" href="./css/style.css">
 </head>
-<body>
+<body class="theme-obsidian">
 
     <nav>
-        <div class="container">
+        <div class="nav-container">
             <a href="index.html" class="logo">
                 <img src="./XibalbaSolutionsLogo.png" alt="Xibalba Solutions">
             </a>
+            <button class="hamburger" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
             <div class="nav-links">
-                <a href="index.html">Foundry</a>
+                <a href="index.html">Home</a>
                 <a href="ai-agents.html">Agents</a>
                 <a href="blog.html" class="active">Blog</a>
                 <a href="local-ai.html">Privacy</a>
                 <a href="pricing.html">Support</a>
                 <a href="contact.html" class="btn-outline">Contact</a>
+                <button id="theme-toggle" class="btn-icon" aria-label="Toggle Theme" style="background: none; border: 1px solid var(--border-main); color: var(--accent-core); padding: 0.5rem; cursor: pointer; border-radius: 4px; display: flex; align-items: center; justify-content: center; margin-left: 1rem;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg></button>
             </div>
         </div>
     </nav>
 
     <header class="page-header">
-        <div class="container">
-            <h1>Technical <span class="gradient-text">Intel</span></h1>
-            <p>Dispatches from the foundry. Deep dives into autonomous systems, model orchestration, and sovereign infrastructure.</p>
+        <div class="container animate-in">
+            <h1 style="font-size: 4rem;">Technical <span class="gradient-text">Dispatches</span></h1>
+            <p style="max-width: 600px; margin: 0 auto; color: var(--text-secondary); font-size: 1.1rem;">Engineering the future of autonomous systems. Explorations in reasoning, sovereignty, and decentralized trust.</p>
         </div>
     </header>
 
     <main class="container content-section">
-        <div class="blog-grid" style="display: grid; grid-template-columns: 1fr; gap: 3rem;">
-            <article class="feature-card animate-in" style="padding: 0; overflow: hidden; margin-bottom: 2rem;">
-                <div style="padding: 2.5rem;">
-                    <div style="color: var(--cyan-core); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.2em; margin-bottom: 1rem;">// 2026-04-03 - INTEGRATION</div>
-                    <h2 style="font-size: 2rem; margin-bottom: 1.5rem;">Omnichannel Autonomy: Integrating OpenClaw with Legacy Systems</h2>
-                    <p style="color: var(--text-secondary); margin-bottom: 2rem;">How we bridge the gap between high-fidelity LLM reasoning and the messy reality of siloed enterprise data.</p>
-                    <a href="blog/2026-04-03-openclaw-integration.html" style="color: var(--violet-core); text-decoration: none; font-weight: 600; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.1em;">Read Full Intel →</a>
+        <!-- Featured Post: Integrity Coin -->
+        <article class="feature-card blog-card animate-in" style="grid-column: 1 / -1; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; padding: 4rem; margin-bottom: 4rem;">
+            <div style="display: flex; flex-direction: column; justify-content: center;">
+                <div class="blog-card-meta">
+                    <span class="category-tag">DeFi / Sovereignty</span>
+                    <span>• 12 Min Read</span>
+                    <span>• April 3, 2026</span>
+                </div>
+                <h2 style="font-size: 3rem; margin-bottom: 2rem; line-height: 1.1;">Integrity Coin: Tokenizing Trust in Autonomous Swarms</h2>
+                <p style="color: var(--text-secondary); font-size: 1.1rem; margin-bottom: 3rem;">How we are building an Ethereum-based reputation metric to ensure agentic honesty in trustless environments.</p>
+                <div style="display: flex; gap: 1.5rem; align-items: center;">
+                    <a href="blog/integrity-coin-reputation.html" class="btn" style="width: fit-content;">Read Full Publication</a>
+                    <a href="https://github.com/XibalbaTechSol/integrity-coin" style="color: var(--text-muted); text-decoration: none; font-size: 0.9rem; text-transform: uppercase; font-weight: 500; letter-spacing: 0.1em;">View on GitHub</a>
+                </div>
+            </div>
+            <div style="background: linear-gradient(135deg, var(--secondary-glow) 0%, transparent 100%); border-radius: 24px; border: 1px solid var(--border-main); position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center;">
+                <div style="font-size: 8rem; filter: drop-shadow(0 0 30px var(--secondary-glow));">💎</div>
+                <div style="position: absolute; bottom: 0; left: 0; width: 100%; height: 50%; background: linear-gradient(to top, var(--bg-deep), transparent);"></div>
+            </div>
+        </article>
+
+        <!-- Blog Grid -->
+        <div class="blog-grid">
+                <!-- SanctumBrain -->
+                <article class="blog-card animate-in" style="animation-delay: 0.1s;">
+                    <div class="blog-card-meta">
+                        <span class="category-tag">Automation / Neural</span>
+                        <span>• 12 Min Read</span>
+                    </div>
+                    <h2><a href="blog/sanctumbrain-neural-command.html" style="color: #fff; text-decoration: none;">SanctumBrain: The Neural Command Center</a></h2>
+                    <p style="color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 2.5rem; line-height: 1.7;">Building a visual engine for zero-code orchestration. Drag-and-drop node libraries for Action, Bridge, and Config logic.</p>
+                    <div style="display: flex; gap: 1rem; align-items: center;">
+                        <a href="blog/sanctumbrain-neural-command.html" style="color: var(--accent-core); text-decoration: none; font-size: 0.8rem; text-transform: uppercase; font-weight: 700; letter-spacing: 0.1em;">Read Deep Dive →</a>
+                        <a href="https://github.com/XibalbaTechSol/sanctumbrain" style="color: var(--text-muted); text-decoration: none; font-size: 0.8rem; text-transform: uppercase; font-weight: 500; letter-spacing: 0.1em;">GitHub</a>
+                    </div>
+                </article>
+
+                <!-- Integrity Coin Progress -->
+                <article class="blog-card animate-in" style="animation-delay: 0.2s;">
+                <div class="blog-card-meta">
+                    <span class="category-tag">Design / UX</span>
+                    <span>• 8 Min Read</span>
+                </div>
+                <h3 style="font-size: 1.8rem; margin-bottom: 1.5rem;">Zero-Code Intelligence: The Evolution of Hermes UI</h3>
+                <p style="color: var(--text-secondary); margin-bottom: 2rem;">From raw CLI subagents to a visual Command Center. The journey of making complex AI orchestration accessible.</p>
+                <div style="display: flex; gap: 1.5rem; align-items: center; margin-top: auto;">
+                    <a href="blog/hermes-ui-zero-code.html" style="color: var(--accent-core); text-decoration: none; font-weight: 600; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.1em;">Explore the Evolution →</a>
+                    <a href="https://github.com/XibalbaTechSol/hermes-ui" style="color: var(--text-muted); text-decoration: none; font-size: 0.8rem; text-transform: uppercase; font-weight: 500; letter-spacing: 0.1em;">GitHub</a>
                 </div>
             </article>
-        
-            <article class="feature-card animate-in" style="padding: 0; overflow: hidden; margin-bottom: 2rem;">
-                <div style="padding: 2.5rem;">
-                    <div style="color: var(--cyan-core); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.2em; margin-bottom: 1rem;">// 2026-04-02 - ARCHITECTURE</div>
-                    <h2 style="font-size: 2rem; margin-bottom: 1.5rem;">Recursive Reasoning: Fine-Tuning Hermes 3 for Long-Horizon Autonomy</h2>
-                    <p style="color: var(--text-secondary); margin-bottom: 2rem;">Why standard prompting fails for complex tasks, and how we engineer self-correction loops directly into the agent runtime.</p>
-                    <a href="blog/2026-04-02-hermes-loops.html" style="color: var(--violet-core); text-decoration: none; font-weight: 600; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.1em;">Read Full Intel →</a>
+
+            <!-- Agent Swarm -->
+            <article class="feature-card blog-card animate-in" style="animation-delay: 0.2s;">
+                <div class="blog-card-meta">
+                    <span class="category-tag">Architecture</span>
+                    <span>• 10 Min Read</span>
+                </div>
+                <h3 style="font-size: 1.8rem; margin-bottom: 1.5rem;">Hierarchical Swarms and Bayesian Consensus</h3>
+                <p style="color: var(--text-secondary); margin-bottom: 2rem;">Deep dive into our 30-day forecasting simulations and the 3D telemetry that guides them.</p>
+                <div style="display: flex; gap: 1.5rem; align-items: center; margin-top: auto;">
+                    <a href="blog/agent-swarm-consensus.html" style="color: var(--accent-core); text-decoration: none; font-weight: 600; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.1em;">Read the Deep Dive →</a>
+                    <a href="https://github.com/XibalbaTechSol/agent-swarm-consensus" style="color: var(--text-muted); text-decoration: none; font-size: 0.8rem; text-transform: uppercase; font-weight: 500; letter-spacing: 0.1em;">GitHub</a>
                 </div>
             </article>
-        
-            <!-- Placeholder for future posts -->
-            <div style="border: 1px dashed var(--border-glass); border-radius: 12px; padding: 4rem; text-align: center; color: var(--text-muted);">
-                <p>Establishing next encrypted signal link...</p>
+
+            <!-- Hermes vs OpenClaw -->
+            <article class="feature-card blog-card animate-in" style="animation-delay: 0.3s;">
+                <div class="blog-card-meta">
+                    <span class="category-tag">Frameworks</span>
+                    <span>• 6 Min Read</span>
+                </div>
+                <h3 style="font-size: 1.8rem; margin-bottom: 1.5rem;">The Brain vs. The Body: Decoding Our Stack</h3>
+                <p style="color: var(--text-secondary); margin-bottom: 2rem;">Why we separate reasoning (Hermes) from execution (OpenClaw) to ensure data sovereignty.</p>
+                <a href="blog/2026-04-05-hermes-vs-openclaw.html" style="color: var(--accent-core); text-decoration: none; font-weight: 600; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.1em; margin-top: auto;">Compare Architectures →</a>
+            </article>
+
+            <!-- Newsletter Card -->
+            <div class="feature-card animate-in" style="animation-delay: 0.4s; background: var(--secondary-glow); border-color: var(--secondary-core); display: flex; flex-direction: column; justify-content: center; text-align: center;">
+                <h3 style="margin-bottom: 1.5rem;">Join the Sovereign Feed</h3>
+                <p style="color: var(--text-primary); margin-bottom: 2rem; font-size: 0.9rem;">Receive monthly updates on autonomous engineering and private LLM research.</p>
+                <form onsubmit="event.preventDefault(); alert('Transmission Received.')" style="display: flex; gap: 0.5rem;">
+                    <input type="email" placeholder="technical@domain.ai" style="flex: 1; padding: 1rem; border-radius: 100px; border: 1px solid var(--border-main); background: var(--bg-deep); color: #fff;">
+                    <button class="btn" style="padding: 1rem 2rem;">Sync</button>
+                </form>
             </div>
         </div>
     </main>

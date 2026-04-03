@@ -3,85 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Service Model | Xibalba Solutions</title>
+    <title>Support | Xibalba Solutions</title>
+    <meta name="description" content="Premium AI agent engineering tiers: Strategic Architecture builds, Global Command Center swarms, and Sovereign Stack maintenance plans.">
     <link rel="icon" href="./favicon.ico" sizes="any">
     <link rel="stylesheet" href="./css/style.css">
 </head>
-<body>
+<body class="theme-obsidian">
 
     <nav>
-        <div class="container">
+        <div class="nav-container">
             <a href="index.html" class="logo">
                 <img src="./XibalbaSolutionsLogo.png" alt="Xibalba Solutions">
             </a>
+            <button class="hamburger" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
             <div class="nav-links">
-                <a href="index.html">Foundry</a>
+                <a href="index.html">Home</a>
                 <a href="ai-agents.html">Agents</a>
                 <a href="blog.html">Blog</a>
                 <a href="local-ai.html">Privacy</a>
                 <a href="pricing.html" class="active">Support</a>
                 <a href="contact.html" class="btn-outline">Contact</a>
+                <button id="theme-toggle" class="btn-icon" aria-label="Toggle Theme" style="background: none; border: 1px solid var(--border-main); color: var(--accent-core); padding: 0.5rem; cursor: pointer; border-radius: 4px; display: flex; align-items: center; justify-content: center; margin-left: 1rem;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg></button>
             </div>
         </div>
     </nav>
 
     <header class="page-header">
-        <div class="container">
-            <h1>Specialized <span class="gradient-text">Foundry Services</span></h1>
-            <p>I don't sell subscriptions. I build custom intelligence layers. High-fidelity engineering for organizations that demand total privacy and niche customization.</p>
+        <div class="container animate-in">
+            <h1>Industrial <span class="gradient-text">Foundry</span></h1>
+            <p style="max-width: 600px; margin: 0 auto; color: var(--text-secondary); font-size: 1.1rem;">High-fidelity engineering for organizations that demand absolute control and premium agent orchestration.</p>
         </div>
     </header>
 
     <main class="container content-section">
-        <div class="features">
-            <!-- Custom Agent Build -->
-            <div class="feature-card animate-in">
-                <h4 style="color: var(--cyan-core); text-transform: uppercase; font-size: 0.75rem; letter-spacing: 0.2em; margin-bottom: 1rem;">// Agent Foundry</h4>
-                <h3 style="font-size: 1.5rem; margin-bottom: 1.5rem;">Custom Agent Build</h3>
-                <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 2rem;">End-to-end engineering of a specialized Hermes/OpenClaw agent tailored to your niche datasets.</p>
-                <div style="font-size: 2rem; font-weight: 700; margin-bottom: 2rem;">$15,000<span style="font-size: 0.9rem; color: var(--text-muted); font-weight: 400;">/ build</span></div>
-                <ul style="list-style: none; font-size: 0.85rem; color: var(--text-muted); line-height: 2.2;">
-                    <li>• Model Fine-tuning (Hermes 3)</li>
-                    <li>• Recursive Feedback Loop Design</li>
-                    <li>• Custom UI/UX Implementation</li>
-                    <li>• 30-Day Hardening Period</li>
+        <div class="feature-grid">
+            <!-- Strategic Architecture -->
+            <div class="feature-card animate-in" style="animation-delay: 0.1s;">
+                <h3 style="margin-bottom: 1.5rem;">Strategic Architecture</h3>
+                <div style="font-size: 2.5rem; font-weight: 700; margin-bottom: 2rem;">$15k <span style="font-size: 0.9rem; font-weight: 400; color: var(--text-muted);">/ Build</span></div>
+                <p style="color: var(--text-secondary); margin-bottom: 2rem;">Custom agent orchestration for specialized workflows, Hermes 3 integration, and private runtime deployment.</p>
+                <ul style="list-style: none; line-height: 2.2; font-size: 0.9rem; color: var(--text-primary); margin-bottom: 3rem;">
+                    <li><span style="color: var(--accent-core); margin-right: 1rem;">•</span> Private LLM Stack Deployment</li>
+                    <li><span style="color: var(--accent-core); margin-right: 1rem;">•</span> Omnichannel execution runtimes</li>
+                    <li><span style="color: var(--accent-core); margin-right: 1rem;">•</span> Integrity-based consensus protocols</li>
                 </ul>
+                <a href="contact.html" class="btn" style="width: 100%; text-align: center;">Initiate Build</a>
             </div>
 
-            <!-- Local Infra -->
-            <div class="feature-card animate-in" style="border-color: var(--violet-core); animation-delay: 0.1s;">
-                <h4 style="color: var(--violet-core); text-transform: uppercase; font-size: 0.75rem; letter-spacing: 0.2em; margin-bottom: 1rem;">// Sanctum Guard</h4>
-                <h3 style="font-size: 1.5rem; margin-bottom: 1.5rem;">Privacy Infrastructure</h3>
-                <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 2rem;">Secure on-premise deployment of LLMs for HIPAA, GDPR, or sensitive corporate compliance.</p>
-                <div style="font-size: 2rem; font-weight: 700; margin-bottom: 2rem;">$5,000<span style="font-size: 0.9rem; color: var(--text-muted); font-weight: 400;">/ setup</span></div>
-                <ul style="list-style: none; font-size: 0.85rem; color: var(--text-muted); line-height: 2.2;">
-                    <li>• Hardware Specification & Audit</li>
-                    <li>• Local Vector DB Orchestration</li>
-                    <li>• Air-Gapped Runtime Config</li>
-                    <li>• Edge PII Redaction Layer</li>
+            <!-- Global Command Center -->
+            <div class="feature-card animate-in" style="animation-delay: 0.2s; border-color: var(--secondary-core); background: rgba(112, 0, 255, 0.05);">
+                <div style="position: absolute; top: 1.5rem; right: 2rem; font-size: 0.7rem; color: var(--secondary-core); font-weight: bold; letter-spacing: 0.1em;">MOST ELITE</div>
+                <h3 style="margin-bottom: 1.5rem;">Global Command Center</h3>
+                <div style="font-size: 2.5rem; font-weight: 700; margin-bottom: 2rem;">Custom <span style="font-size: 0.9rem; font-weight: 400; color: var(--text-muted);">/ Project</span></div>
+                <p style="color: var(--text-secondary); margin-bottom: 2rem;">Hierarchical 100-agent swarms, 3D global telemetry, and recursive Bayesian consensus simulations.</p>
+                <ul style="list-style: none; line-height: 2.2; font-size: 0.9rem; color: var(--text-primary); margin-bottom: 3rem;">
+                    <li><span style="color: var(--secondary-core); margin-right: 1rem;">•</span> Everything in Strategic Tier</li>
+                    <li><span style="color: var(--secondary-core); margin-right: 1rem;">•</span> Dedicated Sovereignty Compute</li>
+                    <li><span style="color: var(--secondary-core); margin-right: 1rem;">•</span> 3D Earth Telemetry Visualization</li>
                 </ul>
+                <a href="contact.html" class="btn" style="width: 100%; text-align: center; background: var(--secondary-core);">Request Consultation</a>
             </div>
 
-            <!-- Support -->
-            <div class="feature-card animate-in" style="animation-delay: 0.2s;">
-                <h4 style="color: var(--text-primary); text-transform: uppercase; font-size: 0.75rem; letter-spacing: 0.2em; margin-bottom: 1rem;">// Continuous Intel</h4>
-                <h3 style="font-size: 1.5rem; margin-bottom: 1.5rem;">Ongoing Engineering</h3>
-                <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 2rem;">Continuous refinement of your agent's skill library and model performance updates.</p>
-                <div style="font-size: 2rem; font-weight: 700; margin-bottom: 2rem;">$3,000<span style="font-size: 0.9rem; color: var(--text-muted); font-weight: 400;">/ month</span></div>
-                <ul style="list-style: none; font-size: 0.85rem; color: var(--text-muted); line-height: 2.2;">
-                    <li>• Weekly Model Optimization</li>
-                    <li>• New Tool/API Integration</li>
-                    <li>• Priority Security Monitoring</li>
-                    <li>• Direct Engineer Channel (Jacob)</li>
+            <!-- Private Intelligence Stack -->
+            <div class="feature-card animate-in" style="animation-delay: 0.3s;">
+                <h3 style="margin-bottom: 1.5rem;">The Sovereign Stack</h3>
+                <div style="font-size: 2.5rem; font-weight: 700; margin-bottom: 2rem;">$5k <span style="font-size: 0.9rem; font-weight: 400; color: var(--text-muted);">/ Month</span></div>
+                <p style="color: var(--text-secondary); margin-bottom: 2rem;">High-fidelity support, recursive skill updates, and ongoing sovereign infrastructure maintenance.</p>
+                <ul style="list-style: none; line-height: 2.2; font-size: 0.9rem; color: var(--text-primary); margin-bottom: 3rem;">
+                    <li><span style="color: var(--accent-core); margin-right: 1rem;">•</span> Priority technical support link</li>
+                    <li><span style="color: var(--accent-core); margin-right: 1rem;">•</span> Monthly skill-library expansions</li>
+                    <li><span style="color: var(--accent-core); margin-right: 1rem;">•</span> Continuous security-patch sync</li>
                 </ul>
+                <a href="contact.html" class="btn" style="width: 100%; text-align: center;">Secure Access</a>
             </div>
         </div>
     </main>
 
-    <footer>
+    <footer style="margin-top: 10rem;">
         <div class="container">
             <div class="footer-bottom">
-                &copy; 2026 Xibalba Solutions. Engineering Privacy.
+                &copy; 2026 Xibalba Solutions. Specialist AI Foundries.
             </div>
         </div>
     </footer>

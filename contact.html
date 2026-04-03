@@ -4,65 +4,73 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Initiate | Xibalba Solutions</title>
+    <meta name="description" content="Initiate a technical consultation for sovereign AI agent orchestration, custom builds, and private infrastructure deployment.">
     <link rel="icon" href="./favicon.ico" sizes="any">
     <link rel="stylesheet" href="./css/style.css">
+    <style>
+        .form-group { margin-bottom: 2rem; text-align: left; }
+        .form-label { display: block; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted); margin-bottom: 0.75rem; font-weight: 600; }
+        .form-control { width: 100%; border: 1px solid var(--border-main); background: var(--glass-bg); padding: 1.25rem; border-radius: 12px; color: #fff; font-family: 'Inter', sans-serif; transition: var(--transition-smooth); outline: none; }
+        .form-control:focus { border-color: var(--accent-core); box-shadow: 0 0 20px var(--accent-glow); }
+        .contact-form-container { max-width: 600px; margin: 0 auto; background: var(--glass-bg); padding: 4rem; border-radius: 32px; border: 1px solid var(--border-main); backdrop-filter: var(--glass-blur); }
+    </style>
 </head>
-<body>
+<body class="theme-obsidian">
 
     <nav>
-        <div class="container">
+        <div class="nav-container">
             <a href="index.html" class="logo">
                 <img src="./XibalbaSolutionsLogo.png" alt="Xibalba Solutions">
             </a>
+            <button class="hamburger" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
             <div class="nav-links">
-                <a href="index.html">Foundry</a>
+                <a href="index.html">Home</a>
                 <a href="ai-agents.html">Agents</a>
                 <a href="blog.html">Blog</a>
                 <a href="local-ai.html">Privacy</a>
                 <a href="pricing.html">Support</a>
                 <a href="contact.html" class="active btn-outline">Contact</a>
+                <button id="theme-toggle" class="btn-icon" aria-label="Toggle Theme" style="background: none; border: 1px solid var(--border-main); color: var(--accent-core); padding: 0.5rem; cursor: pointer; border-radius: 4px; display: flex; align-items: center; justify-content: center; margin-left: 1rem;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg></button>
             </div>
         </div>
     </nav>
 
     <header class="page-header">
-        <div class="container">
+        <div class="container animate-in">
             <h1>Project <span class="gradient-text">Initiation</span></h1>
-            <p>Tell me about the intelligence you need to build. I review all inquiries personally and will respond within 24 hours.</p>
+            <p style="max-width: 600px; margin: 0 auto; color: var(--text-secondary); font-size: 1.1rem;">Secure a technical consultation for your sovereign intelligence requirements. No-code orchestration, custom agents, and trustless swarms.</p>
         </div>
     </header>
 
-    <main class="container content-section">
+    <main class="container content-section" style="text-align: center;">
         <div class="contact-form-container animate-in">
-            <form action="https://formspree.io/f/mqegdoyy" method="POST">
-                <input type="hidden" name="_next" value="https://xibalbatechsol.github.io/xibalba-solutions-site/thank-you.html">
-                
+            <form action="thank-you.html" method="GET">
                 <div class="form-group">
-                    <label for="name">Full Name</label>
-                    <input type="text" id="name" name="name" class="form-control" required placeholder="Jacob Vickers">
+                    <label class="form-label">Identity / Organization</label>
+                    <input type="text" name="name" class="form-control" placeholder="e.g. Sovereign Labs" required>
                 </div>
-                
                 <div class="form-group">
-                    <label for="email">Technical/Work Email</label>
-                    <input type="email" id="email" name="email" class="form-control" required placeholder="founder@company.ai">
+                    <label class="form-label">Secure Transmission Channel (Email)</label>
+                    <input type="email" name="email" class="form-control" placeholder="technical@domain.ai" required>
                 </div>
-                
                 <div class="form-group">
-                    <label for="interest">Primary Interest</label>
-                    <select id="interest" name="interest" class="form-control">
-                        <option value="custom-agent">Custom Hermes/OpenClaw Agent</option>
-                        <option value="local-infra">HIPAA/Sanctum Guard Deployment</option>
-                        <li>Ongoing Support & Engineering</li>
-                        <option value="audit">Architecture Audit</option>
+                    <label class="form-label">Project Scope</label>
+                    <select name="interest" class="form-control">
+                        <option>Strategic Architecture Build</option>
+                        <option>Global Command Center Swarm</option>
+                        <option>Sovereign Stack Maintenance</option>
+                        <option>Custom AI Integration</option>
                     </select>
                 </div>
-                
                 <div class="form-group">
-                    <label for="message">Project Requirements (Technical details encouraged)</label>
-                    <textarea id="message" name="message" class="form-control" rows="5" placeholder="Define your niche use case, model requirements, and privacy constraints..."></textarea>
+                    <label class="form-label">Mission Briefing</label>
+                    <textarea class="form-control" rows="4" placeholder="Describe your technical requirements and sovereignty needs..."></textarea>
                 </div>
-                
-                <button type="submit" class="btn" style="width: 100%;">Initiate Connection</button>
+                <button type="submit" class="btn" style="width: 100%; margin-top: 1rem;">Sync Project</button>
             </form>
         </div>
     </main>
@@ -70,7 +78,7 @@
     <footer>
         <div class="container">
             <div class="footer-bottom">
-                &copy; 2026 Xibalba Solutions. Sovereign Intelligence Only.
+                &copy; 2026 Xibalba Solutions. Specialist AI Foundries.
             </div>
         </div>
     </footer>
