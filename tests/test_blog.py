@@ -12,11 +12,11 @@ def test_blog_flow():
         page.goto(f"file://{listing_path}")
         
         assert "Technical Intel" in page.locator("h1").text_content()
-        first_post_link = page.locator("text=Read Full Intel →")
+        first_post_link = page.locator("text=Read Full Intel →").first
         assert first_post_link.is_visible()
         
         # 2. Test Navigation to Post
-        first_post_link.click()
+        first_post_link.click(force=True)
         
         # Note: In file:// protocol, relative links might be tricky in tests depending on environment
         # Let's verify the content of the post page directly if click fails or navigation is complex

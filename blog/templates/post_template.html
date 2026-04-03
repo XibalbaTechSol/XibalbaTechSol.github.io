@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recursive Reasoning: Fine-Tuning Hermes 3 for Long-Horizon Autonomy | Xibalba Intel</title>
+    <title>{{title}} | Xibalba Intel</title>
     <link rel="icon" href="../favicon.ico" sizes="any">
     <link rel="stylesheet" href="../css/style.css">
     <style>
@@ -35,21 +35,13 @@
 
     <header class="page-header" style="text-align: left; padding: 10rem 0 4rem;">
         <div class="container">
-            <div style="color: var(--cyan-core); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.2em; margin-bottom: 1rem;">// 2026-04-02 - ARCHITECTURE</div>
-            <h1 style="font-size: 3.5rem; max-width: 900px;">Recursive Reasoning: Fine-Tuning Hermes 3 for Long-Horizon Autonomy</h1>
+            <div style="color: var(--cyan-core); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.2em; margin-bottom: 1rem;">// {{date}} - {{category}}</div>
+            <h1 style="font-size: 3.5rem; max-width: 900px;">{{title}}</h1>
         </div>
     </header>
 
     <main class="container content-section intel-body" style="max-width: 800px; margin: 0 auto;">
-        <p>Standard LLM deployments often hit a "complexity wall" when tasked with objectives that require more than 10 sequential steps. Whether it's complex data synthesis or autonomous code refactoring, the model's tendency to drift from the original intent increases exponentially with every turn.</p><h2>The Sincerity Problem</h2><p>Most commercial models are fine-tuned for sycophancy—they want to please the user and will often "hallucinate progress" to avoid admitting confusion. In a high-fidelity foundry, this is unacceptable. I utilize <strong>Hermes 3</strong> specifically because its open-reasoning weights allow for more honest internal monologues.</p><pre><code>// Example Internal Trace Loop
-[Objective] Analyze patient data for SOC2 compliance anomalies.
-[Monologue] I need to verify the encryption headers. 
-[Action] READ_DATABASE_SCHEMA
-[Observation] Error: Unauthorized.
-[Reasoning] My previous assumption about the API key scope was incorrect. 
-[Correction] Re-authenticating via the secure edge bridge...</code></pre><h2>Engineering the Loop</h2><p>Xibalba Solutions doesn't just "prompt" agents. I engineer <strong>Autonomous Feedback Pipelines</strong>. This involves three core layers:</p><li><strong>The Monitor:</strong> A low-latency SLM that watches the primary agent's output for logical drift.</li>
-<li><strong>The Memory:</strong> A persistent PARA-structured vector store that provides long-term context.</li>
-<li><strong>The Reified Reasoning:</strong> A specific fine-tuning pass that encourages the model to "show its work" before executing any tool call.</li><p>By keeping these loops <strong>local</strong>, I ensure that even the agent's internal failures—which are necessary for learning—never touch the public cloud.</p>
+        {{content}}
 
         <div style="margin-top: 4rem; padding: 2rem; border: 1px solid var(--violet-glow); border-radius: 8px; background: rgba(139, 92, 246, 0.05);">
             <h4 style="margin-bottom: 1rem;">Want to see this in action?</h4>

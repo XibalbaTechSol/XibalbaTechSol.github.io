@@ -50,6 +50,31 @@ The site is built with a high-fidelity, privacy-first aesthetic, featuring immer
     ```
     Visit `http://localhost:8000` in your browser.
 
+### Blog Management
+
+The "Intel" section is managed via a custom technical foundry script. 
+
+1.  **Add a new post:**
+    Create a new `.md` file in `blog/src/` with the following frontmatter:
+    ```markdown
+    ---
+    title: "Your Post Title"
+    date: "YYYY-MM-DD"
+    category: "TECH/ARCHITECTURE/PRIVATE"
+    excerpt: "A short summary for the index page."
+    ---
+    Your content here...
+    ```
+
+2.  **Generate the blog:**
+    Run the management script to process Markdown into high-fidelity HTML and update the index:
+    ```bash
+    python3 manage_blog.py
+    ```
+
+3.  **Deploy:**
+    Commit and push the generated `.html` files in `blog/` and the updated `blog.html` to GitHub.
+
 ### Running Tests
 
 End-to-end validation is handled via Playwright:
