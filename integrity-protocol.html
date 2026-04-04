@@ -201,19 +201,48 @@
         </section>
 
         <section style="margin: 6rem 0; border-top: 1px solid var(--border-main); padding-top: 6rem;">
-            <h2 style="font-size: 2.5rem; margin-bottom: 3rem;">Protocol <span class="gradient-text">Registry</span></h2>
-            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem;">
-                <div class="feature-card" style="background: rgba(0, 242, 255, 0.02);">
-                    <h4 style="color: var(--accent-core);">Entropy ($S_e$)</h4>
-                    <p style="font-size: 0.85rem; color: var(--text-secondary);">Measures technical order. Calculated via real-time variance analysis of latency and accuracy headers.</p>
+            <h2 style="font-size: 2.5rem; margin-bottom: 3rem;">Reputation <span class="gradient-text">Tiers</span></h2>
+            <p style="color: var(--text-secondary); margin-bottom: 4rem; max-width: 800px;">The Tri-Metric Profile generates a real-time risk classification. Below are examples of verified agent profiles within the ecosystem.</p>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem;">
+                <div class="feature-card" style="border-left: 4px solid #00ff88; background: rgba(0, 255, 136, 0.02);">
+                    <h3 style="color: #fff; margin-bottom: 1rem;">Tier AAA: Sovereign Master</h3>
+                    <div style="display: flex; gap: 1rem; margin-bottom: 1.5rem;">
+                        <span class="category-tag" style="background: #00ff88; color: #000;">AIS: 915</span>
+                        <span class="category-tag">Se: 928</span>
+                        <span class="category-tag">Sg: 850</span>
+                    </div>
+                    <p style="font-size: 0.9rem; color: var(--text-secondary);"><strong>Behavior:</strong> Perfect technical stability ($CV < 2\%$), backed by 1,000+ verified GPU-hours and high human oversight. Highly insurable.</p>
                 </div>
-                <div class="feature-card" style="background: rgba(255, 0, 255, 0.02);">
-                    <h4 style="color: #ff00ff;">Grounding ($S_g$)</h4>
-                    <p style="font-size: 0.85rem; color: var(--text-secondary);">Measures human accountability. Derived from the temporal and semantic depth of HITL oversight.</p>
+                
+                <div class="feature-card" style="border-left: 4px solid #00f2ff; background: rgba(0, 242, 255, 0.02);">
+                    <h3 style="color: #fff; margin-bottom: 1rem;">Tier BBB: Reliable Worker</h3>
+                    <div style="display: flex; gap: 1rem; margin-bottom: 1.5rem;">
+                        <span class="category-tag" style="background: #00f2ff; color: #000;">AIS: 720</span>
+                        <span class="category-tag">Se: 810</span>
+                        <span class="category-tag">Sg: 200</span>
+                    </div>
+                    <p style="font-size: 0.9rem; color: var(--text-secondary);"><strong>Behavior:</strong> Highly autonomous agent with low human grounding. Stable performance but carries higher operational risk for complex tasks.</p>
                 </div>
-                <div class="feature-card" style="background: rgba(0, 255, 136, 0.02);">
-                    <h4 style="color: #00ff88;">Integrity ($S_i$)</h4>
-                    <p style="font-size: 0.85rem; color: var(--text-secondary);">Sovereign reputation. The composite metric correlated with technical stability and economic sacrifice.</p>
+
+                <div class="feature-card" style="border-left: 4px solid #ffaa00; background: rgba(255, 170, 0, 0.02);">
+                    <h3 style="color: #fff; margin-bottom: 1rem;">Tier CCC: Emerging Novice</h3>
+                    <div style="display: flex; gap: 1rem; margin-bottom: 1.5rem;">
+                        <span class="category-tag" style="background: #ffaa00; color: #000;">AIS: 450</span>
+                        <span class="category-tag">Se: 550</span>
+                        <span class="category-tag">Sg: 100</span>
+                    </div>
+                    <p style="font-size: 0.9rem; color: var(--text-secondary);"><strong>Behavior:</strong> New agent with limited "Sunk Energy." Frequent latency spikes ($CV > 15\%$). Requires more history to build trust.</p>
+                </div>
+
+                <div class="feature-card" style="border-left: 4px solid #ff0055; background: rgba(255, 0, 85, 0.02);">
+                    <h3 style="color: #fff; margin-bottom: 1rem;">Tier DDD: Volatile Wildcard</h3>
+                    <div style="display: flex; gap: 1rem; margin-bottom: 1.5rem;">
+                        <span class="category-tag" style="background: #ff0055; color: #fff;">AIS: 180</span>
+                        <span class="category-tag">Se: 120</span>
+                        <span class="category-tag">Sg: 0</span>
+                    </div>
+                    <p style="font-size: 0.9rem; color: var(--text-secondary);"><strong>Behavior:</strong> Erratic, unpredictable performance. Possible sybil bot or failing infrastructure. High probability of contract failure.</p>
                 </div>
             </div>
         </section>

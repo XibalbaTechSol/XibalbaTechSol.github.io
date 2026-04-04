@@ -82,7 +82,45 @@
             <br><code>Si = Base_Rep * Stability_Drag * Grounding_Boost</code></p>
         </div>
 
-        <h2>4. System Plumbing: The Hybrid Oracle</h2>
+        <h2>4. Reputation Tiers: Risk Classification</h2>
+        <table class="comparison-table">
+            <thead>
+                <tr>
+                    <th>Tier</th>
+                    <th>AIS Range</th>
+                    <th>Risk Profile</th>
+                    <th>Primary Usage</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>AAA</strong></td>
+                    <td>900 - 1000</td>
+                    <td>Sovereign / Verified</td>
+                    <td>High-Value Finance, Legal, Medical</td>
+                </tr>
+                <tr>
+                    <td><strong>BBB</strong></td>
+                    <td>600 - 899</td>
+                    <td>Autonomous / Reliable</td>
+                    <td>Data Scraping, General Research</td>
+                </tr>
+                <tr>
+                    <td><strong>CCC</strong></td>
+                    <td>300 - 599</td>
+                    <td>Emerging / Unaudited</td>
+                    <td>Low-Stakes Micro-tasks</td>
+                </tr>
+                <tr>
+                    <td><strong>DDD</strong></td>
+                    <td>0 - 299</td>
+                    <td>Volatile / Wildcard</td>
+                    <td>Flagged for Manual Review</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>5. System Plumbing: The Hybrid Oracle</h2>
         <p>The protocol operates as a closed-loop feedback system between the physical execution of AI and the immutable Ethereum ledger:</p>
         <ul>
             <li><strong>Ingestion:</strong> The Xibalba SDK intercepts model response headers and ships signed metadata to our Data Ingestor.</li>
@@ -90,21 +128,22 @@
             <li><strong>Finality:</strong> Verified AIS hashes are committed to the on-chain Reputation Registry via an Ethereum L2 (Base).</li>
         </ul>
 
-        <h2>5. The XAO: Autonomous Oracle</h2>
+        <h2>6. The XAO: Autonomous Oracle</h2>
         <p>The Supreme Court of Xibalba is the <strong>Autonomous Oracle (XAO)</strong>. It operates through a <strong>Dual-Witness Handshake</strong>, requiring both provider and customer to ship signed metadata to our data ingestor. Discrepancies trigger immediate Reputation Slashing via our Ethereum L2 smart contracts.</p>
+<h2>7. Tokenomics: INTG</h2>
+<p><strong>INTG</strong> is the ERC-20 utility token powering the ecosystem. It is used for staking, slashing, and settlement. The protocol enforces a deflationary economic model tied directly to the volume of AI trust.</p>
 
-        <h2>6. Tokenomics: INTG</h2>
-        <p><strong>INTG</strong> is the ERC-20 utility token powering the ecosystem. It is used for staking, slashing, and settlement. The protocol enforces a deflationary economic model tied directly to the volume of AI trust.</p>
-        
-        <h3>6.1 Verification Revenue Split</h3>
-        <p>A mandatory <strong>0.5% (50 BPS)</strong> fee is applied to every verified transaction. This fee is distributed as follows:</p>
-        <ul>
-            <li><strong>50% (25 BPS):</strong> Invoiced to Xibalba Solutions as an operational verification fee.</li>
-            <li><strong>50% (25 BPS):</strong> Permanently <strong>Burned</strong> from the supply, creating a hard-coded link between protocol utility and token scarcity.</li>
-        </ul>
+<h3>7.1 Verification Revenue Split</h3>
+<p>A mandatory <strong>0.5% (50 BPS)</strong> fee is applied to every verified transaction. This fee is distributed as follows:</p>
+<ul>
+    <li><strong>50% (25 BPS):</strong> Invoiced to Xibalba Solutions as an operational verification fee.</li>
+    <li><strong>50% (25 BPS):</strong> Permanently <strong>Burned</strong> from the supply, creating a hard-coded link between protocol utility and token scarcity.</li>
+</ul>
 
-        <h3>6.2 Audit Tiers</h3>
-        <table class="comparison-table" style="font-size: 0.9rem;">
+<h3>7.2 Audit Tiers</h3>
+...
+<h2>8. Conclusion</h2>
+
             <thead>
                 <tr>
                     <th>Tier</th>
