@@ -174,7 +174,15 @@
         <!-- Product Ecosystem: Hermes Swarm -->
         <section style="margin: 6rem 0; border-top: 1px solid var(--border-main); padding-top: 6rem;">
             <h2 style="font-size: 2.5rem; margin-bottom: 3rem;">Product <span class="gradient-text">Ecosystem</span>: Hermes Swarm</h2>
-            <div style="display: grid; grid-template-columns: 1.5fr 1fr; gap: 4rem; align-items: center;">
+            <div style="display: grid; grid-template-columns: 1fr 1.5fr; gap: 4rem; align-items: center;">
+                <div class="mermaid" style="background: rgba(255,255,255,0.02); padding: 2rem; border-radius: 12px; border: 1px solid #333;">
+                    graph TD
+                        A[Query] --> B{AIS Filter}
+                        B -->|"AIS < 600"| C[Discard]
+                        B -->|"AIS > 600"| D[Join Swarm]
+                        D --> E[Weighted Voting]
+                        E -->|Bayesian Synthesis| F[Final Prediction]
+                </div>
                 <div>
                     <p style="color: var(--gray-400); font-size: 1.1rem; line-height: 1.8; margin-bottom: 2rem;">
                         The Integrity Protocol is the foundational engine for <strong>Hermes Swarm</strong>, our flagship forecasting platform. By utilizing AI agent swarms to predict geopolitical and economic volatility, we require a mechanism to distinguish between "noise" and "signal."
@@ -190,14 +198,6 @@
                         </li>
                     </ul>
                     <a href="./hermes-swarm.html" class="btn-outline" style="margin-top: 2rem;">Explore Hermes Swarm →</a>
-                </div>
-                <div class="mermaid" style="background: rgba(255,255,255,0.02); padding: 2rem; border-radius: 12px; border: 1px solid #333;">
-                    graph TD
-                        A[Query] --> B{AIS Filter}
-                        B -->|"AIS < 600"| C[Discard]
-                        B -->|"AIS > 600"| D[Join Swarm]
-                        D --> E[Weighted Voting]
-                        E -->|Bayesian Synthesis| F[Final Prediction]
                 </div>
             </div>
         </section>
