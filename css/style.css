@@ -223,34 +223,97 @@ nav {
     opacity: 1;
 }
 
-/* Blog Redesign */
-.blog-grid {
+/* Blog & Editorial UI */
+.blog-hero {
+    padding: 15rem 0 8rem;
+    text-align: left;
+    border-bottom: 1px solid var(--border-main);
+}
+
+.blog-featured-card {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 3rem;
-    margin-bottom: 6rem;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 6rem;
+    align-items: center;
 }
 
-.blog-card {
-    border-radius: 32px;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-}
-
-.blog-card-meta {
-    display: flex;
-    gap: 1rem;
-    font-size: 0.8rem;
-    color: var(--text-muted);
+.category-tag {
+    display: inline-block;
+    padding: 0.4rem 1rem;
+    background: rgba(0, 242, 255, 0.1);
+    color: var(--accent-core);
+    border: 1px solid rgba(0, 242, 255, 0.2);
+    border-radius: 100px;
+    font-size: 0.75rem;
+    font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.1em;
     margin-bottom: 1.5rem;
 }
 
-.category-tag {
-    color: var(--accent-core);
-    font-weight: 600;
+.blog-grid-modern {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 3rem;
+    margin: 6rem 0;
+}
+
+.blog-card-v2 {
+    background: var(--bg-card);
+    border: 1px solid var(--border-main);
+    border-radius: 24px;
+    padding: 2.5rem;
+    transition: var(--transition-smooth);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    cursor: pointer;
+}
+
+.blog-card-v2:hover {
+    border-color: var(--accent-core);
+    transform: translateY(-8px);
+    background: rgba(0, 242, 255, 0.02);
+}
+
+.blog-card-v2 h3 {
+    font-size: 1.8rem;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+}
+
+.blog-card-v2 p {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    flex-grow: 1;
+}
+
+/* Article Reading Experience */
+.article-header {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 15rem 2rem 6rem;
+    text-align: center;
+}
+
+.article-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 2rem 10rem;
+    font-size: 1.15rem;
+    line-height: 1.9;
+    color: var(--text-secondary);
+}
+
+.article-content h2, .article-content h3 {
+    color: #fff;
+    margin-top: 4rem;
+    margin-bottom: 1.5rem;
+}
+
+.article-content p {
+    margin-bottom: 2rem;
 }
 
 /* Buttons */
