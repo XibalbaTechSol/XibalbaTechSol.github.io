@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Integrity Protocol | Xibalba Solutions</title>
+    <meta name="description" content="The AIS v7.0 Tri-Metric Reputation Protocol. Measuring Entropy, Grounding, and Integrity for the Agentic Web.">
+    <link rel="icon" href="./favicon.ico" sizes="any">
+    <link rel="stylesheet" href="./css/style.css">
+    <style>
+        .metric-hero {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin: 4rem 0;
+        }
+        .metric-visual {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--border-main);
+            padding: 2.5rem;
+            border-radius: 12px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        .metric-visual:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-core);
+        }
+        .metric-value {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+            font-family: 'Outfit', sans-serif;
+        }
+        .metric-label {
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+        .architecture-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            margin: 6rem 0;
+        }
+        .code-block {
+            background: #000;
+            padding: 2rem;
+            border-radius: 8px;
+            border: 1px solid #333;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.9rem;
+            color: #00ff88;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body class="theme-obsidian">
+
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="./XibalbaSolutionsLogo.png" alt="Xibalba Solutions">
+            </a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="ai-agents.html">Agents</a>
+                <a href="blog.html">Blog</a>
+                <a href="integrity-protocol.html" class="active">Integrity</a>
+                <a href="contact.html" class="btn-outline">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container" style="padding-top: 8rem;">
+        <section style="text-align: center; max-width: 900px; margin: 0 auto;">
+            <h1 style="font-size: 4rem; line-height: 1; margin-bottom: 2rem;">The <span class="gradient-text">Integrity</span> Protocol</h1>
+            <p style="font-size: 1.2rem; color: var(--text-secondary);">The first actuarial-grade trust layer for the Agentic Web. AIS v7.0 provides a three-dimensional view of AI reputation through technical stability, human accountability, and economic sacrifice.</p>
+        </section>
+
+        <div class="metric-hero">
+            <div class="metric-visual">
+                <div class="metric-value" style="color: #00f2ff;">928</div>
+                <div class="metric-label">Entropy Score</div>
+                <p style="font-size: 0.85rem; margin-top: 1rem; color: var(--text-muted);">Predictability & Behavioral Order</p>
+            </div>
+            <div class="metric-visual">
+                <div class="metric-value" style="color: #ff00ff;">850</div>
+                <div class="metric-label">Grounding Score</div>
+                <p style="font-size: 0.85rem; margin-top: 1rem; color: var(--text-muted);">Human-in-the-Loop Accountability</p>
+            </div>
+            <div class="metric-visual">
+                <div class="metric-value" style="color: #00ff88;">915</div>
+                <div class="metric-label">Integrity Score</div>
+                <p style="font-size: 0.85rem; margin-top: 1rem; color: var(--text-muted);">Comprehensive Reputation Metric</p>
+            </div>
+        </div>
+
+        <section class="architecture-grid">
+            <div>
+                <h2 style="font-size: 2.5rem; margin-bottom: 1.5rem;">The Physics of <span class="gradient-text">Trust.</span></h2>
+                <p style="margin-bottom: 1.5rem;">Standard reputation systems rely on "likes" and "votes"—metrics easily gamed by bot farms. The Integrity Protocol anchors trust in physical and mathematical reality.</p>
+                <ul style="list-style: none; padding: 0;">
+                    <li style="margin-bottom: 1rem;"><strong>⚡ Sunk Energy:</strong> We verify GPU-hours using our proprietary Cost-of-Existence (COE) lookup tables.</li>
+                    <li style="margin-bottom: 1rem;"><strong>🌀 Behavioral Entropy:</strong> We analyze the variance in latency and accuracy to detect infrastructure instability.</li>
+                    <li style="margin-bottom: 1rem;"><strong>🤝 Dual-Witness:</strong> Every transaction is verified by both the provider and the customer, eliminating self-reporting bias.</li>
+                </ul>
+            </div>
+            <div class="code-block">
+# AIS v7.0 Tri-Metric Calculation
+def calculate_trust(metrics):
+    stability = exp(-1.5 * metrics.variance)
+    grounding = metrics.hgi * 1000
+    integrity = base_rep * stability * (1.0 + metrics.hgi * 0.2)
+    
+    return {
+        "Se": stability * 1000,
+        "Sg": grounding,
+        "Si": integrity
+    }
+            </div>
+        </section>
+
+        <section style="padding: 6rem 0; border-top: 1px solid var(--border-main);">
+            <h2 style="text-align: center; margin-bottom: 4rem;">For the <span class="gradient-text">Enterprise</span></h2>
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 3rem;">
+                <div class="feature-card">
+                    <h3>Insurance APIs</h3>
+                    <p style="color: var(--text-muted);">Actuarial-grade data feeds for insurers to price AI failure policies and malpractice coverage.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Autonomous SDK</h3>
+                    <p style="color: var(--text-muted);">Zero-effort integration for developers. Automatically verify truth by tapping into model headers.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>On-Chain Slashing</h3>
+                    <p style="color: var(--text-muted);">Economic enforcement via Ethereum L2. Collateral is burned or redistributed upon verified failure.</p>
+                </div>
+            </div>
+        </section>
+
+        <section style="text-align: center; padding: 8rem 0;">
+            <h2 style="margin-bottom: 2rem;">Ready to Anchor Your Intelligence?</h2>
+            <a href="contact.html" class="btn">Request a Deep-Dive Audit</a>
+            <p style="margin-top: 2rem;"><a href="blog/integrity-coin-reputation.html" style="color: var(--accent-core);">Read the Full Whitepaper →</a></p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-bottom">
+                &copy; 2026 Xibalba Solutions. The Gold Standard for AI Trust.
+            </div>
+        </div>
+    </footer>
+
+    <script src="./js/main.js"></script>
+</body>
+</html>
