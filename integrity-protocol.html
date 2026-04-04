@@ -200,20 +200,74 @@
             <p style="text-align: center; color: var(--text-muted); margin-top: 2rem; font-size: 0.9rem;">Comprehensive Tri-Metric Correlation Algorithm (AIS v7.0)</p>
         </section>
 
-        <section style="padding: 6rem 0; border-top: 1px solid var(--border-main);">
-            <h2 style="text-align: center; margin-bottom: 4rem;">For the <span class="gradient-text">Enterprise</span></h2>
-            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 3rem;">
-                <div class="feature-card">
-                    <h3>Insurance APIs</h3>
-                    <p style="color: var(--text-muted);">Actuarial-grade data feeds for insurers to price AI failure policies and malpractice coverage.</p>
+        <section style="margin: 6rem 0; border-top: 1px solid var(--border-main); padding-top: 6rem;">
+            <h2 style="font-size: 2.5rem; margin-bottom: 3rem;">Protocol <span class="gradient-text">Registry</span></h2>
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem;">
+                <div class="feature-card" style="background: rgba(0, 242, 255, 0.02);">
+                    <h4 style="color: var(--accent-core);">Entropy ($S_e$)</h4>
+                    <p style="font-size: 0.85rem; color: var(--text-secondary);">Measures technical order. Calculated via real-time variance analysis of latency and accuracy headers.</p>
                 </div>
-                <div class="feature-card">
-                    <h3>Autonomous SDK</h3>
-                    <p style="color: var(--text-muted);">Zero-effort integration for developers. Automatically verify truth by tapping into model headers.</p>
+                <div class="feature-card" style="background: rgba(255, 0, 255, 0.02);">
+                    <h4 style="color: #ff00ff;">Grounding ($S_g$)</h4>
+                    <p style="font-size: 0.85rem; color: var(--text-secondary);">Measures human accountability. Derived from the temporal and semantic depth of HITL oversight.</p>
                 </div>
-                <div class="feature-card">
-                    <h3>On-Chain Slashing</h3>
-                    <p style="color: var(--text-muted);">Economic enforcement via Ethereum L2. Collateral is burned or redistributed upon verified failure.</p>
+                <div class="feature-card" style="background: rgba(0, 255, 136, 0.02);">
+                    <h4 style="color: #00ff88;">Integrity ($S_i$)</h4>
+                    <p style="font-size: 0.85rem; color: var(--text-secondary);">Sovereign reputation. The composite metric correlated with technical stability and economic sacrifice.</p>
+                </div>
+            </div>
+        </section>
+
+        <section style="margin: 6rem 0; border-top: 1px solid var(--border-main); padding-top: 6rem;">
+            <h2 style="font-size: 2.5rem; margin-bottom: 3rem;">Monetization <span class="gradient-text">Framework</span></h2>
+            <p style="color: var(--text-secondary); margin-bottom: 3rem; max-width: 800px;">Xibalba Solutions acts as the Supreme Court of the Agentic Web. Our revenue model is built on automated verification and risk-as-a-service.</p>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem;">
+                <div style="border-left: 2px solid var(--accent-core); padding-left: 2rem;">
+                    <h3 style="color: #fff; margin-bottom: 1rem;">Verification Fees</h3>
+                    <p style="color: var(--text-secondary); font-size: 0.95rem;">A <strong>0.5% (50 BPS)</strong> protocol fee is applied to all INTG transactions. 50% of this fee is retained by Xibalba Solutions, while 50% is permanently burned to drive INTG scarcity.</p>
+                </div>
+                <div style="border-left: 2px solid var(--secondary-core); padding-left: 2rem;">
+                    <h3 style="color: #fff; margin-bottom: 1rem;">Tiered Audit Subscriptions</h3>
+                    <p style="color: var(--text-secondary); font-size: 0.95rem;">Agents can purchase **Platinum Verification** (1,000 INTG/yr) to unlock high-priority verification, ZK-proof generation, and a 20% AIS grounding boost.</p>
+                </div>
+                <div style="border-left: 2px solid #fff; padding-left: 2rem;">
+                    <h3 style="color: #fff; margin-bottom: 1rem;">Insurance Oracle API</h3>
+                    <p style="color: var(--text-secondary); font-size: 0.95rem;">Institutional underwriters pay SaaS fees to access our actuarial risk tiers (AAA to CCC) for pricing AI-related insurance policies.</p>
+                </div>
+                <div style="border-left: 2px solid var(--accent-core); padding-left: 2rem;">
+                    <h3 style="color: #fff; margin-bottom: 1rem;">Dispute Resolution</h3>
+                    <p style="color: var(--text-secondary); font-size: 0.95rem;">A manual arbitration fee of <strong>500 INTG</strong> is applied to resolve high-value Dual-Witness mismatches detected by the XAO Oracle.</p>
+                </div>
+            </div>
+        </section>
+
+        <section style="margin: 6rem 0; border-top: 1px solid var(--border-main); padding-top: 6rem;">
+            <h2 style="font-size: 2.5rem; margin-bottom: 3rem;">SDK <span class="gradient-text">Manifest</span></h2>
+            <p style="color: var(--text-secondary); margin-bottom: 3rem;">The Integrity SDK provides zero-effort telemetry interception for autonomous agents. Supported in Python and Node.js.</p>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
+                <div>
+                    <h4 style="color: #fff; margin-bottom: 1rem;">1. Autonomous Interceptor</h4>
+                    <div class="code-block" style="font-size: 0.8rem; padding: 1.5rem;">
+# Python: Auto-track OpenAI inferences
+sdk = XibalbaIntegritySDK("0xAgentAddr")
+sdk.track_openai(openai_client)
+
+# Every completion is now autonomously 
+# verified by the XAO Oracle.
+                    </div>
+                </div>
+                <div>
+                    <h4 style="color: #fff; margin-bottom: 1rem;">2. HITL Grounding Bridge</h4>
+                    <div class="code-block" style="font-size: 0.8rem; padding: 1.5rem; color: #ff00ff;">
+# Report a human oversight event
+sdk.report_human_grounding(
+    task_id="tx_99",
+    was_edited=True,
+    edit_distance=0.45
+)
+                    </div>
                 </div>
             </div>
         </section>
