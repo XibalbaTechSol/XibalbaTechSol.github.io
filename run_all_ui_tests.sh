@@ -21,7 +21,8 @@ $PYTEST "$TEST_DIR" -v
 # 2. Perform Visual Artifact Capture (Screenshots)
 echo -e "\n[*] Phase 2: Generating Visual Evidence (Screenshots)..."
 
-pages=("index.html" "ai-agents.html" "integrity-protocol.html" "whitepaper.html" "business-plan.html" "blog.html")
+# Only capture active HTML pages (Whitepaper/Business Plan are now PDFs)
+pages=("index.html" "ai-agents.html" "integrity-protocol.html" "blog.html")
 
 for page in "${pages[@]}"; do
     echo "  -> Capturing $page..."
@@ -33,8 +34,10 @@ with sync_playwright() as p:
     page = browser.new_page(viewport={'width': 1440, 'height': 900})
     abs_path = os.path.abspath('$page')
     page.goto(f'file://{abs_path}')
-    # Wait for Mermaid and KaTeX to render
-    page.wait_for_timeout(2000) 
+    # Inject style to force visibility for screenshots
+    page.add_style_tag(content='.animate-in { opacity: 1 !important; transform: none !important; }')
+    # Wait for Mermaid and KaTeX
+    page.wait_for_timeout(3000) 
     page.screenshot(path='$SCREENSHOT_DIR/${page%.html}.png', full_page=True)
     browser.close()
 "
