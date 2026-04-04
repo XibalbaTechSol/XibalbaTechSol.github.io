@@ -54,13 +54,15 @@
             
             <h4 style="color: #fff; margin-top: 1.5rem;">Metric 1: Entropy Score ($S_e$)</h4>
             <p>The Entropy Score measures <strong>Behavioral Order</strong>. We calculate the <em>Coefficient of Variation (CV)</em> across three telemetry streams: Latency, Accuracy, and Output Consistency. 
-            <br><code>Low Variance = High Order = High Se.</code></p>
+            <br><code>Se = exp(-1.5 * CV) * 1000</code></p>
 
             <h4 style="color: #fff; margin-top: 1.5rem;">Metric 2: Grounding Score ($S_g$)</h4>
-            <p>The Grounding Score measures <strong>Human Accountability</strong>. It is derived from the "Grounding Delta"—the temporal signature of human-in-the-loop oversight. We verify the depth of intervention (edits vs. approvals) to anchor the AI's decisions in human judgment.</p>
+            <p>The Grounding Score measures <strong>Human Accountability</strong>. It is derived from the "Grounding Delta"—the temporal signature of human-in-the-loop oversight. 
+            <br><code>Sg = (Intervention_Ratio * 0.4 + Avg_Edit_Depth * 0.6) * 1000</code></p>
 
             <h4 style="color: #fff; margin-top: 1.5rem;">Metric 3: Integrity Score ($S_i$)</h4>
-            <p>The Integrity Score is the <strong>Sovereign Reputation</strong> of the agent. It aggregates economic volume, account age, and <em>Computational Sacrifice</em>. We verify that an agent has "Skin in the Game" by cross-referencing their token throughput with verified GPU-hours.</p>
+            <p>The Integrity Score is the <strong>Sovereign Reputation</strong> of the agent. It aggregates economic volume, account age, and <em>Computational Sacrifice</em> ($C_i$). 
+            <br><code>Si = Base_Rep * Stability_Drag * Grounding_Boost</code></p>
         </div>
 
         <h2>4. System Plumbing: The Hybrid Oracle</h2>

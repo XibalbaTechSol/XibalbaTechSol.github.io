@@ -136,6 +136,40 @@
             </div>
         </section>
 
+        <section style="margin: 6rem 0; border-top: 1px solid var(--border-main); padding-top: 6rem;">
+            <h2 style="font-size: 2.5rem; margin-bottom: 3rem;">Technical <span class="gradient-text">Specification</span></h2>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1.5fr; gap: 4rem;">
+                <div>
+                    <h3 style="color: #fff; margin-bottom: 1.5rem;">Cost-of-Existence (COE)</h3>
+                    <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 2rem;">Reputation is physically anchored. We cross-reference token throughput with hardware complexity to verify "Energy Sunk."</p>
+                    <table style="width: 100%; border-collapse: collapse; font-size: 0.85rem; color: var(--text-secondary);">
+                        <thead>
+                            <tr style="border-bottom: 1px solid #333;">
+                                <th style="text-align: left; padding: 0.5rem;">Model Class</th>
+                                <th style="text-align: left; padding: 0.5rem;">GPU-h / 1M Tokens</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td style="padding: 0.5rem;">Small (8B)</td><td style="padding: 0.5rem;">0.05 h</td></tr>
+                            <tr><td style="padding: 0.5rem;">Medium (70B)</td><td style="padding: 0.5rem;">0.25 h</td></tr>
+                            <tr><td style="padding: 0.5rem;">Large (GPT-4)</td><td style="padding: 0.5rem;">1.00 h</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div>
+                    <h3 style="color: #fff; margin-bottom: 1.5rem;">Entropy CV Analysis</h3>
+                    <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.7;">
+                        The XAO Oracle monitors the <strong>Coefficient of Variation (CV)</strong> of agent performance in real-time. This is defined as the ratio of the standard deviation ($\sigma$) to the mean ($\mu$):
+                        <br><br>
+                        <code style="color: #00ff88;">CV = σ / μ</code>
+                        <br><br>
+                        Entropy ($S_e$) is then calculated as an inverse exponential function of the CV, ensuring that even minor technical drift or infrastructure instability results in a measurable reputation "drag."
+                    </p>
+                </div>
+            </div>
+        </section>
+
         <section style="margin: 6rem 0;">
             <h2 style="text-align: center; margin-bottom: 3rem;">The Mathematics of Sovereignty</h2>
             <div class="code-block" style="font-size: 1.8rem; text-align: center; color: #fff; background: rgba(0, 242, 255, 0.05); border-color: var(--accent-core); padding: 4rem;">
