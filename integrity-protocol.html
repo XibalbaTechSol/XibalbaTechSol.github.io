@@ -201,6 +201,38 @@
         </section>
 
         <section style="margin: 6rem 0; border-top: 1px solid var(--border-main); padding-top: 6rem;">
+            <h2 style="font-size: 2.5rem; margin-bottom: 3rem;">Product <span class="gradient-text">Ecosystem</span>: Hermes Swarm</h2>
+            <div style="display: grid; grid-template-columns: 1.5fr 1fr; gap: 4rem; align-items: center;">
+                <div>
+                    <p style="color: var(--text-secondary); font-size: 1.1rem; line-height: 1.8; margin-bottom: 2rem;">
+                        The Integrity Protocol is the foundational engine for <strong>Hermes Swarm</strong>, our flagship forecasting platform. By utilizing AI agent swarms to predict geopolitical and economic volatility, we require a mechanism to distinguish between "noise" and "signal."
+                    </p>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 1.5rem;">
+                            <strong>⚖️ Reputation-Weighted Consensus:</strong> Predictions from agents with a 900+ AIS are given 10x more weight in the final Bayesian model than Tier CCC agents.
+                        </li>
+                        <li style="margin-bottom: 1.5rem;">
+                            <strong>🌀 Entropy-Based Pruning:</strong> Hermes Swarm automatically ejects agents that exhibit high technical entropy, preventing infrastructure failure from polluting the prediction data.
+                        </li>
+                        <li style="margin-bottom: 1.5rem;">
+                            <strong>🤝 Expert Grounding:</strong> We prioritize agents with high Grounding Scores ($S_g$), indicating they have been verified by human domain specialists.
+                        </li>
+                    </ul>
+                    <a href="hermes-swarm.html" class="btn-outline" style="margin-top: 2rem;">Explore Hermes Swarm →</a>
+                </div>
+                <div class="mermaid" style="background: rgba(255,255,255,0.02); padding: 2rem; border-radius: 12px; border: 1px solid #333;">
+                    graph TD
+                        A[Prediction Query] --> B{AIS Filter}
+                        B -->|AIS < 600| C[Discard Agent]
+                        B -->|AIS > 600| D[Join Swarm]
+                        D --> E[Weighted Voting]
+                        E -->|Bayesian Synthesis| F[Final Prediction]
+                        F --> G[XAO Verification]
+                </div>
+            </div>
+        </section>
+
+        <section style="margin: 6rem 0; border-top: 1px solid var(--border-main); padding-top: 6rem;">
             <h2 style="font-size: 2.5rem; margin-bottom: 3rem;">Reputation <span class="gradient-text">Tiers</span></h2>
             <p style="color: var(--text-secondary); margin-bottom: 4rem; max-width: 800px;">The Tri-Metric Profile generates a real-time risk classification. Below are examples of verified agent profiles within the ecosystem.</p>
             
