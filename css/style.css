@@ -717,3 +717,54 @@ footer::before {
         transform: none;
     }
 }
+/* --- 🌊 MERMAID SYSTEM (2-Color Aesthetic) --- */
+.mermaid {
+    background: rgba(0, 0, 0, 0.4) !important;
+    border-radius: 12px;
+    padding: 2rem !important;
+    margin: 2rem 0 !important;
+    font-family: var(--font-primary) !important;
+}
+
+.mermaid svg {
+    max-width: 100% !important;
+    height: auto !important;
+}
+
+/* Nodes: Electric Cyan */
+.mermaid .node rect, 
+.mermaid .node circle, 
+.mermaid .node polygon, 
+.mermaid .node path {
+    fill: rgba(0, 242, 255, 0.05) !important;
+    stroke: var(--color-brand-primary) !important;
+    stroke-width: 2px !important;
+}
+
+.mermaid .node .label, 
+.mermaid .node foreignObject {
+    color: var(--color-brand-primary) !important;
+    font-weight: 500 !important;
+}
+
+/* Edges: Hazard Yellow */
+.mermaid .edgePath path {
+    stroke: var(--color-warning) !important;
+    stroke-width: 2px !important;
+}
+
+.mermaid .markerPath {
+    fill: var(--color-warning) !important;
+}
+
+.mermaid .edgeLabel {
+    background-color: var(--absolute-black) !important;
+    color: var(--color-warning) !important;
+}
+
+/* Subgraph/Clusters */
+.mermaid .cluster rect {
+    fill: rgba(255, 255, 255, 0.02) !important;
+    stroke: rgba(255, 255, 255, 0.1) !important;
+    stroke-dasharray: 5,5;
+}

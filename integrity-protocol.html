@@ -10,23 +10,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body, {delimiters: [{left: '$$', right: '$$', display: true}, {left: '$', right: '$', display: false}]});"></script>
-    <script src="https://cdn.jsdelivr.net/npm/mermaid@10.6.1/dist/mermaid.min.js"></script>
-    <script>mermaid.initialize({
-        startOnLoad: true,
-        theme: 'base',
-        themeVariables: {
-            darkMode: true,
-            primaryColor: '#00F2FF',
-            primaryTextColor: '#000',
-            primaryBorderColor: '#00F2FF',
-            lineColor: '#FFD600',
-            secondaryColor: '#FFD600',
-            tertiaryColor: '#1e293b',
-            edgeLabelBackground: '#000',
-            nodeBorder: '#00F2FF',
-            fontFamily: 'Raleway'
-        }
-    });</script>
+    
+    
     <base href="./">
     <style>
         .metric-hero { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin: 4rem 0; }
@@ -65,6 +50,7 @@
         <!-- The Crisis of Chaos -->
         <section style="margin: 8rem 0; display: grid; grid-template-columns: 1fr 1.2fr; gap: 6rem; align-items: center;">
             <div class="mermaid" style="background: rgba(255,255,255,0.02); padding: 2rem; border-radius: 12px; border: 1px solid #333;">
+
 graph TD
                     A["The Trust Vacuum"] --> B{Standard Rep Systems}
                     B -->|Gaming| C[Bot Farms]
@@ -76,6 +62,7 @@ graph TD
                     F --> G((INTEGRITY PROTOCOL))
                     G --> H[Physical Grounding]
                     G --> I[Mathematical Order]
+
 </div>
             <div>
                 <h2 style="font-size: 2.5rem; margin-bottom: 1.5rem;">The Crisis of <span class="gradient-text">Chaos.</span></h2>
@@ -137,6 +124,7 @@ graph TD
                 </ul>
             </div>
             <div class="mermaid" style="background: rgba(255,255,255,0.02); padding: 2rem; border-radius: 12px; border: 1px solid #333; max-width: 500px; margin-left: auto;">
+
 graph TD
                     A[SDK Ingest] --> B{XAO Engine}
                     B -->|Entropy| Se[Score]
@@ -146,6 +134,7 @@ graph TD
                     C --> D[Ethereum L2]
                     D -->|Slash| E[Bond Burn]
                     E -->|Feedback| A
+
 </div>
         </section>
 
@@ -191,12 +180,14 @@ graph TD
             <h2 style="font-size: 2.5rem; margin-bottom: 3rem;">Product <span class="gradient-text">Ecosystem</span>: Hermes Swarm</h2>
             <div style="display: grid; grid-template-columns: 1fr 1.5fr; gap: 4rem; align-items: center;">
                 <div class="mermaid" style="background: rgba(255,255,255,0.02); padding: 2rem; border-radius: 12px; border: 1px solid #333;">
+
 graph TD
                         A[Query] --> B{AIS Filter}
                         B -->|"AIS < 600"| C[Discard]
                         B -->|"AIS > 600"| D[Join Swarm]
                         D --> E[Weighted Voting]
                         E -->|Bayesian Synthesis| F[Final Prediction]
+
 </div>
                 <div>
                     <p style="line-height: 1.8; margin-bottom: 2rem;">
@@ -286,6 +277,7 @@ graph TD
                 <div>
                     <h3 style="color: #fff; margin-bottom: 1.5rem;">XAO Ingestor Pipeline</h3>
                     <div class="mermaid" style="background: #000; padding: 2rem; border-radius: 12px; border: 1px solid #333;">
+
 graph LR
                             A[SDK Webhook] --> B[JWT Verification]
                             B --> C[COE Cross-Check]
@@ -293,6 +285,7 @@ graph LR
                             D --> E{Reputation Update}
                             E -->|"AIS Delta"| F[Off-Chain DB]
                             E -->|Slash| G[L2 Registry]
+
 </div>
                 </div>
             </div>
@@ -467,5 +460,24 @@ sdk.report_human_grounding(task_id="tx_99", was_edited=True)
         </div>
     </footer>
     <script src="./js/main.js"></script>
+
+    <!-- Mermaid: High-Fidelity Vector Flowcharts -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10.6.1/dist/mermaid.min.js"></script>
+    <script>
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: 'base',
+            themeVariables: {
+                primaryColor: '#00F2FF',
+                primaryTextColor: '#00F2FF',
+                primaryBorderColor: '#00F2FF',
+                lineColor: '#FFD600',
+                secondaryColor: '#FFD600',
+                tertiaryColor: '#1e293b',
+                fontFamily: 'Raleway'
+            }
+        });
+    </script>
+    
 </body>
 </html>

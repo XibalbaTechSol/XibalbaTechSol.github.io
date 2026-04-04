@@ -51,6 +51,7 @@
 <li><strong>Latent Intent Extraction:</strong> Identifying what the user <em>actually</em> needs, even if the prompt is underspecified.</li>
 <li><strong>Recursive Reasoning Loops:</strong> Multiple internal "thought steps" that simulate potential outcomes.</li>
 <li><strong>Agentic Nuance:</strong> High-fidelity role-play and adherence to complex, multi-step system prompts.</li><div class="mermaid">
+
 graph TD
     User([User Prompt]) --> Hermes[Hermes 3 Reasoning Engine]
     subgraph "The Recursive Brain"
@@ -59,10 +60,12 @@ graph TD
     Loop -- "Ready" --> Intent[Final Intent]
     end
     Intent --> Output(Structured Plan)
+
 </div><h2>2. OpenClaw: The Omnichannel Runtime</h2><p>If Hermes is the brain, <strong>OpenClaw</strong> is the nervous system. It is the runtime environment that handles the "messy" reality of the external world. While Hermes <em>decides</em> what to do, OpenClaw <em>executes</em> the action across your infrastructure.</p><h3>Architectural Focus:</h3>
 <li><strong>State Persistence:</strong> Maintaining the context of a conversation across multiple platforms (Slack, CLI, Web).</li>
 <li><strong>Tool Orchestration:</strong> Securely calling APIs, running shell commands, and querying databases.</li>
 <li><strong>Sandbox Management:</strong> Executing code in isolated environments to ensure system safety.</li><div class="mermaid">
+
 graph LR
     Plan(Structured Plan) --> OpenClaw[OpenClaw Runtime]
     subgraph "The Nervous System"
@@ -71,7 +74,9 @@ graph LR
     OpenClaw --> Code[Python Sandbox]
     end
     Slack --> Success([Action Completed])
+
 </div><h2>3. The Unified Stack: Integrated Autonomy</h2><p>The true power of a Xibalba-engineered solution lies in the feedback loop between these two layers. When OpenClaw encounters an error (e.g., a database timeout), it doesn't just crash. It sends the error trace back to Hermes.</p><p>Hermes analyzes the trace, adjusts the original plan, and sends a new instruction to OpenClaw. This is the difference between a "script" and an "autonomous agent."</p><div class="mermaid">
+
 sequenceDiagram
     participant U as User
     participant H as Hermes 3 (Brain)
@@ -85,6 +90,7 @@ sequenceDiagram
     H->>H: Adjust Reasoning
     H->>O: New Instruction
     O->>U: Final Result
+
 </div></p><h2>Summary: Sovereignty through Specialization</h2><p>By separating the <strong>Reasoning</strong> (Hermes) from the <strong>Execution</strong> (OpenClaw), we ensure that your intelligence remains sovereign. You can swap out models, upgrade your hardware, or expand your toolset without rebuilding the entire agent.</p><p>If you are ready to move beyond basic wrappers and build a core intelligence layer that truly understands your business logic, <a href="../contact.html">reach out to Xibalba Solutions</a>.</p>
 
         <div style="margin-top: 4rem; padding: 2rem; border: 1px solid var(--color-brand-secondary-glow); border-radius: 8px; background: var(--color-brand-secondary-glow);">
@@ -122,23 +128,27 @@ sequenceDiagram
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
-    <script>mermaid.initialize({
-        startOnLoad: true,
-        theme: 'base',
-        themeVariables: {
-            darkMode: true,
-            primaryColor: '#00F2FF',
-            primaryTextColor: '#000',
-            primaryBorderColor: '#00F2FF',
-            lineColor: '#FFD600',
-            secondaryColor: '#FFD600',
-            tertiaryColor: '#1e293b',
-            edgeLabelBackground: '#000',
-            nodeBorder: '#00F2FF',
-            fontFamily: 'Raleway'
-        }
-    });</script>
+    
+    
     <script src="../js/main.js"></script>
+
+    <!-- Mermaid: High-Fidelity Vector Flowcharts -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10.6.1/dist/mermaid.min.js"></script>
+    <script>
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: 'base',
+            themeVariables: {
+                primaryColor: '#00F2FF',
+                primaryTextColor: '#00F2FF',
+                primaryBorderColor: '#00F2FF',
+                lineColor: '#FFD600',
+                secondaryColor: '#FFD600',
+                tertiaryColor: '#1e293b',
+                fontFamily: 'Raleway'
+            }
+        });
+    </script>
+    
 </body>
 </html>

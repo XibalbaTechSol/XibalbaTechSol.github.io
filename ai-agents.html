@@ -10,23 +10,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body, {delimiters: [{left: '$$', right: '$$', display: true}, {left: '$', right: '$', display: false}]});"></script>
-    <script src="https://cdn.jsdelivr.net/npm/mermaid@10.6.1/dist/mermaid.min.js"></script>
-    <script>mermaid.initialize({
-        startOnLoad: true,
-        theme: 'base',
-        themeVariables: {
-            darkMode: true,
-            primaryColor: '#00F2FF',
-            primaryTextColor: '#000',
-            primaryBorderColor: '#00F2FF',
-            lineColor: '#FFD600',
-            secondaryColor: '#FFD600',
-            tertiaryColor: '#1e293b',
-            edgeLabelBackground: '#000',
-            nodeBorder: '#00F2FF',
-            fontFamily: 'Raleway'
-        }
-    });</script>
+    
+    
     <base href="./">
     <style>
         .product-section { padding: 12rem 0; border-bottom: 1px solid var(--border-main); }
@@ -97,6 +82,7 @@
                 </div>
                 <div class="mermaid-container">
                     <div class="mermaid">
+
 graph TD
                             START["Contract Initialization"] -->|"Lock INTG"| BOND["Sovereign Bond Registry"]
                             BOND --> EXEC["Agent Execution"]
@@ -108,8 +94,7 @@ graph TD
                             FEE -->|"50%"| BURN((BURN))
                             SLASH -->|"70%"| COMP["Victim Comp"]
                             SLASH -->|"30%"| BURN
-                            style BURN fill:#ff0055,stroke:#fff,stroke-width:2px,color:#fff
-                            style XAO fill:#00f2ff,stroke:#fff,stroke-width:2px,color:#000
+
 </div>
                 </div>
             </div>
@@ -120,6 +105,7 @@ graph TD
             <div class="product-grid reversed">
                 <div class="mermaid-container">
                     <div class="mermaid">
+
 graph LR
                             INPUT[Objective] --> REASON["Hermes 3 Engine"]
                             REASON --> PASS1{Logic Pass 1}
@@ -129,8 +115,7 @@ graph LR
                             PASS2 -->|Jailbreak Detect| DROP["Eject Execution"]
                             PASS2 -->|Clean| EXEC["Action via OpenClaw"]
                             EXEC --> LOG["Telemetry to XAO"]
-                            style CORR fill:#00F2FF,stroke:#fff,color:#000
-                            style REASON fill:rgba(112,0,255,0.2),stroke:#fff
+
 </div>
                 </div>
                 <div>
@@ -182,6 +167,7 @@ graph LR
                 </div>
                 <div class="mermaid-container">
                     <div class="mermaid">
+
 graph TD
                             INT["Internal Network"] -->|Query| SG{Sanctum Guard}
                             SG -->|Redacted| ENCLAVE["Confidential Computing Enclave"]
@@ -190,8 +176,7 @@ graph TD
                             MODEL -->|Signed Response| SG
                             SG -->|Re-Hydrated| INT
                             SG -.->|Blocked| CLOUD((Public Cloud))
-                            style ENCLAVE fill:#111,stroke:var(--color-brand-primary),stroke-width:2px,color:#fff
-                            style SG fill:#00F2FF,stroke:#fff,color:#000
+
 </div>
                 </div>
             </div>
@@ -202,6 +187,7 @@ graph TD
             <div class="product-grid reversed">
                 <div class="mermaid-container">
                     <div class="mermaid">
+
 graph TD
                             GOAL["Forecasting Objective"] --> DIST["Swarm Distribution"]
                             DIST --> AG1["Agent Persona 1"]
@@ -214,8 +200,7 @@ graph TD
                             EVAL -->|High Rep| VOTE["Weighted Consensus"]
                             VOTE -->|Bayesian Synthesis| OUT["Final Predictive Model"]
                             OUT --> FED["Decision Feedback"]
-                            style EVAL fill:#00f2ff,stroke:#fff,color:#000
-                            style OUT fill:#00F2FF,stroke:#fff,color:#000
+
 </div>
                 </div>
                 <div>
@@ -280,5 +265,24 @@ graph TD
     </footer>
 
     <script src="./js/main.js"></script>
+
+    <!-- Mermaid: High-Fidelity Vector Flowcharts -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10.6.1/dist/mermaid.min.js"></script>
+    <script>
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: 'base',
+            themeVariables: {
+                primaryColor: '#00F2FF',
+                primaryTextColor: '#00F2FF',
+                primaryBorderColor: '#00F2FF',
+                lineColor: '#FFD600',
+                secondaryColor: '#FFD600',
+                tertiaryColor: '#1e293b',
+                fontFamily: 'Raleway'
+            }
+        });
+    </script>
+    
 </body>
 </html>

@@ -10,23 +10,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body, {delimiters: [{left: '$$', right: '$$', display: true}, {left: '$', right: '$', display: false}]});"></script>
-    <script src="https://cdn.jsdelivr.net/npm/mermaid@10.6.1/dist/mermaid.min.js"></script>
-    <script>mermaid.initialize({
-        startOnLoad: true,
-        theme: 'base',
-        themeVariables: {
-            darkMode: true,
-            primaryColor: '#00F2FF',
-            primaryTextColor: '#000',
-            primaryBorderColor: '#00F2FF',
-            lineColor: '#FFD600',
-            secondaryColor: '#FFD600',
-            tertiaryColor: '#1e293b',
-            edgeLabelBackground: '#000',
-            nodeBorder: '#00F2FF',
-            fontFamily: 'Raleway'
-        }
-    });</script>
+    
+    
     <base href="./">
 </head>
 <body class="theme-obsidian">
@@ -88,6 +73,7 @@
                 </ul>
             </div>
             <div class="mermaid" style="background: rgba(255,255,255,0.02); padding: 3rem; border-radius: 24px; border: 1px solid #333;">
+
 graph TD
                     A["The Trust Vacuum"] --> B{Legacy Systems}
                     B -->|Gaming| C["Bot Farms"]
@@ -96,7 +82,7 @@ graph TD
                     D --> F
                     F --> G((XAO ORACLE))
                     G --> H["Verified Mastery"]
-                    style G fill:#00F2FF,stroke:#fff,color:#000
+
 </div>
         </section>
 
@@ -190,5 +176,24 @@ graph TD
     </footer>
 
     <script src="./js/main.js"></script>
+
+    <!-- Mermaid: High-Fidelity Vector Flowcharts -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10.6.1/dist/mermaid.min.js"></script>
+    <script>
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: 'base',
+            themeVariables: {
+                primaryColor: '#00F2FF',
+                primaryTextColor: '#00F2FF',
+                primaryBorderColor: '#00F2FF',
+                lineColor: '#FFD600',
+                secondaryColor: '#FFD600',
+                tertiaryColor: '#1e293b',
+                fontFamily: 'Raleway'
+            }
+        });
+    </script>
+    
 </body>
 </html>
