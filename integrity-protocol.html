@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Integrity Protocol | Xibalba Solutions</title>
-    <meta name="description" content="The AIS v7.0 Tri-Metric Reputation Protocol. Measuring Entropy, Grounding, and Integrity for the Agentic Web.">
+    <title>The Integrity Protocol | AIS v8.0 | Xibalba Solutions</title>
+    <meta name="description" content="The AIS v8.0 Tri-Metric Reputation Protocol. Measuring Entropy, Grounding, and Integrity for the Agentic Web.">
     <link rel="icon" href="./favicon.ico" sizes="any">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
@@ -14,62 +14,20 @@
     <script>mermaid.initialize({ startOnLoad: true, theme: 'dark' });</script>
     <base href="/xibalba-solutions-site/">
     <style>
-        .metric-hero {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
-            margin: 4rem 0;
-        }
-        .metric-visual {
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid var(--border-main);
-            padding: 2.5rem;
-            border-radius: 12px;
-            text-align: center;
-            transition: transform 0.3s ease;
-        }
-        .metric-visual:hover {
-            transform: translateY(-5px);
-            border-color: var(--accent-core);
-        }
-        .metric-value {
-            font-size: 3rem;
-            font-weight: 800;
-            margin-bottom: 0.5rem;
-            font-family: 'Outfit', sans-serif;
-        }
-        .metric-label {
-            text-transform: uppercase;
-            letter-spacing: 0.2em;
-            font-size: 0.8rem;
-            color: var(--text-muted);
-        }
-        .architecture-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-            margin: 6rem 0;
-        }
-        .code-block {
-            background: #000;
-            padding: 2rem;
-            border-radius: 8px;
-            border: 1px solid #333;
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 0.9rem;
-            color: #00ff88;
-            overflow-x: auto;
-        }
+        .metric-hero { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin: 4rem 0; }
+        .metric-visual { background: rgba(255, 255, 255, 0.03); border: 1px solid var(--border-main); padding: 2.5rem; border-radius: 12px; text-align: center; transition: transform 0.3s ease; }
+        .metric-visual:hover { transform: translateY(-5px); border-color: var(--accent-core); }
+        .metric-value { font-size: 3rem; font-weight: 800; margin-bottom: 0.5rem; font-family: 'Outfit', sans-serif; }
+        .metric-label { text-transform: uppercase; letter-spacing: 0.2em; font-size: 0.8rem; color: var(--text-muted); }
+        .architecture-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: flex-start; margin: 6rem 0; }
+        .code-block { background: #000; padding: 2rem; border-radius: 8px; border: 1px solid #333; font-family: 'JetBrains Mono', monospace; font-size: 0.9rem; color: #00ff88; overflow-x: auto; }
     </style>
 </head>
 <body class="theme-obsidian">
 
     <nav>
         <div class="nav-container">
-            <a href="index.html" class="logo">
-                <img src="./XibalbaSolutionsLogo.png" alt="Xibalba Solutions">
-            </a>
+            <a href="index.html" class="logo"><img src="./XibalbaSolutionsLogo.png" alt="Xibalba Solutions"></a>
             <div class="nav-links">
                 <a href="index.html">Home</a>
                 <a href="ai-agents.html">Agents</a>
@@ -81,26 +39,52 @@
     </nav>
 
     <main class="container" style="padding-top: 8rem;">
-        <section style="text-align: center; max-width: 900px; margin: 0 auto;">
-            <h1 style="font-size: 4rem; line-height: 1; margin-bottom: 2rem;">The <span class="gradient-text">Integrity</span> Protocol</h1>
-            <p style="font-size: 1.2rem; color: var(--text-secondary);">The first actuarial-grade trust layer for the Agentic Web. AIS v7.0 provides a three-dimensional view of AI reputation through technical stability, human accountability, and economic sacrifice.</p>
+        <section style="text-align: center; max-width: 1000px; margin: 0 auto;">
+            <h1 style="font-size: 4.5rem; line-height: 1; margin-bottom: 2.5rem;">The <span class="gradient-text">Integrity</span> Protocol</h1>
+            <p style="font-size: 1.4rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 3rem;">
+                Reputation is the only currency that never devalues. We have engineered the definitive trust layer for the Agentic Web—a system where trust is not granted, but <strong>earned through computational sacrifice.</strong>
+            </p>
+        </section>
+
+        <!-- The Crisis of Chaos -->
+        <section style="margin: 8rem 0; display: grid; grid-template-columns: 1fr 1.2fr; gap: 6rem; align-items: center;">
+            <div class="mermaid" style="background: rgba(255,255,255,0.02); padding: 2rem; border-radius: 12px; border: 1px solid #333;">
+                graph TD
+                    A[The Trust Vacuum] --> B{Standard Rep Systems}
+                    B -->|Gaming| C[Bot Farms]
+                    B -->|Spoofing| D[Sybil Attacks]
+                    B -->|Drift| E[Model Decay]
+                    C & D & E --> F[Economic Collapse]
+                    F --> G((INTEGRITY PROTOCOL))
+                    G --> H[Physical Grounding]
+                    G --> I[Mathematical Order]
+            </div>
+            <div>
+                <h2 style="font-size: 2.5rem; margin-bottom: 1.5rem;">The Crisis of <span class="gradient-text">Chaos.</span></h2>
+                <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 1.5rem;">
+                    In a world of trillion-parameter models, traditional reviews and star-ratings are obsolete. They are "social metadata"—easily manipulated and entirely decoupled from the technical reality of the AI's execution. 
+                </p>
+                <p style="color: var(--text-muted); line-height: 1.8;">
+                    When an agent initiates a trade or provides medical advice, you don't need to know if people "like" it. You need to know if its infrastructure is stable, if a human has verified its logic, and if it has enough <strong>Skin in the Game</strong> to be held accountable. The Integrity Protocol anchors these variables in an immutable ledger.
+                </p>
+            </div>
         </section>
 
         <div class="metric-hero">
             <div class="metric-visual">
-                <div class="metric-value" style="color: #00f2ff;">928</div>
+                <div class="metric-value" style="color: #00f2ff;">$S_e$</div>
                 <div class="metric-label">Entropy Score</div>
-                <p style="font-size: 0.85rem; margin-top: 1rem; color: var(--text-muted);">Predictability & Behavioral Order</p>
+                <p style="font-size: 0.85rem; margin-top: 1rem; color: var(--text-muted);">Predictability & Order</p>
             </div>
             <div class="metric-visual">
-                <div class="metric-value" style="color: #ff00ff;">850</div>
+                <div class="metric-value" style="color: #ff00ff;">$S_g$</div>
                 <div class="metric-label">Grounding Score</div>
-                <p style="font-size: 0.85rem; margin-top: 1rem; color: var(--text-muted);">Human-in-the-Loop Accountability</p>
+                <p style="font-size: 0.85rem; margin-top: 1rem; color: var(--text-muted);">Human Accountability</p>
             </div>
             <div class="metric-visual">
-                <div class="metric-value" style="color: #00ff88;">915</div>
+                <div class="metric-value" style="color: #00ff88;">$S_i$</div>
                 <div class="metric-label">Integrity Score</div>
-                <p style="font-size: 0.85rem; margin-top: 1rem; color: var(--text-muted);">Comprehensive Reputation Metric</p>
+                <p style="font-size: 0.85rem; margin-top: 1rem; color: var(--text-muted);">Comprehensive Reputation</p>
             </div>
         </div>
 
@@ -110,21 +94,27 @@
                 <p style="font-size: 1.1rem; color: var(--text-secondary); line-height: 1.8; margin-bottom: 2rem;">
                     The Integrity Protocol operates as a closed-loop feedback system between the physical execution of AI and the immutable Ethereum ledger. 
                 </p>
-                <p style="font-size: 1rem; color: var(--text-muted); line-height: 1.8;">
-                    Our architecture ensures that high-frequency performance data remains efficient off-chain while the final reputation outcome is globally verifiable. By utilizing the <strong>XAO Autonomous Oracle</strong>, we remove human bias from the verification process, creating a truly trustless reputation layer for the Agentic Web.
+                <p style="font-size: 1rem; color: var(--text-muted); line-height: 1.8; margin-bottom: 1.5rem;">
+                    Our architecture is built on the principle of <strong>Autonomous Observability</strong>. By tapping into the raw model headers of providers like OpenAI and Anthropic, we capture the "Temporal Fingerprint" of every inference. This data is signed, shipped, and analyzed by the XAO Oracle to detect even the slightest hint of model drift or infrastructure instability.
                 </p>
                 <ul style="list-style: none; padding: 0; margin-top: 2.5rem;">
-                    <li style="margin-bottom: 1rem; display: flex; gap: 1rem; align-items: center;">
+                    <li style="margin-bottom: 1.5rem; display: flex; gap: 1rem; align-items: flex-start;">
                         <span style="color: var(--accent-core); font-weight: bold;">01</span>
-                        <span>Real-time Telemetry Ingestion via Xibalba SDK</span>
+                        <div>
+                            <strong>Telemetry Ingestion:</strong> The Xibalba SDK intercepts millisecond-level latency and token-usage metadata, creating a high-fidelity record of computational effort.
+                        </div>
                     </li>
-                    <li style="margin-bottom: 1rem; display: flex; gap: 1rem; align-items: center;">
+                    <li style="margin-bottom: 1.5rem; display: flex; gap: 1rem; align-items: flex-start;">
                         <span style="color: var(--accent-core); font-weight: bold;">02</span>
-                        <span>Bayesian Variance & Entropy Analysis</span>
+                        <div>
+                            <strong>Recursive Analysis:</strong> The Oracle performs a Bayesian synthesis of historical transactions, weighting the reputation of the agent against its current technical order ($S_e$).
+                        </div>
                     </li>
-                    <li style="margin-bottom: 1rem; display: flex; gap: 1rem; align-items: center;">
+                    <li style="margin-bottom: 1.5rem; display: flex; gap: 1rem; align-items: flex-start;">
                         <span style="color: var(--accent-core); font-weight: bold;">03</span>
-                        <span>On-Chain Finality via Ethereum L2 Hashing</span>
+                        <div>
+                            <strong>L2 Finality:</strong> Verified AIS State Hashes are committed to an Ethereum L2 (Base) every 24 hours, ensuring that reputation is public, immutable, and permanent.
+                        </div>
                     </li>
                 </ul>
             </div>
@@ -135,90 +125,49 @@
                     B -->|Grounding| Sg[Score]
                     Se & Sg --> C[AIS Commit]
                     C --> D[Ethereum L2]
+                    D -->|Slash| E[Bond Burn]
+                    E -->|Feedback| A
             </div>
         </section>
 
         <section class="architecture-grid">
             <div>
                 <h2 style="font-size: 2.5rem; margin-bottom: 1.5rem;">The Physics of <span class="gradient-text">Trust.</span></h2>
-                <p style="margin-bottom: 1.5rem;">Standard reputation systems rely on "likes" and "votes"—metrics easily gamed by bot farms. The Integrity Protocol anchors trust in physical and mathematical reality through three distinct telemetry channels.</p>
+                <p style="margin-bottom: 1.5rem; color: var(--text-secondary);">Trust is a thermodynamic property. It requires energy to create and is subject to natural decay. We measure this through three distinct telemetry channels.</p>
                 
                 <h3 style="color: #fff; margin-bottom: 1.5rem;">The Entropy Derivation ($S_e$)</h3>
                 <p style="color: var(--text-secondary); margin-bottom: 1.5rem; line-height: 1.8;">
-                    In information theory, entropy measures the uncertainty or randomness of a signal. For AI agents, instability is the ultimate risk. We calculate technical stability by analyzing the <strong>Coefficient of Variation (CV)</strong> across latency and accuracy streams.
+                    Entropy measures the unpredictability of a signal. For AI, technical order is the hallmark of reliability. We analyze the <strong>Coefficient of Variation (CV)</strong> across latency and accuracy streams.
                     <br><br>
                     $$\text{CV} = \frac{\sigma}{\mu} \quad \rightarrow \quad S_e = 1000 \cdot e^{-1.5 \cdot \text{CV}}$$
                     <br>
-                    This ensures that an agent with erratic performance (high $\sigma$) sees an exponential decay in their technical trust score, effectively signaling infrastructure failure to potential transaction partners.
+                    If an agent’s performance is erratic, the standard deviation ($\sigma$) increases, causing the Entropy Score ($S_e$) to collapse exponentially. This prevents "Wildcard" agents from masquerading as stable enterprise infrastructure.
                 </p>
 
                 <h3 style="color: #fff; margin-bottom: 1.5rem;">The Grounding Mechanics ($S_g$)</h3>
                 <p style="color: var(--text-secondary); margin-bottom: 1.5rem; line-height: 1.8;">
-                    Accountability requires a human anchor. The Grounding Score measures the depth of human oversight via the <strong>Grounding Delta</strong>. We analyze the ratio of interventions ($R_i$) and the average edit distance ($D_e$) of human corrections.
+                    Grounding is the measure of <strong>Human Intentionality</strong>. It ensures that an agent is not hallucinating in isolation. We analyze the <strong>Grounding Delta</strong>—the temporal signature of human oversight.
                     <br><br>
-                    $$S_g = (R_i \cdot 0.4 + D_e \cdot 0.6) \cdot 1000$$
+                    $$S_g = (Ratio_{intervention} \cdot 0.4 + Depth_{edit} \cdot 0.6) \cdot 1000$$
                     <br>
-                    High-stakes agents are required to maintain a threshold $S_g$ to participate in regulated insurance-backed contracts.
+                    By monitoring the ratio of human corrections and the semantic depth of those edits, we can mathematically prove that an agent is "Human-Anchored."
                 </p>
             </div>
             <div>
-                <h3 style="color: #fff; margin-bottom: 1.5rem;">System Architecture</h3>
-                <div style="background: rgba(255,255,255,0.02); border: 1px solid #333; padding: 2rem; border-radius: 12px;">
-                    <p style="font-size: 0.95rem; line-height: 1.8; color: var(--text-secondary);">
-                        <strong>The XAO Oracle:</strong> An autonomous statistical engine built on a distributed cluster of verification nodes. It ingests high-frequency telemetry from the Xibalba SDK and performs real-time Bayesian inference to detect sybil attacks and model drift.
+                <h3 style="color: #fff; margin-bottom: 1.5rem;">The Integrity Synthesis ($S_i$)</h3>
+                <div style="background: rgba(255,255,255,0.02); border: 1px solid #333; padding: 3rem; border-radius: 12px;">
+                    <p style="font-size: 1rem; line-height: 1.8; color: var(--text-secondary);">
+                        The final <strong>Integrity Score</strong> is the comprehensive "Credit Score" of the Agentic Web. It is not a simple average; it is a correlated synthesis of economic sacrifice and technical order.
                         <br><br>
-                        <strong>Dual-Witness Handshake:</strong> To solve the self-reporting problem, we implement a bi-directional verification protocol.
-                        <br><br>
-                        $$\text{Consensus} = \min(1.0, \frac{\text{WCH}_{\text{latency}}}{\text{CFR}_{\text{latency}}})$$
+                        $$S_i = \left[ (\text{TrustFlow} \cdot 0.25) + (\text{Audit} \cdot 0.25) + (C_i \cdot 0.50) \right] \cdot \frac{S_e}{1000} \cdot (1 + \frac{S_g}{5000})$$
                         <br>
-                        If the <em>Work Commitment Hash</em> (Provider) and the <em>Customer Feedback Receipt</em> (Customer) diverge beyond a 20% tolerance, the transaction is flagged for automated dispute resolution.
+                        <strong>Computational Sacrifice ($C_i$):</strong> We verify that an agent has "Skin in the Game." By cross-referencing token throughput with model complexity tables, we verify the GPU-hours consumed. This makes it economically impossible to "fake" reputation—you must spend real energy to earn real trust.
                     </p>
                 </div>
             </div>
         </section>
 
-        <section style="margin: 6rem 0; border-top: 1px solid var(--border-main); padding-top: 6rem;">
-            <h2 style="font-size: 2.5rem; margin-bottom: 3rem;">Technical <span class="gradient-text">Specification</span></h2>
-            
-            <div style="display: grid; grid-template-columns: 1fr 1.5fr; gap: 4rem;">
-                <div>
-                    <h3 style="color: #fff; margin-bottom: 1.5rem;">Cost-of-Existence (COE)</h3>
-                    <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 2rem;">Reputation is physically anchored. We cross-reference token throughput with hardware complexity to verify "Energy Sunk."</p>
-                    <table style="width: 100%; border-collapse: collapse; font-size: 0.85rem; color: var(--text-secondary);">
-                        <thead>
-                            <tr style="border-bottom: 1px solid #333;">
-                                <th style="text-align: left; padding: 0.5rem;">Model Class</th>
-                                <th style="text-align: left; padding: 0.5rem;">GPU-h / 1M Tokens</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr><td style="padding: 0.5rem;">Small (8B)</td><td style="padding: 0.5rem;">0.05 h</td></tr>
-                            <tr><td style="padding: 0.5rem;">Medium (70B)</td><td style="padding: 0.5rem;">0.25 h</td></tr>
-                            <tr><td style="padding: 0.5rem;">Large (GPT-4)</td><td style="padding: 0.5rem;">1.00 h</td></tr>
-                        </tbody>
-                    </table>
-                </div>
-                <div>
-                    <h3 style="color: #fff; margin-bottom: 1.5rem;">Entropy CV Analysis</h3>
-                    <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.7;">
-                        The XAO Oracle monitors the <strong>Coefficient of Variation (CV)</strong> of agent performance in real-time. This is defined as the ratio of the standard deviation ($\sigma$) to the mean ($\mu$):
-                        <br><br>
-                        <code style="color: #00ff88;">CV = σ / μ</code>
-                        <br><br>
-                        Entropy ($S_e$) is then calculated as an inverse exponential function of the CV, ensuring that even minor technical drift or infrastructure instability results in a measurable reputation "drag."
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <section style="margin: 6rem 0;">
-            <h2 style="text-align: center; margin-bottom: 3rem;">The Mathematics of Sovereignty</h2>
-            <div class="code-block" style="font-size: 1.8rem; text-align: center; color: #fff; background: rgba(0, 242, 255, 0.05); border-color: var(--accent-core); padding: 4rem;">
-                $$AIS = [ (W_T \cdot T_i) + (W_X \cdot X_i) + (W_C \cdot C_i) + (W_S \cdot S_i) + (W_V \cdot V_i) ] \cdot E_s \cdot (1 - P_s)$$
-            </div>
-            <p style="text-align: center; color: var(--text-muted); margin-top: 2rem; font-size: 0.9rem;">Comprehensive Tri-Metric Correlation Algorithm (AIS v7.0)</p>
-        </section>
-
+        <!-- Product Ecosystem: Hermes Swarm -->
         <section style="margin: 6rem 0; border-top: 1px solid var(--border-main); padding-top: 6rem;">
             <h2 style="font-size: 2.5rem; margin-bottom: 3rem;">Product <span class="gradient-text">Ecosystem</span>: Hermes Swarm</h2>
             <div style="display: grid; grid-template-columns: 1.5fr 1fr; gap: 4rem; align-items: center;">
@@ -227,93 +176,68 @@
                         The Integrity Protocol is the foundational engine for <strong>Hermes Swarm</strong>, our flagship forecasting platform. By utilizing AI agent swarms to predict geopolitical and economic volatility, we require a mechanism to distinguish between "noise" and "signal."
                     </p>
                     <ul style="list-style: none; padding: 0;">
-                        <li style="margin-bottom: 1.5rem;">
-                            <strong>⚖️ Reputation-Weighted Consensus:</strong> Predictions from agents with a 900+ AIS are given 10x more weight in the final Bayesian model than Tier CCC agents.
+                        <li style="margin-bottom: 1.5rem; display: flex; gap: 1rem;">
+                            <span>⚖️</span>
+                            <div><strong>Reputation-Weighted Consensus:</strong> Predictions from agents with a 900+ AIS are given 10x more weight in the final Bayesian model.</div>
                         </li>
-                        <li style="margin-bottom: 1.5rem;">
-                            <strong>🌀 Entropy-Based Pruning:</strong> Hermes Swarm automatically ejects agents that exhibit high technical entropy, preventing infrastructure failure from polluting the prediction data.
-                        </li>
-                        <li style="margin-bottom: 1.5rem;">
-                            <strong>🤝 Expert Grounding:</strong> We prioritize agents with high Grounding Scores ($S_g$), indicating they have been verified by human domain specialists.
+                        <li style="margin-bottom: 1.5rem; display: flex; gap: 1rem;">
+                            <span>🌀</span>
+                            <div><strong>Entropy-Based Pruning:</strong> Hermes Swarm automatically ejects agents that exhibit high technical entropy, preventing infrastructure failure from polluting data.</div>
                         </li>
                     </ul>
                     <a href="hermes-swarm.html" class="btn-outline" style="margin-top: 2rem;">Explore Hermes Swarm →</a>
                 </div>
                 <div class="mermaid" style="background: rgba(255,255,255,0.02); padding: 2rem; border-radius: 12px; border: 1px solid #333;">
                     graph TD
-                        A[Prediction Query] --> B{AIS Filter}
-                        B -->|AIS < 600| C[Discard Agent]
+                        A[Query] --> B{AIS Filter}
+                        B -->|AIS < 600| C[Discard]
                         B -->|AIS > 600| D[Join Swarm]
                         D --> E[Weighted Voting]
                         E -->|Bayesian Synthesis| F[Final Prediction]
-                        F --> G[XAO Verification]
                 </div>
             </div>
         </section>
 
+        <!-- Broker Analysis -->
         <section style="margin: 6rem 0; background: rgba(112, 0, 255, 0.03); border: 1px solid var(--border-main); padding: 4rem; border-radius: 12px;">
             <div style="text-transform: uppercase; color: var(--accent-core); font-weight: 700; letter-spacing: 0.2em; font-size: 0.8rem; margin-bottom: 1.5rem;">Broker Analysis</div>
             <h2 style="font-size: 2.5rem; margin-bottom: 2rem;">The Actuarial <span class="gradient-text">Perspective</span></h2>
-            <p style="color: var(--text-secondary); font-size: 1.1rem; line-height: 1.8; margin-bottom: 3rem;">How a top-tier AI insurance underwriter interprets the Tri-Metric Profile to price risk for high-value contracts.</p>
-            
             <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.5rem;">
                 <div>
                     <h4 style="color: #fff; margin-bottom: 1rem;">Underwriting Entropy ($S_e$)</h4>
                     <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.6;">
-                        "We view $S_e$ as the <strong>Technical Premium Factor</strong>. An agent with a 900+ Entropy score receives a 40% discount on their base premium. If $S_e$ drops below 400, the policy is immediately suspended due to infrastructure volatility risk."
+                        "We view $S_e$ as the <strong>Technical Premium Factor</strong>. An agent with a 900+ Entropy score receives a 40% discount on their base premium."
                     </p>
                 </div>
                 <div>
                     <h4 style="color: #fff; margin-bottom: 1rem;">Underwriting Grounding ($S_g$)</h4>
                     <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.6;">
-                        "In high-stakes sectors like legal or medicine, $S_g$ is our <strong>Malpractice Shield</strong>. Agents with high human-in-the-loop oversight are deemed 'lower intent risk.' We require a minimum $S_g$ of 700 for any policy exceeding $1M."
+                        "In high-stakes sectors, $S_g$ is our <strong>Malpractice Shield</strong>. We require a minimum $S_g$ of 700 for any policy exceeding $1M."
                     </p>
                 </div>
                 <div>
                     <h4 style="color: #fff; margin-bottom: 1rem;">Underwriting Integrity ($S_i$)</h4>
                     <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.6;">
-                        "$S_i$ is the <strong>Sovereign Deductible</strong>. High-integrity agents have proven economic sacrifice. We allow agents with a 900+ score to lower their staked collateral requirements by 50% because their 'Sunk Energy' history acts as a verified bond."
+                        "$S_i$ is the <strong>Sovereign Deductible</strong>. High-integrity agents have proven economic sacrifice, allowing for lower collateral requirements."
                     </p>
                 </div>
             </div>
         </section>
 
+        <!-- Reputation Tiers -->
         <section style="margin: 6rem 0; border-top: 1px solid var(--border-main); padding-top: 6rem;">
             <h2 style="font-size: 2.5rem; margin-bottom: 3rem;">Reputation <span class="gradient-text">Tiers</span></h2>
-            <p style="color: var(--text-secondary); margin-bottom: 4rem; max-width: 800px;">The Tri-Metric Profile generates a real-time risk classification. Below are examples of verified agent profiles within the ecosystem.</p>
-            
             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem;">
-                <div class="feature-card" style="border-left: 4px solid #00ff88; background: rgba(0, 255, 136, 0.02);">
+                <div class="feature-card" style="border-left: 4px solid #00ff88; background: rgba(0, 255, 136, 0.02); cursor: pointer;" onclick="window.location.href='whitepaper.html'">
                     <h3 style="color: #fff; margin-bottom: 1rem;">Tier AAA: Sovereign Master</h3>
                     <div style="display: flex; gap: 1rem; margin-bottom: 1.5rem;">
                         <span class="category-tag" style="background: #00ff88; color: #000;">AIS: 915</span>
                         <span class="category-tag">Se: 928</span>
                         <span class="category-tag">Sg: 850</span>
                     </div>
-                    <p style="font-size: 0.9rem; color: var(--text-secondary);"><strong>Behavior:</strong> Perfect technical stability ($CV < 2\%$), backed by 1,000+ verified GPU-hours and high human oversight. Highly insurable.</p>
+                    <p style="font-size: 0.9rem; color: var(--text-secondary);"><strong>Behavior:</strong> Perfect technical stability, backed by 1,000+ verified GPU-hours and high human oversight. Highly insurable.</p>
                 </div>
-                
-                <div class="feature-card" style="border-left: 4px solid #00f2ff; background: rgba(0, 242, 255, 0.02);">
-                    <h3 style="color: #fff; margin-bottom: 1rem;">Tier BBB: Reliable Worker</h3>
-                    <div style="display: flex; gap: 1rem; margin-bottom: 1.5rem;">
-                        <span class="category-tag" style="background: #00f2ff; color: #000;">AIS: 720</span>
-                        <span class="category-tag">Se: 810</span>
-                        <span class="category-tag">Sg: 200</span>
-                    </div>
-                    <p style="font-size: 0.9rem; color: var(--text-secondary);"><strong>Behavior:</strong> Highly autonomous agent with low human grounding. Stable performance but carries higher operational risk for complex tasks.</p>
-                </div>
-
-                <div class="feature-card" style="border-left: 4px solid #ffaa00; background: rgba(255, 170, 0, 0.02);">
-                    <h3 style="color: #fff; margin-bottom: 1rem;">Tier CCC: Emerging Novice</h3>
-                    <div style="display: flex; gap: 1rem; margin-bottom: 1.5rem;">
-                        <span class="category-tag" style="background: #ffaa00; color: #000;">AIS: 450</span>
-                        <span class="category-tag">Se: 550</span>
-                        <span class="category-tag">Sg: 100</span>
-                    </div>
-                    <p style="font-size: 0.9rem; color: var(--text-secondary);"><strong>Behavior:</strong> New agent with limited "Sunk Energy." Frequent latency spikes ($CV > 15\%$). Requires more history to build trust.</p>
-                </div>
-
-                <div class="feature-card" style="border-left: 4px solid #ff0055; background: rgba(255, 0, 85, 0.02);">
+                <div class="feature-card" style="border-left: 4px solid #ff0055; background: rgba(255, 0, 85, 0.02); cursor: pointer;" onclick="window.location.href='whitepaper.html'">
                     <h3 style="color: #fff; margin-bottom: 1rem;">Tier DDD: Volatile Wildcard</h3>
                     <div style="display: flex; gap: 1rem; margin-bottom: 1.5rem;">
                         <span class="category-tag" style="background: #ff0055; color: #fff;">AIS: 180</span>
@@ -325,34 +249,54 @@
             </div>
         </section>
 
+        <!-- Technical Specification -->
         <section style="margin: 6rem 0; border-top: 1px solid var(--border-main); padding-top: 6rem;">
-            <h2 style="font-size: 2.5rem; margin-bottom: 3rem;">Monetization <span class="gradient-text">Framework</span></h2>
-            <p style="color: var(--text-secondary); margin-bottom: 3rem; max-width: 800px;">Xibalba Solutions acts as the Supreme Court of the Agentic Web. Our revenue model is built on automated verification and risk-as-a-service.</p>
-            
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem;">
-                <div style="border-left: 2px solid var(--accent-core); padding-left: 2rem;">
-                    <h3 style="color: #fff; margin-bottom: 1rem;">Verification Fees</h3>
-                    <p style="color: var(--text-secondary); font-size: 0.95rem;">A <strong>0.5% (50 BPS)</strong> protocol fee is applied to all INTG transactions. 50% of this fee is retained by Xibalba Solutions, while 50% is permanently burned to drive INTG scarcity.</p>
+            <h2 style="font-size: 2.5rem; margin-bottom: 3rem;">Technical <span class="gradient-text">Specification</span></h2>
+            <div style="display: grid; grid-template-columns: 1fr 1.5fr; gap: 4rem;">
+                <div>
+                    <h3 style="color: #fff; margin-bottom: 1.5rem;">Cost-of-Existence (COE)</h3>
+                    <table style="width: 100%; border-collapse: collapse; font-size: 0.85rem; color: var(--text-secondary);">
+                        <thead><tr style="border-bottom: 1px solid #333;"><th style="text-align: left; padding: 0.5rem;">Model Class</th><th style="text-align: left; padding: 0.5rem;">GPU-h / 1M Tokens</th></tr></thead>
+                        <tbody>
+                            <tr><td style="padding: 0.5rem;">Small (8B)</td><td style="padding: 0.5rem;">0.05 h</td></tr>
+                            <tr><td style="padding: 0.5rem;">Medium (70B)</td><td style="padding: 0.5rem;">0.25 h</td></tr>
+                            <tr><td style="padding: 0.5rem;">Large (GPT-4)</td><td style="padding: 0.5rem;">1.00 h</td></tr>
+                        </tbody>
+                    </table>
                 </div>
-                <div style="border-left: 2px solid var(--secondary-core); padding-left: 2rem;">
-                    <h3 style="color: #fff; margin-bottom: 1rem;">Tiered Audit Subscriptions</h3>
-                    <p style="color: var(--text-secondary); font-size: 0.95rem;">Agents can purchase **Platinum Verification** (1,000 INTG/yr) to unlock high-priority verification, ZK-proof generation, and a 20% AIS grounding boost.</p>
-                </div>
-                <div style="border-left: 2px solid #fff; padding-left: 2rem;">
-                    <h3 style="color: #fff; margin-bottom: 1rem;">Insurance Oracle API</h3>
-                    <p style="color: var(--text-secondary); font-size: 0.95rem;">Institutional underwriters pay SaaS fees to access our actuarial risk tiers (AAA to CCC) for pricing AI-related insurance policies.</p>
-                </div>
-                <div style="border-left: 2px solid var(--accent-core); padding-left: 2rem;">
-                    <h3 style="color: #fff; margin-bottom: 1rem;">Dispute Resolution</h3>
-                    <p style="color: var(--text-secondary); font-size: 0.95rem;">A manual arbitration fee of <strong>500 INTG</strong> is applied to resolve high-value Dual-Witness mismatches detected by the XAO Oracle.</p>
+                <div>
+                    <h3 style="color: #fff; margin-bottom: 1.5rem;">XAO Ingestor Pipeline</h3>
+                    <div class="mermaid" style="background: #000; padding: 2rem; border-radius: 12px; border: 1px solid #333;">
+                        graph LR
+                            A[SDK Webhook] --> B[JWT Verification]
+                            B --> C[COE Cross-Check]
+                            C --> D[CV Statistical Engine]
+                            D --> E{Reputation Update}
+                            E -->|AIS Delta| F[Off-Chain DB]
+                            E -->|Slash| G[L2 Registry]
+                    </div>
                 </div>
             </div>
         </section>
 
+        <!-- Monetization Framework -->
+        <section style="margin: 6rem 0; border-top: 1px solid var(--border-main); padding-top: 6rem;">
+            <h2 style="font-size: 2.5rem; margin-bottom: 3rem;">Monetization <span class="gradient-text">Framework</span></h2>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem;">
+                <div style="border-left: 2px solid var(--accent-core); padding-left: 2rem;">
+                    <h3 style="color: #fff; margin-bottom: 1rem;">Verification Fees</h3>
+                    <p style="color: var(--text-secondary); font-size: 0.95rem;">A <strong>0.5% protocol fee</strong> is applied to all INTG transactions. 50% is retained by Xibalba Solutions, 50% is permanently burned.</p>
+                </div>
+                <div style="border-left: 2px solid var(--secondary-core); padding-left: 2rem;">
+                    <h3 style="color: #fff; margin-bottom: 1rem;">Tiered Audits</h3>
+                    <p style="color: var(--text-secondary); font-size: 0.95rem;">Platinum Verification (1,000 INTG/yr) unlocks high-priority verification and ZK-proof generation.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SDK Manifest -->
         <section style="margin: 6rem 0; border-top: 1px solid var(--border-main); padding-top: 6rem;">
             <h2 style="font-size: 2.5rem; margin-bottom: 3rem;">SDK <span class="gradient-text">Manifest</span></h2>
-            <p style="color: var(--text-secondary); margin-bottom: 3rem;">The Integrity SDK provides zero-effort telemetry interception for autonomous agents. Supported in Python and Node.js.</p>
-            
             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
                 <div>
                     <h4 style="color: #fff; margin-bottom: 1rem;">1. Autonomous Interceptor</h4>
@@ -360,57 +304,34 @@
 # Python: Auto-track OpenAI inferences
 sdk = XibalbaIntegritySDK("0xAgentAddr")
 sdk.track_openai(openai_client)
-
-# Every completion is now autonomously 
-# verified by the XAO Oracle.
                     </div>
                 </div>
                 <div>
                     <h4 style="color: #fff; margin-bottom: 1rem;">2. HITL Grounding Bridge</h4>
                     <div class="code-block" style="font-size: 0.8rem; padding: 1.5rem; color: #ff00ff;">
 # Report a human oversight event
-sdk.report_human_grounding(
-    task_id="tx_99",
-    was_edited=True,
-    edit_distance=0.45
-)
+sdk.report_human_grounding(task_id="tx_99", was_edited=True)
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- Sovereign Source -->
         <section style="background: rgba(255, 255, 255, 0.03); border: 1px solid var(--border-main); padding: 4rem; border-radius: 12px; margin: 4rem 0; text-align: center;">
             <h2 style="margin-bottom: 1.5rem;">Sovereign <span class="gradient-text">Source</span></h2>
-            <p style="color: var(--text-secondary); margin-bottom: 2.5rem; max-width: 600px; margin-left: auto; margin-right: auto;">The Integrity Protocol is built on the principles of transparency and immutability. Explore our autonomous oracles, scoring engines, and multi-language SDKs on GitHub.</p>
-            <div style="display: flex; gap: 2rem; justify-content: center;">
+            <div style="display: flex; gap: 2rem; justify-content: center; margin-top: 2rem;">
                 <a href="https://github.com/XibalbaTechSol/integrity-protocol" class="btn" target="_blank">View Repository</a>
-                <a href="https://github.com/XibalbaTechSol/integrity-protocol/tree/master/sdk" class="btn-outline" target="_blank" style="color: #fff; border-color: #fff;">Explore SDKs</a>
-            </div>
-        </section>
-
-        <section style="background: rgba(112, 0, 255, 0.05); padding: 4rem; border-radius: 12px; border: 1px solid var(--border-main); margin: 4rem 0; text-align: center;">
-            <h2 style="margin-bottom: 2rem;">Sovereign Documents</h2>
-            <div style="display: flex; gap: 2rem; justify-content: center;">
                 <a href="whitepaper.html" class="btn-outline" style="color: #fff; border-color: #fff;">View Whitepaper</a>
-                <a href="business-plan.html" class="btn-outline" style="color: #fff; border-color: #fff;">Strategic Business Plan</a>
             </div>
         </section>
 
         <section style="text-align: center; padding: 8rem 0;">
             <h2 style="margin-bottom: 2rem;">Ready to Anchor Your Intelligence?</h2>
             <a href="contact.html" class="btn">Request a Deep-Dive Audit</a>
-            <p style="margin-top: 2rem;"><a href="blog/ais-v7-tri-metric-protocol.html" style="color: var(--accent-core);">Read the Technical Dispatch →</a></p>
         </section>
     </main>
 
-    <footer>
-        <div class="container">
-            <div class="footer-bottom">
-                &copy; 2026 Xibalba Solutions. The Gold Standard for AI Trust.
-            </div>
-        </div>
-    </footer>
-
+    <footer><div class="container"><div class="footer-bottom">&copy; 2026 Xibalba Solutions. The Gold Standard for AI Trust.</div></div></footer>
     <script src="./js/main.js"></script>
 </body>
 </html>
