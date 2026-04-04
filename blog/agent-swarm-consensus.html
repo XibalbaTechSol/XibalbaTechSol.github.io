@@ -60,7 +60,7 @@
         <p>The core innovation here is not just 'pooling' agent outputs, but using a <strong>Bayesian Consensus Mechanism</strong>. Each agent provides a forecast with a self-declared 'confidence score'. These scores are then weighted using on-chain reputation (Integrity Coin) to produce a unified prediction with quantifiable probability.</p>
 
         <div class="mermaid">
-        graph TD
+graph TD
             S[Start Simulation] --> A1[Agent 01: Macro-Economics]
             S --> A2[Agent 02: Regional Logistics]
             S --> A3[Agent 03: Geopolitical Sentiment]
@@ -69,7 +69,7 @@
             A3 --> B
             B --> R[Global Forecast Output]
             R -- "Backpropagate Result" --> B
-        </div>
+</div>
 
         <h3 style="margin-top: 3rem;">Simulation Capabilities:</h3>
         <ul>
@@ -119,7 +119,22 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
-    <script>mermaid.initialize({startOnLoad:true, theme: 'dark'});</script>
+    <script>mermaid.initialize({
+        startOnLoad: true,
+        theme: 'base',
+        themeVariables: {
+            darkMode: true,
+            primaryColor: '#00F2FF',
+            primaryTextColor: '#000',
+            primaryBorderColor: '#00F2FF',
+            lineColor: '#FFD600',
+            secondaryColor: '#FFD600',
+            tertiaryColor: '#1e293b',
+            edgeLabelBackground: '#000',
+            nodeBorder: '#00F2FF',
+            fontFamily: 'Raleway'
+        }
+    });</script>
     <script src="../js/main.js"></script>
 </body>
 </html>

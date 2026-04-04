@@ -1,0 +1,121 @@
+[
+  {
+    "id": "ai-agents_chart_0",
+    "file": "ai-agents.html",
+    "index": 0,
+    "content": "graph TD\n                            START[\"Contract Initialization\"] -->|\"Lock INTG\"| BOND[\"Sovereign Bond Registry\"]\n                            BOND --> EXEC[\"Agent Execution\"]\n                            EXEC --> TELE[\"Telemetry Stream\"]\n                            TELE -->|Verification| XAO{XAO Autonomous Oracle}\n                            XAO -->|Success| FEE[\"0.5% Protocol Fee\"]\n                            XAO -->|Breach| SLASH[\"Slashing Event\"]\n                            FEE -->|\"50%\"| REV[\"Xibalba Rev\"]\n                            FEE -->|\"50%\"| BURN((BURN))\n                            SLASH -->|\"70%\"| COMP[\"Victim Comp\"]\n                            SLASH -->|\"30%\"| BURN\n                            style BURN fill:#ff0055,stroke:#fff,stroke-width:2px,color:#fff\n                            style XAO fill:#00f2ff,stroke:#fff,stroke-width:2px,color:#000",
+    "original_style": ""
+  },
+  {
+    "id": "ai-agents_chart_1",
+    "file": "ai-agents.html",
+    "index": 1,
+    "content": "graph LR\n                            INPUT[Objective] --> REASON[\"Hermes 3 Engine\"]\n                            REASON --> PASS1{Logic Pass 1}\n                            PASS1 -->|Anomaly| CORR[\"Recursive Self-Correction\"]\n                            CORR --> REASON\n                            PASS1 -->|Verified| PASS2{Security Pass 2}\n                            PASS2 -->|Jailbreak Detect| DROP[\"Eject Execution\"]\n                            PASS2 -->|Clean| EXEC[\"Action via OpenClaw\"]\n                            EXEC --> LOG[\"Telemetry to XAO\"]\n                            style CORR fill:#00F2FF,stroke:#fff,color:#000\n                            style REASON fill:rgba(112,0,255,0.2),stroke:#fff",
+    "original_style": ""
+  },
+  {
+    "id": "ai-agents_chart_2",
+    "file": "ai-agents.html",
+    "index": 2,
+    "content": "graph TD\n                            INT[\"Internal Network\"] -->|Query| SG{Sanctum Guard}\n                            SG -->|Redacted| ENCLAVE[\"Confidential Computing Enclave\"]\n                            ENCLAVE -->|Local RAG| VAULT[(\"Vector Vault\")]\n                            ENCLAVE -->|Local Inference| MODEL[\"Hermes 3 Local\"]\n                            MODEL -->|Signed Response| SG\n                            SG -->|Re-Hydrated| INT\n                            SG -.->|Blocked| CLOUD((Public Cloud))\n                            style ENCLAVE fill:#111,stroke:var(--color-brand-primary),stroke-width:2px,color:#fff\n                            style SG fill:#00F2FF,stroke:#fff,color:#000",
+    "original_style": ""
+  },
+  {
+    "id": "ai-agents_chart_3",
+    "file": "ai-agents.html",
+    "index": 3,
+    "content": "graph TD\n                            GOAL[\"Forecasting Objective\"] --> DIST[\"Swarm Distribution\"]\n                            DIST --> AG1[\"Agent Persona 1\"]\n                            DIST --> AG2[\"Agent Persona 2\"]\n                            DIST --> AGn[\"Agent Persona N\"]\n                            AG1 --> EVAL{AIS Filtering Layer}\n                            AG2 --> EVAL\n                            AGn --> EVAL\n                            EVAL -->|Low Rep| DROP[\"Pruned\"]\n                            EVAL -->|High Rep| VOTE[\"Weighted Consensus\"]\n                            VOTE -->|Bayesian Synthesis| OUT[\"Final Predictive Model\"]\n                            OUT --> FED[\"Decision Feedback\"]\n                            style EVAL fill:#00f2ff,stroke:#fff,color:#000\n                            style OUT fill:#00F2FF,stroke:#fff,color:#000",
+    "original_style": ""
+  },
+  {
+    "id": "index_chart_0",
+    "file": "index.html",
+    "index": 0,
+    "content": "graph TD\n                    A[\"The Trust Vacuum\"] --> B{Legacy Systems}\n                    B -->|Gaming| C[\"Bot Farms\"]\n                    B -->|Spoofing| D[\"Sybil Attacks\"]\n                    C --> F[\"Economic Risk\"]\n                    D --> F\n                    F --> G((XAO ORACLE))\n                    G --> H[\"Verified Mastery\"]\n                    style G fill:#00F2FF,stroke:#fff,color:#000",
+    "original_style": "background: rgba(255,255,255,0.02); padding: 3rem; border-radius: 24px; border: 1px solid #333;"
+  },
+  {
+    "id": "integrity-protocol_chart_0",
+    "file": "integrity-protocol.html",
+    "index": 0,
+    "content": "graph TD\n                    A[\"The Trust Vacuum\"] --> B{Standard Rep Systems}\n                    B -->|Gaming| C[Bot Farms]\n                    B -->|Spoofing| D[Sybil Attacks]\n                    B -->|Drift| E[Model Decay]\n                    C --> F[Economic Collapse]\n                    D --> F\n                    E --> F\n                    F --> G((INTEGRITY PROTOCOL))\n                    G --> H[Physical Grounding]\n                    G --> I[Mathematical Order]",
+    "original_style": "background: rgba(255,255,255,0.02); padding: 2rem; border-radius: 12px; border: 1px solid #333;"
+  },
+  {
+    "id": "integrity-protocol_chart_1",
+    "file": "integrity-protocol.html",
+    "index": 1,
+    "content": "graph TD\n                    A[SDK Ingest] --> B{XAO Engine}\n                    B -->|Entropy| Se[Score]\n                    B -->|Grounding| Sg[Score]\n                    Se --> C[AIS Commit]\n                    Sg --> C\n                    C --> D[Ethereum L2]\n                    D -->|Slash| E[Bond Burn]\n                    E -->|Feedback| A",
+    "original_style": "background: rgba(255,255,255,0.02); padding: 2rem; border-radius: 12px; border: 1px solid #333; max-width: 500px; margin-left: auto;"
+  },
+  {
+    "id": "integrity-protocol_chart_2",
+    "file": "integrity-protocol.html",
+    "index": 2,
+    "content": "graph TD\n                        A[Query] --> B{AIS Filter}\n                        B -->|\"AIS < 600\"| C[Discard]\n                        B -->|\"AIS > 600\"| D[Join Swarm]\n                        D --> E[Weighted Voting]\n                        E -->|Bayesian Synthesis| F[Final Prediction]",
+    "original_style": "background: rgba(255,255,255,0.02); padding: 2rem; border-radius: 12px; border: 1px solid #333;"
+  },
+  {
+    "id": "integrity-protocol_chart_3",
+    "file": "integrity-protocol.html",
+    "index": 3,
+    "content": "graph LR\n                            A[SDK Webhook] --> B[JWT Verification]\n                            B --> C[COE Cross-Check]\n                            C --> D[CV Statistical Engine]\n                            D --> E{Reputation Update}\n                            E -->|\"AIS Delta\"| F[Off-Chain DB]\n                            E -->|Slash| G[L2 Registry]",
+    "original_style": "background: #000; padding: 2rem; border-radius: 12px; border: 1px solid #333;"
+  },
+  {
+    "id": "blog_agent-swarm-consensus_chart_0",
+    "file": "blog/agent-swarm-consensus.html",
+    "index": 0,
+    "content": "graph TD\n            S[Start Simulation] --> A1[Agent 01: Macro-Economics]\n            S --> A2[Agent 02: Regional Logistics]\n            S --> A3[Agent 03: Geopolitical Sentiment]\n            A1 --> B{Bayesian Consensus Processor}\n            A2 --> B\n            A3 --> B\n            B --> R[Global Forecast Output]\n            R -- \"Backpropagate Result\" --> B",
+    "original_style": ""
+  },
+  {
+    "id": "blog_2026-04-05-hermes-vs-openclaw_chart_0",
+    "file": "blog/2026-04-05-hermes-vs-openclaw.html",
+    "index": 0,
+    "content": "graph TD\n    User([User Prompt]) --> Hermes[Hermes 3 Reasoning Engine]\n    subgraph \"The Recursive Brain\"\n    Hermes --> Loop{Internal Check}\n    Loop -- \"Logic Error\" --> Hermes\n    Loop -- \"Ready\" --> Intent[Final Intent]\n    end\n    Intent --> Output(Structured Plan)",
+    "original_style": ""
+  },
+  {
+    "id": "blog_2026-04-05-hermes-vs-openclaw_chart_1",
+    "file": "blog/2026-04-05-hermes-vs-openclaw.html",
+    "index": 1,
+    "content": "graph LR\n    Plan(Structured Plan) --> OpenClaw[OpenClaw Runtime]\n    subgraph \"The Nervous System\"\n    OpenClaw --> Slack[Slack Bridge]\n    OpenClaw --> DB[(SQL/NoSQL DB)]\n    OpenClaw --> Code[Python Sandbox]\n    end\n    Slack --> Success([Action Completed])",
+    "original_style": ""
+  },
+  {
+    "id": "blog_2026-04-05-hermes-vs-openclaw_chart_2",
+    "file": "blog/2026-04-05-hermes-vs-openclaw.html",
+    "index": 2,
+    "content": "sequenceDiagram\n    participant U as User\n    participant H as Hermes 3 (Brain)\n    participant O as OpenClaw (Body)\n    participant E as External SystemU->>H: Request complex task\n    H->>H: Recursive Reasoning\n    H->>O: Send Action Plan\n    O->>E: Execute Tool\n    E-->>O: Return Error/Data\n    O->>H: Return Trace/Result\n    H->>H: Adjust Reasoning\n    H->>O: New Instruction\n    O->>U: Final Result",
+    "original_style": ""
+  },
+  {
+    "id": "blog_sanctumbrain-neural-command_chart_0",
+    "file": "blog/sanctumbrain-neural-command.html",
+    "index": 0,
+    "content": "graph LR\n            Input[User Mission] --> SB{SanctumBrain Engine}\n            SB --> Node1[Action: CLI Execution]\n            SB --> Node2[Bridge: Secure Relay]\n            SB --> Node3[Config: Global Sync]\n            Node1 --> Swarm[Agent Swarm]\n            Node2 --> Swarm\n            Node3 --> Swarm",
+    "original_style": ""
+  },
+  {
+    "id": "blog_ais-v7-tri-metric-protocol_chart_0",
+    "file": "blog/ais-v7-tri-metric-protocol.html",
+    "index": 0,
+    "content": "graph TD\n                A[Agent Performance] --> B{XAO Oracle}\n                B -->|Stability| Se[Entropy Score]\n                B -->|Accountability| Sg[Grounding Score]\n                B -->|History| Si[Integrity Score]\n                Se & Sg & Si --> D[Actuarial Risk Tier]",
+    "original_style": "background: #000; padding: 3rem; border-radius: 12px; border: 1px solid #333; margin: 3rem 0;"
+  },
+  {
+    "id": "blog_hermes-ui-zero-code_chart_0",
+    "file": "blog/hermes-ui-zero-code.html",
+    "index": 0,
+    "content": "graph LR\n            Trigger[Cron Job / HTTP Trigger] --> Node[Hermes Core Agent]\n            Node --> MCP[Global MCP Pool]\n            MCP --> Success[Action Completed]\n            Node -- \"Self-Correction\" --> Node",
+    "original_style": ""
+  },
+  {
+    "id": "blog_integrity-coin-reputation_chart_0",
+    "file": "blog/integrity-coin-reputation.html",
+    "index": 0,
+    "content": "graph TD\n            A[Agent Performance] --> B{Verification Layer}\n            B -- \"Validated Output\" --> C[IC Reputation Increase]\n            B -- \"Detected Bias/Hallucination\" --> D[IC Slashing Event]\n            C --> E[Higher Priority in Swarm selection]\n            D --> F[Restricted Access to Sensitive Data]",
+    "original_style": ""
+  }
+]

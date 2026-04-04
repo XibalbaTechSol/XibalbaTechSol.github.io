@@ -76,7 +76,7 @@ sequenceDiagram
     participant U as User
     participant H as Hermes 3 (Brain)
     participant O as OpenClaw (Body)
-    participant E as External System<p>U->>H: Request complex task
+    participant E as External SystemU->>H: Request complex task
     H->>H: Recursive Reasoning
     H->>O: Send Action Plan
     O->>E: Execute Tool
@@ -123,7 +123,22 @@ sequenceDiagram
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
-    <script>mermaid.initialize({startOnLoad:true, theme: 'dark'});</script>
+    <script>mermaid.initialize({
+        startOnLoad: true,
+        theme: 'base',
+        themeVariables: {
+            darkMode: true,
+            primaryColor: '#00F2FF',
+            primaryTextColor: '#000',
+            primaryBorderColor: '#00F2FF',
+            lineColor: '#FFD600',
+            secondaryColor: '#FFD600',
+            tertiaryColor: '#1e293b',
+            edgeLabelBackground: '#000',
+            nodeBorder: '#00F2FF',
+            fontFamily: 'Raleway'
+        }
+    });</script>
     <script src="../js/main.js"></script>
 </body>
 </html>

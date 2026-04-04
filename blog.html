@@ -11,7 +11,22 @@
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body, {delimiters: [{left: '$$', right: '$$', display: true}, {left: '$', right: '$', display: false}]});"></script>
     <script src="https://cdn.jsdelivr.net/npm/mermaid@10.6.1/dist/mermaid.min.js"></script>
-    <script>mermaid.initialize({ startOnLoad: true, theme: 'dark' });</script>
+    <script>mermaid.initialize({
+        startOnLoad: true,
+        theme: 'base',
+        themeVariables: {
+            darkMode: true,
+            primaryColor: '#00F2FF',
+            primaryTextColor: '#000',
+            primaryBorderColor: '#00F2FF',
+            lineColor: '#FFD600',
+            secondaryColor: '#FFD600',
+            tertiaryColor: '#1e293b',
+            edgeLabelBackground: '#000',
+            nodeBorder: '#00F2FF',
+            fontFamily: 'Raleway'
+        }
+    });</script>
     <base href="./">
 </head>
 <body class="theme-obsidian">

@@ -11,7 +11,22 @@
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body, {delimiters: [{left: '$$', right: '$$', display: true}, {left: '$', right: '$', display: false}]});"></script>
     <script src="https://cdn.jsdelivr.net/npm/mermaid@10.6.1/dist/mermaid.min.js"></script>
-    <script>mermaid.initialize({ startOnLoad: true, theme: 'dark' });</script>
+    <script>mermaid.initialize({
+        startOnLoad: true,
+        theme: 'base',
+        themeVariables: {
+            darkMode: true,
+            primaryColor: '#00F2FF',
+            primaryTextColor: '#000',
+            primaryBorderColor: '#00F2FF',
+            lineColor: '#FFD600',
+            secondaryColor: '#FFD600',
+            tertiaryColor: '#1e293b',
+            edgeLabelBackground: '#000',
+            nodeBorder: '#00F2FF',
+            fontFamily: 'Raleway'
+        }
+    });</script>
     <base href="./">
     <style>
         .product-section { padding: 12rem 0; border-bottom: 1px solid var(--border-main); }
@@ -82,7 +97,7 @@
                 </div>
                 <div class="mermaid-container">
                     <div class="mermaid">
-                        graph TD
+graph TD
                             START["Contract Initialization"] -->|"Lock INTG"| BOND["Sovereign Bond Registry"]
                             BOND --> EXEC["Agent Execution"]
                             EXEC --> TELE["Telemetry Stream"]
@@ -95,7 +110,7 @@
                             SLASH -->|"30%"| BURN
                             style BURN fill:#ff0055,stroke:#fff,stroke-width:2px,color:#fff
                             style XAO fill:#00f2ff,stroke:#fff,stroke-width:2px,color:#000
-                    </div>
+</div>
                 </div>
             </div>
         </section>
@@ -105,7 +120,7 @@
             <div class="product-grid reversed">
                 <div class="mermaid-container">
                     <div class="mermaid">
-                        graph LR
+graph LR
                             INPUT[Objective] --> REASON["Hermes 3 Engine"]
                             REASON --> PASS1{Logic Pass 1}
                             PASS1 -->|Anomaly| CORR["Recursive Self-Correction"]
@@ -116,7 +131,7 @@
                             EXEC --> LOG["Telemetry to XAO"]
                             style CORR fill:#00F2FF,stroke:#fff,color:#000
                             style REASON fill:rgba(112,0,255,0.2),stroke:#fff
-                    </div>
+</div>
                 </div>
                 <div>
                     <div class="meta" style="color: var(--color-brand-secondary); margin-bottom: 1.5rem;">RECURSIVE INTELLIGENCE</div>
@@ -167,7 +182,7 @@
                 </div>
                 <div class="mermaid-container">
                     <div class="mermaid">
-                        graph TD
+graph TD
                             INT["Internal Network"] -->|Query| SG{Sanctum Guard}
                             SG -->|Redacted| ENCLAVE["Confidential Computing Enclave"]
                             ENCLAVE -->|Local RAG| VAULT[("Vector Vault")]
@@ -177,7 +192,7 @@
                             SG -.->|Blocked| CLOUD((Public Cloud))
                             style ENCLAVE fill:#111,stroke:var(--color-brand-primary),stroke-width:2px,color:#fff
                             style SG fill:#00F2FF,stroke:#fff,color:#000
-                    </div>
+</div>
                 </div>
             </div>
         </section>
@@ -187,7 +202,7 @@
             <div class="product-grid reversed">
                 <div class="mermaid-container">
                     <div class="mermaid">
-                        graph TD
+graph TD
                             GOAL["Forecasting Objective"] --> DIST["Swarm Distribution"]
                             DIST --> AG1["Agent Persona 1"]
                             DIST --> AG2["Agent Persona 2"]
@@ -201,7 +216,7 @@
                             OUT --> FED["Decision Feedback"]
                             style EVAL fill:#00f2ff,stroke:#fff,color:#000
                             style OUT fill:#00F2FF,stroke:#fff,color:#000
-                    </div>
+</div>
                 </div>
                 <div>
                     <div class="meta" style="color: var(--color-brand-primary); margin-bottom: 1.5rem;">COLLECTIVE FORESIGHT</div>
