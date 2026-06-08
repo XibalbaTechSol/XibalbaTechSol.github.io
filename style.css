@@ -490,7 +490,7 @@ footer { text-align: center; padding: 3rem 1.5rem; border-top: 1px solid var(--b
 }
 
 /* Monogram Avatar */
-.founder-avatar { width: 120px; height: 120px; border-radius: 50%; object-fit: cover; margin: 0 auto; border: 4px solid var(--bg-body); box-shadow: 0 0 0 1px var(--border-main); }
+.founder-avatar { width: 120px; height: 120px; border-radius: 50%; object-fit: cover; display: block; margin: 0 auto; border: 4px solid var(--bg-body); box-shadow: 0 0 0 1px var(--border-main); }
 
 /* Contact Waitlist Form */
 .waitlist-form {
@@ -752,6 +752,7 @@ footer { text-align: center; padding: 3rem 1.5rem; border-top: 1px solid var(--b
 .glowing-avatar {
     width: 120px;
     height: 120px;
+    border-radius: 50%;
     font-size: 3rem;
     box-shadow: 0 0 30px var(--color-brand-primary-dim), inset 0 0 20px rgba(255,255,255,0.1);
     border: 2px solid var(--color-brand-primary);
