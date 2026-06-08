@@ -6,123 +6,579 @@
     <title>Jacob Vickers | Founder, Xibalba Solutions</title>
     <meta name="description" content="Founder of Xibalba Solutions. Building the trust and accountability layer for autonomous AI.">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" crossorigin="anonymous">
 </head>
 <body>
     <nav>
         <div class="nav-container">
-            <a href="#" class="logo">
-                <span><strong>J</strong>acob <strong>V</strong>ickers</span>
+            <a href="#" class="logo" style="display: flex; align-items: center; gap: 0.75rem; text-decoration: none;">
+                <img src="XibalbaSolutionsLogo.png" alt="Xibalba Solutions Logo" style="height: 48px; width: auto;">
+                <span style="font-size: 0.95rem; color: var(--text-secondary); font-weight: 500; text-transform: uppercase; letter-spacing: 0.05em;">Jacob Vickers</span>
             </a>
-            <button class="hamburger" aria-label="Toggle Menu">
-                <span></span><span></span><span></span>
-            </button>
-            <div class="nav-links">
+            <div class="nav-links" style="display: flex; gap: 2.5rem; align-items: center; margin: 0 auto;">
+                <a href="#value-prop">Company</a>
+                <a href="#how-it-works">How It Works</a>
+                <a href="#architecture">Architecture</a>
                 <a href="#about">Founder</a>
-                <a href="#integrity">Xibalba Solutions</a>
                 <a href="#contact">Contact</a>
             </div>
+            <div style="display: flex; align-items: center; gap: 1rem;">
+                <button id="theme-toggle" aria-label="Toggle Theme" style="background: none; border: none; color: var(--text-primary); cursor: pointer; font-size: 1.25rem;">
+                    <span class="icon-moon">🌙</span>
+                    <span class="icon-sun" style="display: none;">☀️</span>
+                </button>
+                <button class="hamburger" aria-label="Toggle Menu" style="margin-left: 0;">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+
         </div>
     </nav>
 
     <header class="hero">
         <div class="hero-content animate-in">
-            <img src="XibalbaSolutionsLogo.png" alt="Xibalba Solutions Logo" class="hero-logo" style="max-height: 80px; margin-bottom: 1.5rem;">
-            <h1 style="font-size: 3.5rem; margin-bottom: 0.5rem; font-weight: 300; text-transform: uppercase;"><strong style="font-weight: 500;">J</strong>acob <span class="gradient-text"><strong style="font-weight: 500;">V</strong>ickers</span></h1>
-            <h2 style="font-size: 1.5rem; color: var(--text-secondary); margin-bottom: 2rem;">Founder & CEO, Xibalba Solutions</h2>
+            <img src="XibalbaSolutionsLogo.png" alt="Xibalba Solutions Logo" class="hero-logo" style="max-height: 120px; margin-bottom: 1.5rem;">
+            <h1 style="font-size: 3rem; margin-bottom: 1rem; font-weight: 700; line-height: 1.1; letter-spacing: -0.02em;">Ship Autonomous Medical AI.<br><span class="gradient-text">Pass HIPAA Audits Instantly.</span></h1>
             
-            <p style="font-size: 1.25rem; font-weight: 500; color: var(--text-primary); max-width: 700px; margin: 0 auto 2.5rem; line-height: 1.5;">
-                We build the trust and accountability layer for autonomous AI. <br>
-                <span class="gradient-text">Making AI deterministic, HIPAA-compliant, and production-ready for the enterprise.</span>
+            <p style="font-size: 1.25rem; font-weight: 500; color: var(--text-secondary); max-width: 700px; margin: 0 auto 2rem; line-height: 1.5;">
+                The developer SDK that generates cryptographic audit trails for LLM agents. Stop building custom compliance infrastructure and get back to building your product.
             </p>
+
+            <div class="terminal-window">
+                <div class="terminal-header">
+                    <div class="terminal-dots">
+                        <span style="background: #FF5F56;"></span>
+                        <span style="background: #FFBD2E;"></span>
+                        <span style="background: #27C93F;"></span>
+                    </div>
+                    <div class="terminal-title">app.py</div>
+                </div>
+                <div class="terminal-body">
+                    <span style="color: #F472B6;">from</span> xibalba.shield <span style="color: #F472B6;">import</span> AgentShield<br><br>
+                    <span style="color: #94A3B8;"># Wrap your LLM agent in 2 lines</span><br>
+                    shield = AgentShield(api_key=<span style="color: #A7F3D0;">"YOUR_KEY"</span>, policy=<span style="color: #A7F3D0;">"HIPAA_STRICT"</span>)<br>
+                    safe_response = shield.execute(agent.run, patient_data)
+                </div>
+            </div>
             
             <div class="hero-badges">
-                <span class="hero-badge">Dual Degrees: Applied Math & Physics</span>
-                <span class="hero-badge">Control Theory</span>
-                <span class="hero-badge">Local AI Architectures</span>
+                <a href="#contact" class="btn" style="text-decoration: none;">Join Developer Beta &rarr;</a>
+                <a href="#architecture" class="btn-outline" style="text-decoration: none;">View Documentation</a>
             </div>
         </div>
     </header>
 
-    <section id="integrity" style="background: rgba(255,255,255,0.01); border-top: 1px solid var(--border-main); border-bottom: 1px solid var(--border-main);">
-        <div class="container animate-in">
-            <span class="meta-label">The Company</span>
-            <h2>Xibalba Solutions</h2>
-            
-            <div class="split" style="margin-top: 3rem; align-items: start;">
-                <div class="card" style="border-left: 3px solid var(--color-error);">
-                    <span class="card-icon">⚠️</span>
-                    <h3 class="card-title">The Problem</h3>
-                    <p style="color: var(--text-primary); font-weight: 500;">AI agents are stochastic and unpredictable.</p>
-                    <p>Enterprises and healthcare organizations cannot adopt autonomous AI because hallucination and drift violate strict regulatory compliance and operational safety.</p>
-                </div>
-                <div class="card" style="border-left: 3px solid var(--color-success);">
-                    <span class="card-icon">🛡️</span>
-                    <h3 class="card-title">The Solution</h3>
-                    <p style="color: var(--text-primary); font-weight: 500;">The Integrity Protocol.</p>
-                    <p>A deterministic control layer that places hard, cryptographically-verifiable guardrails on AI agents, ensuring they stay strictly within operational boundaries.</p>
-                </div>
+    <section id="problem" class="container animate-in">
+        <div class="text-center" style="max-width: 800px; margin: 0 auto;">
+            <h2 style="font-size: 2rem; margin-bottom: 1.5rem;">Why AWS GovCloud Isn't Enough for Agents</h2>
+            <p style="color: var(--text-secondary); font-size: 1.15rem; line-height: 1.7;">
+                Standard logging and BAAs cover your database, but they <strong>fail completely</strong> when an LLM takes autonomous action. When a medical agent makes a stochastic decision, hospital compliance officers need mathematical certainty of its reasoning path. Without cryptographic execution proofs, your agent is legally undeployable.
+            </p>
+        </div>
+    </section>
+
+    <section id="value-prop" class="container animate-in">
+        <div class="split" style="margin-top: 2rem;">
+            <!-- Integrity Protocol -->
+            <div class="card" style="border-top: 4px solid var(--color-brand-primary);">
+                <span class="card-icon">
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                </span>
+                <h3 class="card-title">Integrity Protocol</h3>
+                <p style="color: var(--text-primary); font-weight: 500; margin-bottom: 1rem;">Open Source Engine</p>
+                <p>The core infrastructure. A 5-node validation lifecycle that bridges stochastic LLM reasoning with deterministic finality using zero-knowledge proofs and immutable execution logs.</p>
+                <a href="https://xibalbatechsol.github.io/docs/whitepaper.pdf" target="_blank" style="color: var(--color-brand-primary); font-family: var(--font-mono); font-size: 0.85rem; font-weight: 700; text-decoration: none;">Read Whitepaper &rarr;</a>
             </div>
-            
-            <div class="text-center" style="margin-top: 3rem;">
-                <a href="https://github.com/XibalbaTechSol" target="_blank" class="btn-outline">View GitHub Organization</a>
+
+            <!-- Xibalba Shield -->
+            <div class="card" style="border-top: 4px solid var(--color-brand-secondary);">
+                <span class="card-icon">
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                </span>
+                <h3 class="card-title">Xibalba Shield</h3>
+                <p style="color: var(--text-primary); font-weight: 500; margin-bottom: 1rem;">Enterprise Compliance Dashboard</p>
+                <p>Built on the Integrity Protocol. An enterprise SaaS platform that generates tamper-proof audit trails and automated compliance reporting for hospital administrators.</p>
+                <a href="#contact" style="color: var(--color-brand-secondary); font-family: var(--font-mono); font-size: 0.85rem; font-weight: 700; text-decoration: none;">Contact for Enterprise Pricing &rarr;</a>
+            </div>
+        </div>
+
+        <!-- Traction Bar -->
+        <div class="traction-bar">
+            <div class="traction-stat">
+                <span class="stat-value">v2.2</span>
+                <span class="stat-label">Python SDK</span>
+            </div>
+            <div class="traction-stat">
+                <span class="stat-value">HIPAA</span>
+                <span class="stat-label">Compliance Ready</span>
+            </div>
+            <div class="traction-stat">
+                <span class="stat-value">&lt; 15ms</span>
+                <span class="stat-label">Latency Overhead</span>
+            </div>
+            <div class="traction-stat">
+                <span class="stat-value">Waitlist</span>
+                <span class="stat-label">Developer Beta</span>
+            </div>
+        </div>
+
+        <!-- Product Screenshot -->
+        <div style="margin-top: 4rem; text-align: center;">
+            <h3 style="margin-bottom: 1.5rem; font-size: 1.1rem; color: var(--text-secondary);">Xibalba Shield Command Center</h3>
+            <div class="screenshot-wrapper">
+                <img src="dashboard.png" alt="Xibalba Shield Dashboard" style="width: 100%; border-radius: 8px; border: 1px solid var(--border-main);">
+            </div>
+        </div>
+
+        <!-- Competitive Comparison -->
+        <div style="margin-top: 5rem;">
+            <h3 style="text-align: center; margin-bottom: 2rem;">How Xibalba Shield Compares</h3>
+            <div class="compare-table-wrapper">
+                <table class="compare-table">
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>Guardrails AI</th>
+                            <th>NeMo Guardrails</th>
+                            <th>Lakera</th>
+                            <th class="highlight-header">Xibalba Shield</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Pre-execution Intent Gating</td>
+                            <td>Partial</td>
+                            <td>Partial</td>
+                            <td>&#10003;</td>
+                            <td class="highlight-col">&#10003;</td>
+                        </tr>
+                        <tr>
+                            <td>HIPAA-Specific Policy Engine</td>
+                            <td>&#10007;</td>
+                            <td>Partial</td>
+                            <td>&#10003;</td>
+                            <td class="highlight-col">&#10003;</td>
+                        </tr>
+                        <tr>
+                            <td>Cryptographic Audit Proofs</td>
+                            <td>&#10007;</td>
+                            <td>&#10007;</td>
+                            <td>&#10007;</td>
+                            <td class="highlight-col">&#10003;</td>
+                        </tr>
+                        <tr>
+                            <td>Tamper-proof Log Anchoring</td>
+                            <td>&#10007;</td>
+                            <td>&#10007;</td>
+                            <td>&#10007;</td>
+                            <td class="highlight-col">&#10003;</td>
+                        </tr>
+                        <tr>
+                            <td>Hardware-bound Identity (TEE)</td>
+                            <td>&#10007;</td>
+                            <td>&#10007;</td>
+                            <td>&#10007;</td>
+                            <td class="highlight-col">&#10003;</td>
+                        </tr>
+                        <tr>
+                            <td>Agent Reputation Scoring</td>
+                            <td>&#10007;</td>
+                            <td>&#10007;</td>
+                            <td>&#10007;</td>
+                            <td class="highlight-col highlight-col-bottom">&#10003;</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </section>
 
-    <section id="about">
-        <div class="container">
-            <div class="split animate-in" style="align-items: center;">
+    <section id="how-it-works" style="background: var(--bg-surface); border-top: 1px solid var(--border-main);">
+        <div class="container animate-in">
+            <div class="text-center">
+                <span class="meta-label">The Validation Lifecycle</span>
+                <h2>How The Integrity Protocol Works</h2>
+                <p style="color: var(--text-secondary); max-width: 700px; margin: 1rem auto 4rem;">LLMs are probabilistic &mdash; you cannot guarantee what they will say or do. The Integrity Protocol doesn't try to make them deterministic. Instead, it wraps every agent action in a cryptographic validation loop where <strong style="color: var(--text-primary);">non-compliance destroys the agent's ability to operate.</strong></p>
+            </div>
+            
+            <div class="enforcement-loop">
+                <!-- Step 1 -->
+                <div class="loop-step">
+                    <div class="loop-marker">
+                        <div class="loop-num">1</div>
+                        <div class="loop-line"></div>
+                    </div>
+                    <div class="loop-content">
+                        <h3>Agent Proposes an Action</h3>
+                        <p>An autonomous AI agent generates a reasoning trace and proposes an action &mdash; writing to an EHR, sending a clinical summary, updating a patient record. The Integrity SDK serializes the intended state, hashes it with SHA-256, and signs it with the agent's hardware-bound DID private key (<code>did:intg:&lt;address&gt;</code>). This signed commitment is locked to a 60-second TTL. No commitment, no execution.</p>
+                        <div class="loop-tags"><span>Integrity SDK</span><span>W3C DID Signing</span><span>SHA-256</span><span>60s TTL</span></div>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="loop-step">
+                    <div class="loop-marker">
+                        <div class="loop-num">2</div>
+                        <div class="loop-line"></div>
+                    </div>
+                    <div class="loop-content">
+                        <h3>BCC Middleware Intercepts</h3>
+                        <p>The Behavioral Commitment Chain (BCC) middleware intercepts the request at <code>/v1/bcc/intercept</code>. It runs a 4-gate validation sequence in order:</p>
+                        <ol style="margin: 0.75rem 0 0 1.25rem; font-size: 0.9rem; color: var(--text-secondary); line-height: 2;">
+                            <li><strong style="color: var(--text-primary);">TTL Check</strong> &mdash; Has the commitment expired?</li>
+                            <li><strong style="color: var(--text-primary);">AIS Threshold</strong> &mdash; Does the agent's reputation score meet the minimum for this action class?</li>
+                            <li><strong style="color: var(--text-primary);">Intent Hash Match</strong> &mdash; Does the actual action match the cryptographic commitment? (Drift detection)</li>
+                            <li><strong style="color: var(--text-primary);">OPA Policy Evaluation</strong> &mdash; Does the action comply with the agent's Alignment Card (HIPAA boundaries, scope limits, PHI exposure rules)?</li>
+                        </ol>
+                        <p style="margin-top: 0.75rem;">If any gate fails, the action is killed and the failure is logged. No exceptions.</p>
+                        <div class="loop-tags"><span>BCC Middleware</span><span>FastAPI</span><span>OPA</span><span>Intent Drift Detection</span></div>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="loop-step">
+                    <div class="loop-marker">
+                        <div class="loop-num">3</div>
+                        <div class="loop-line"></div>
+                    </div>
+                    <div class="loop-content">
+                        <h3>Authorized Execution &amp; Proof Generation</h3>
+                        <p>If all four gates pass, the BCC generates an HMAC-SHA256 verification token and the action executes. Simultaneously, Xibalba Shield generates a zero-knowledge proof (Aztec Noir, UltraPlonk) that cryptographically verifies the reasoning was valid &mdash; <em>without ever exposing the raw prompt, logprobs, or PHI</em>. The proof and audit record are written to the provenance ledger.</p>
+                        <div class="loop-tags"><span>HMAC-SHA256</span><span>ZK-ML (Aztec Noir)</span><span>Xibalba Shield</span><span>Provenance Ledger</span></div>
+                    </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="loop-step">
+                    <div class="loop-marker">
+                        <div class="loop-num">4</div>
+                        <div class="loop-line"></div>
+                    </div>
+                    <div class="loop-content">
+                        <h3>Telemetry &rarr; Oracle &rarr; AIS Update</h3>
+                        <p>Every action outcome &mdash; success or failure &mdash; is streamed as telemetry to the Rust Axum Oracle via OTLP/gRPC. The Oracle recalculates the agent's <strong>Tri-Metric Agent Integrity Score (AIS)</strong> in real-time across three axes: behavioral entropy, human grounding, and computational sacrifice. The updated global reputation state is Merkle-root anchored to Base L2 every 24 hours.</p>
+                        <div class="loop-tags"><span>Rust Axum Oracle</span><span>OTLP/gRPC</span><span>Tri-Metric AIS</span><span>Base L2 Anchor</span></div>
+                    </div>
+                </div>
+
+                <!-- Step 5: The Enforcement -->
+                <div class="loop-step loop-step--penalty">
+                    <div class="loop-marker">
+                        <div class="loop-num" style="background: #EF4444;">5</div>
+                        <div class="loop-line" style="background: transparent;"></div>
+                    </div>
+                    <div class="loop-content" style="border-color: rgba(239, 68, 68, 0.3);">
+                        <h3 style="color: #EF4444;">Hallucinate or Expose PHI? Lose Everything.</h3>
+                        <p>This is the enforcement mechanism that makes the entire lifecycle work. If an agent hallucinates, exposes PHI, or drifts from its Alignment Card, the Oracle slashes its <strong>AIS</strong> in real-time. AIS isn't cosmetic &mdash; it's the agent's operating license:</p>
+                        <div class="penalty-grid">
+                            <div class="penalty-item">
+                                <span class="penalty-score">Below 600</span>
+                                <span class="penalty-desc">Demoted to Tier 1 (Sovereign). Restricted to pseudonymous, sandboxed operations only. No access to production systems.</span>
+                            </div>
+                            <div class="penalty-item">
+                                <span class="penalty-score">Below 400</span>
+                                <span class="penalty-desc">Locked out of A2A service contracts. No institutional counterparty will transact with this agent.</span>
+                            </div>
+                            <div class="penalty-item">
+                                <span class="penalty-score">Below 200</span>
+                                <span class="penalty-desc">Effectively dead. The agent cannot pass AIS threshold gating for any meaningful action on the network.</span>
+                            </div>
+                        </div>
+                        <p style="margin-top: 1.25rem; font-size: 0.9rem;">Compliance isn't enforced by hoping the model behaves. It's enforced by making non-compliance economically and operationally catastrophic. <strong>The agent's reputation <em>is</em> its ability to function.</strong></p>
+                        <div class="loop-tags"><span>AIS Slashing</span><span>Verification Ladder</span><span>Economic Enforcement</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Architecture Deep Dive -->
+    <section id="architecture" style="background: var(--bg-body); border-top: 1px solid var(--border-main);">
+        <div class="container animate-in">
+            <span class="meta-label">Under The Hood</span>
+            <h2>Protocol Architecture</h2>
+            <p style="max-width: 750px; margin-bottom: 3rem;">The Integrity Protocol is a 5-node validation lifecycle that bridges stochastic LLM reasoning with deterministic on-chain finality. Every layer is production-grade.</p>
+
+            <!-- 5-Node Architecture Table -->
+            <div class="arch-table">
+                <div class="arch-row">
+                    <div class="arch-node">01</div>
+                    <div class="arch-detail">
+                        <h3 style="font-size: 1.1rem; margin-bottom: 0.25rem;">Infrastructure Foundation</h3>
+                        <p style="margin: 0; font-size: 0.9rem;">Smart contracts on Base L2 (EVM). <code>SovereignAgent.sol</code> handles identity &amp; access control. <code>StateAnchor.sol</code> anchors Merkle roots for global reputation state every 24h.</p>
+                    </div>
+                    <div class="arch-tags"><span>Solidity</span><span>Base L2</span><span>Foundry</span></div>
+                </div>
+                <div class="arch-row">
+                    <div class="arch-node">02</div>
+                    <div class="arch-detail">
+                        <h3 style="font-size: 1.1rem; margin-bottom: 0.25rem;">Identity &amp; Security Layer</h3>
+                        <p style="margin: 0; font-size: 0.9rem;">Hardware-bound agent identity via TEE (AWS Nitro / Intel SGX). W3C DID Documents (<code>did:intg:&lt;address&gt;</code>) with hardware fingerprinting. AWS KMS (FIPS 140-2 Level 3 HSM) for Oracle signing. ECC keypairs &rarr; deterministic Secp256k1 EVM wallets.</p>
+                    </div>
+                    <div class="arch-tags"><span>W3C DID</span><span>TEE</span><span>AWS KMS</span></div>
+                </div>
+                <div class="arch-row">
+                    <div class="arch-node">03</div>
+                    <div class="arch-detail">
+                        <h3 style="font-size: 1.1rem; margin-bottom: 0.25rem;">Behavioral Commitment Chain (BCC)</h3>
+                        <p style="margin: 0; font-size: 0.9rem;">Pre-execution gating: agents cryptographically commit to an <code>intended_state_hash</code> before any action executes. OPA policy evaluation, SHA-256 intent drift detection, TTL-based commitment expiration (60s default), and AIS threshold gating.</p>
+                    </div>
+                    <div class="arch-tags"><span>FastAPI</span><span>OPA</span><span>SHA-256</span></div>
+                </div>
+                <div class="arch-row">
+                    <div class="arch-node">04</div>
+                    <div class="arch-detail">
+                        <h3 style="font-size: 1.1rem; margin-bottom: 0.25rem;">Zero-Knowledge Verification (ZK-ML)</h3>
+                        <p style="margin: 0; font-size: 0.9rem;">Aztec Noir circuits with UltraPlonk backend for zero-knowledge proofs of inference correctness. Proves an AI's reasoning was valid without exposing raw data &mdash; prompts, logprobs, or PHI never leave the edge.</p>
+                    </div>
+                    <div class="arch-tags"><span>Aztec Noir</span><span>UltraPlonk</span><span>WASM</span></div>
+                </div>
+                <div class="arch-row">
+                    <div class="arch-node">05</div>
+                    <div class="arch-detail">
+                        <h3 style="font-size: 1.1rem; margin-bottom: 0.25rem;">Reputation &amp; Compliance Observability</h3>
+                        <p style="margin: 0; font-size: 0.9rem;">Rust Axum Oracle ingests high-throughput telemetry via OTLP/gRPC. Calculates the Tri-Metric Agent Integrity Score (AIS, 0&ndash;1000). Enables A2A markets: agents with 700+ AIS access institutional credit and service contracts.</p>
+                    </div>
+                    <div class="arch-tags"><span>Rust</span><span>Axum</span><span>PostgreSQL</span></div>
+                </div>
+            </div>
+
+            <!-- AIS Scoring Math -->
+            <div style="margin-top: 4rem;">
+                <h3 style="margin-bottom: 1.5rem;">Agent Integrity Score (AIS) &mdash; The Math</h3>
+                <div class="split" style="gap: 2rem; align-items: start;">
+                    <div class="card katex-card">
+                        <div class="katex-eq">
+                            <p class="eq-label">ENTROPY (Behavioral Stability)</p>
+                            <div class="eq-render">$$S_e = 1000 \cdot e^{\,-1.5\,\cdot\, CV}$$</div>
+                            <p class="eq-note">where <span class="eq-inline">\(CV = \sigma / \mu\)</span> (Coefficient of Variation of latency &amp; accuracy)</p>
+                        </div>
+                        <div class="katex-eq">
+                            <p class="eq-label">GROUNDING (Human Accountability)</p>
+                            <div class="eq-render">$$S_g = \left(R_{\text{intervention}} \cdot 0.4 + D_{\text{edit}} \cdot 0.6\right) \cdot 1000$$</div>
+                        </div>
+                        <div class="katex-eq">
+                            <p class="eq-label">COMPOSITE INTEGRITY SCORE</p>
+                            <div class="eq-render">$$S_i = \Big[\underbrace{T_f \cdot 0.25}_{\text{TrustFlow}} + \underbrace{A \cdot 0.25}_{\text{Audit}} + \underbrace{C_i \cdot 0.50}_{\text{Sacrifice}}\Big] \cdot \frac{S_e}{1000} \cdot \left(1 + \frac{S_g}{5000}\right)$$</div>
+                            <p class="eq-note"><span class="eq-inline">\(C_i\)</span> = Computational Sacrifice (verified GPU-hours cross-referenced against Cost-of-Existence tables)</p>
+                        </div>
+                    </div>
+                    <div>
+                        <p style="font-size: 0.95rem;">Every agent is continuously scored on three axes: <strong>behavioral entropy</strong> (how predictable is it?), <strong>grounding</strong> (how often does a human intervene?), and <strong>computational sacrifice</strong> (verified GPU-hours cross-referenced against Cost-of-Existence tables).</p>
+                        <p style="font-size: 0.95rem;">AIS determines what an agent can do. Below 600, it's pseudonymous. Above 700, it can access institutional credit. At 850+, it qualifies for TEE-bound institutional trust.</p>
+                        <!-- Verification Ladder -->
+                        <div class="verification-ladder" style="margin-top: 1.5rem;">
+                            <div class="ladder-tier">
+                                <span class="tier-label" style="color: var(--text-muted);">Tier 1 &mdash; Sovereign</span>
+                                <span class="tier-bar" style="width: 60%; background: var(--border-bright);"></span>
+                                <span class="tier-cap">600</span>
+                            </div>
+                            <div class="ladder-tier">
+                                <span class="tier-label" style="color: var(--text-secondary);">Tier 2 &mdash; Linked</span>
+                                <span class="tier-bar" style="width: 85%; background: var(--color-brand-secondary);"></span>
+                                <span class="tier-cap">850</span>
+                            </div>
+                            <div class="ladder-tier">
+                                <span class="tier-label" style="color: var(--text-primary);">Tier 3 &mdash; Institutional</span>
+                                <span class="tier-bar" style="width: 100%; background: var(--color-brand-primary);"></span>
+                                <span class="tier-cap">1000</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- HIPAA Compliance Mapping -->
+            <div style="margin-top: 4rem;">
+                <h3 style="margin-bottom: 1.5rem;">HIPAA Compliance Mapping</h3>
+                <div class="compliance-table">
+                    <div class="compliance-row compliance-header">
+                        <span>HIPAA Requirement</span>
+                        <span>CFR Section</span>
+                        <span>How We Solve It</span>
+                    </div>
+                    <div class="compliance-row">
+                        <span>Access Control</span>
+                        <span><code>&sect; 164.312(a)(1)</code></span>
+                        <span><code>SovereignAgent.sol</code> identity wrapper with TEE-bound DID</span>
+                    </div>
+                    <div class="compliance-row">
+                        <span>Audit Controls</span>
+                        <span><code>&sect; 164.312(b)</code></span>
+                        <span>Provenance Ledger + 24h Merkle root anchoring to Base L2</span>
+                    </div>
+                    <div class="compliance-row">
+                        <span>Transmission Security</span>
+                        <span><code>&sect; 164.312(e)(1)</code></span>
+                        <span>Local ZK-hashing via Aztec Noir &mdash; PHI never leaves the edge</span>
+                    </div>
+                    <div class="compliance-row">
+                        <span>Integrity</span>
+                        <span><code>&sect; 164.312(c)(1)</code></span>
+                        <span>BCC pre-execution gating + HMAC-SHA256 verification tokens</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SDK Code Snippet -->
+            <div style="margin-top: 4rem;">
+                <h3 style="margin-bottom: 0.5rem;">For Developers &mdash; Integrate in 5 Lines</h3>
+                <p style="margin-bottom: 1.5rem;">The Integrity SDK (Python, v2.2) ships with native LangChain integration, TEE attestation, and BCC intent-locking out of the box.</p>
+                <div class="code-block">
+                    <div class="code-header"><span>Python</span><span style="color: var(--text-muted);">integrity-sdk v2.2</span></div>
+<pre><code><span class="code-kw">from</span> integrity_sdk <span class="code-kw">import</span> IntegrityClient
+
+client = IntegrityClient(did=<span class="code-str">"did:intg:0xA3f..."</span>)
+alignment_card = client.load_policy(<span class="code-str">"hipaa_ehr_write"</span>)
+
+<span class="code-comment"># Every action is now gated by the BCC middleware</span>
+result = <span class="code-kw">await</span> client.execute_with_integrity(
+    action=ehr_update,
+    policy=alignment_card,
+    require_zk_proof=<span class="code-val">True</span>
+)</code></pre>
+                </div>
+            </div>
+
+            <!-- Tech Stack Badges -->
+            <div style="margin-top: 4rem; text-align: center;">
+                <h3 style="margin-bottom: 1.5rem;">Built With</h3>
+                <div class="stack-badges">
+                    <span class="stack-badge">Rust</span>
+                    <span class="stack-badge">Solidity</span>
+                    <span class="stack-badge">Aztec Noir</span>
+                    <span class="stack-badge">Python</span>
+                    <span class="stack-badge">FastAPI</span>
+                    <span class="stack-badge">Base L2</span>
+                    <span class="stack-badge">AWS KMS</span>
+                    <span class="stack-badge">PostgreSQL</span>
+                    <span class="stack-badge">LangChain</span>
+                    <span class="stack-badge">C++</span>
+                </div>
+            </div>
+
+            <!-- CTA Buttons -->
+            <div class="text-center" style="margin-top: 4rem; display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+                <a href="https://xibalbatechsol.github.io/docs/whitepaper.pdf" target="_blank" class="btn">Read the Whitepaper &rarr;</a>
+                <a href="https://github.com/XibalbaTechSol" target="_blank" class="btn-outline">View on GitHub &rarr;</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" style="background: var(--bg-surface); border-top: 1px solid var(--border-main);">
+        <div class="container animate-in">
+            <span class="meta-label">The Founder</span>
+            <h2>Who is Jacob Vickers?</h2>
+            
+            <div class="split" style="align-items: center; margin-top: 3rem;">
+                <div class="text-center" style="flex: 0 0 300px;">
+                    <div class="monogram-avatar">JV</div>
+                    <h3 style="margin-top: 1.5rem; margin-bottom: 0.5rem;">Jacob Vickers</h3>
+                    <p style="color: var(--text-secondary); font-size: 0.9rem;">Founder, Xibalba Solutions</p>
+                    <div class="social-links" style="margin-top: 1rem; display: flex; gap: 1rem; justify-content: center;">
+                        <a href="https://x.com/jacobvickers" target="_blank" aria-label="X (Twitter)" style="color: var(--text-secondary); transition: color 0.2s;">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                        </a>
+                        <a href="https://linkedin.com/in/jacobvickers" target="_blank" aria-label="LinkedIn" style="color: var(--text-secondary); transition: color 0.2s;">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                        </a>
+                        <a href="https://github.com/XibalbaTechSol" target="_blank" aria-label="GitHub" style="color: var(--text-secondary); transition: color 0.2s;">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                        </a>
+                    </div>
+                </div>
                 <div>
-                    <span class="meta-label">The Founder</span>
-                    <h2>Built on <span class="gradient-text">Grit & First Principles.</span></h2>
-                    
-                    <ul style="list-style: none; margin-top: 2rem;">
-                        <li style="margin-bottom: 2rem; position: relative; padding-left: 1.5rem;">
-                            <span style="position: absolute; left: 0; color: var(--color-brand-primary);">▹</span>
-                            <strong style="display: block; font-size: 1.1rem; margin-bottom: 0.25rem;">10 Years of High-Volume Hospitality</strong>
-                            <p style="margin: 0; font-size: 0.95rem;">Waited tables in chaotic, high-pressure environments for a decade to single-handedly fund dual degrees in Applied Mathematics and Physics (Cum Laude). I know how to manage chaos without breaking a sweat.</p>
-                        </li>
-                        <li style="margin-bottom: 2rem; position: relative; padding-left: 1.5rem;">
-                            <span style="position: absolute; left: 0; color: var(--color-brand-primary);">▹</span>
-                            <strong style="display: block; font-size: 1.1rem; margin-bottom: 0.25rem;">Enterprise "Plumbing" & Compliance</strong>
-                            <p style="margin: 0; font-size: 0.95rem;">Spent 6 years managing IT infrastructure for healthcare organizations. Migrated company-wide VOIP systems and built digital workflows for Electronic Visit Verification (EVV) under strict, unforgiving regulatory deadlines.</p>
-                        </li>
-                        <li style="position: relative; padding-left: 1.5rem;">
-                            <span style="position: absolute; left: 0; color: var(--color-brand-primary);">▹</span>
-                            <strong style="display: block; font-size: 1.1rem; margin-bottom: 0.25rem;">The "Sparky" Origin</strong>
-                            <p style="margin: 0; font-size: 0.95rem;">Earned the childhood nickname "Sparky" after short-circuiting a wall outlet at age 3. The room went dark, but it sparked a lifelong obsession with understanding and building complex, mission-critical systems.</p>
-                        </li>
+                    <p style="font-size: 1.1rem; line-height: 1.8;">I'm an engineer obsessed with building resilient systems.</p>
+                    <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 1.5rem;">After building previous startups in hardware and 3D printing, I observed the explosive growth of agentic AI. Through my work on the OpenClaw project, I realized the industry was rushing toward autonomous agents without solving the fundamental liability: <strong>how do you trust a probabilistic model to execute deterministic actions in highly regulated environments?</strong></p>
+                    <p style="color: var(--text-secondary); line-height: 1.7;">Xibalba Solutions was born from this exact problem. I'm building the Integrity Protocol to give hospitals and enterprises the cryptographic certainty they need to safely deploy AI agents into production.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" style="border-top: 1px solid var(--border-main);">
+        <div class="container animate-in">
+            <div class="text-center" style="max-width: 600px; margin: 0 auto;">
+                <span class="meta-label">Developer Access</span>
+                <h2>Join the Developer Beta</h2>
+                <p style="color: var(--text-secondary); margin: 1rem 0 2.5rem;">We are currently opening early access to the Python SDK for AI healthcare startups. Sign up below to get your API key.</p>
+                
+                <form class="contact-form" action="https://xibalba-api.onrender.com/contact" method="POST">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Work Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Use Case</label>
+                        <textarea id="message" name="message" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="btn" style="width: 100%;">Submit Inquiry &rarr;</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer style="background: #0B0F19; padding: 5rem 0 2rem 0; color: #fff; border-top: 1px solid rgba(255,255,255,0.05);">
+        <div class="container" style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem;">
+            <div style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+                <img src="XibalbaSolutionsLogo.png" alt="Xibalba Solutions Logo" style="height: 48px; filter: brightness(0) invert(1); margin-bottom: 1.5rem;">
+                <p style="color: #94A3B8; font-size: 0.95rem; max-width: 320px; line-height: 1.7; margin-bottom: 2rem;">Building the trust layer for autonomous medical AI agents.</p>
+                <div class="social-links" style="display: flex; gap: 1rem;">
+                    <a href="https://x.com/jacobvickers" target="_blank" aria-label="X (Twitter)" style="color: #94A3B8; transition: color 0.2s;">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                    </a>
+                    <a href="https://linkedin.com/in/jacobvickers" target="_blank" aria-label="LinkedIn" style="color: #94A3B8; transition: color 0.2s;">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                    </a>
+                    <a href="https://github.com/XibalbaTechSol" target="_blank" aria-label="GitHub" style="color: #94A3B8; transition: color 0.2s;">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                    </a>
+                </div>
+            </div>
+            <div style="display: flex; justify-content: space-around;">
+                <div>
+                    <h4 style="color: #fff; margin-bottom: 1.5rem; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.1em;">Protocol</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 0.75rem;"><a href="#value-prop" style="color: #94A3B8; text-decoration: none; font-size: 0.95rem; transition: color 0.2s;">Platform</a></li>
+                        <li style="margin-bottom: 0.75rem;"><a href="#how-it-works" style="color: #94A3B8; text-decoration: none; font-size: 0.95rem; transition: color 0.2s;">Validation Loop</a></li>
+                        <li style="margin-bottom: 0.75rem;"><a href="#architecture" style="color: #94A3B8; text-decoration: none; font-size: 0.95rem; transition: color 0.2s;">Architecture</a></li>
+                        <li style="margin-bottom: 0.75rem;"><a href="https://xibalbatechsol.github.io/docs/whitepaper.pdf" target="_blank" style="color: #94A3B8; text-decoration: none; font-size: 0.95rem; transition: color 0.2s;">Whitepaper</a></li>
                     </ul>
                 </div>
-                
-                <div class="card" style="text-align: center; padding: 3rem 2rem;">
-                    <div style="font-size: 3rem; margin-bottom: 1rem;">⚙️</div>
-                    <h3 style="margin-bottom: 1rem;">Systems Architect</h3>
-                    <p style="margin-bottom: 0;">My background in physics and control theory provides a mathematical framework for building stable software. I don't just write code; I engineer deterministic systems.</p>
+                <div>
+                    <h4 style="color: #fff; margin-bottom: 1.5rem; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.1em;">Company</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 0.75rem;"><a href="#about" style="color: #94A3B8; text-decoration: none; font-size: 0.95rem; transition: color 0.2s;">The Founder</a></li>
+                        <li style="margin-bottom: 0.75rem;"><a href="#contact" style="color: #94A3B8; text-decoration: none; font-size: 0.95rem; transition: color 0.2s;">Request Pilot</a></li>
+                    </ul>
                 </div>
             </div>
         </div>
-    </section>
-
-    <section id="contact" style="background: rgba(10,10,15,0.5);">
-        <div class="container animate-in text-center">
-            <span class="meta-label">Connect</span>
-            <h2>Let's Talk.</h2>
-            <p style="max-width: 500px; margin: 0 auto 2rem;">I'm actively building the infrastructure that will allow enterprises to trust autonomous AI.</p>
-            <div class="social-links" style="display: flex; justify-content: center; gap: 1rem;">
-                <a href="mailto:jacob.v.universe@gmail.com" class="btn">Email: jacob.v.universe@gmail.com</a>
-                <a href="https://linkedin.com/in/jacobvickers" target="_blank" class="btn-outline">LinkedIn Profile</a>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2026 Jacob Vickers. All rights reserved.</p>
-            <p style="font-size: 0.8rem; margin-top: 0.5rem; color: var(--text-muted);">Founder & CEO, Xibalba Solutions LLC</p>
+        <div class="container" style="border-top: 1px solid rgba(255,255,255,0.1); margin-top: 4rem; padding-top: 2rem; display: flex; justify-content: space-between; align-items: center; color: #64748B; font-size: 0.85rem;">
+            <span>&copy; 2026 Xibalba Solutions LLC. All rights reserved.</span>
+            <span>Founded by Jacob Vickers</span>
         </div>
     </footer>
 
     <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" crossorigin="anonymous"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            renderMathInElement(document.body, {
+                delimiters: [
+                    {left: '$$', right: '$$', display: true},
+                    {left: '\\(', right: '\\)', display: false}
+                ],
+                throwOnError: false
+            });
+        });
+    </script>
 </body>
 </html>

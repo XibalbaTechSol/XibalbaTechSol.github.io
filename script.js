@@ -1,4 +1,31 @@
 document.addEventListener("DOMContentLoaded", () => {
+    // Theme Toggle
+    const themeToggle = document.getElementById("theme-toggle");
+    const iconMoon = document.querySelector(".icon-moon");
+    const iconSun = document.querySelector(".icon-sun");
+
+    // Check localStorage
+    if (localStorage.getItem("theme") === "light") {
+        document.documentElement.classList.add("light-mode");
+        iconMoon.style.display = "none";
+        iconSun.style.display = "inline";
+    }
+
+    if (themeToggle) {
+        themeToggle.addEventListener("click", () => {
+            document.documentElement.classList.toggle("light-mode");
+            if (document.documentElement.classList.contains("light-mode")) {
+                localStorage.setItem("theme", "light");
+                iconMoon.style.display = "none";
+                iconSun.style.display = "inline";
+            } else {
+                localStorage.setItem("theme", "dark");
+                iconMoon.style.display = "inline";
+                iconSun.style.display = "none";
+            }
+        });
+    }
+
     // Navigation Scroll Effect
     const nav = document.querySelector("nav");
     window.addEventListener("scroll", () => {

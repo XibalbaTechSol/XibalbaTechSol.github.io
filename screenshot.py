@@ -7,7 +7,7 @@ async def main():
         page = await browser.new_page()
         await page.goto("file:///home/xibalba/Desktop/personal-site/index.html")
         await page.wait_for_load_state("networkidle")
-        await page.screenshot(path="screenshot.png")
+        await page.screenshot(path="screenshot.png", full_page=True)
         await browser.close()
 
 if __name__ == "__main__":
