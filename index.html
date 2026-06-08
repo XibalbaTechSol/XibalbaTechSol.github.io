@@ -87,7 +87,7 @@
                 </span>
                 <h3 class="card-title">Integrity Protocol</h3>
                 <p style="color: var(--text-primary); font-weight: 500; margin-bottom: 1rem;">Open Source Engine</p>
-                <p>The core infrastructure. A 5-node validation lifecycle that bridges stochastic LLM reasoning with deterministic finality using zero-knowledge proofs and immutable execution logs.</p>
+                <p>The local core infrastructure. A real-time validation SDK that intercepts agent requests, checks policy conformance locally, and logs execution paths using lightweight cryptographic hashes.</p>
                 <a href="https://xibalbatechsol.github.io/docs/whitepaper.pdf" target="_blank" style="color: var(--color-brand-primary); font-family: var(--font-mono); font-size: 0.85rem; font-weight: 700; text-decoration: none;">Read Whitepaper &rarr;</a>
             </div>
 
@@ -97,8 +97,8 @@
                     <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
                 </span>
                 <h3 class="card-title">Xibalba Shield</h3>
-                <p style="color: var(--text-primary); font-weight: 500; margin-bottom: 1rem;">Enterprise Compliance Dashboard</p>
-                <p>Built on the Integrity Protocol. An enterprise SaaS platform that generates tamper-proof audit trails and automated compliance reporting for hospital administrators.</p>
+                <p style="color: var(--text-primary); font-weight: 500; margin-bottom: 1rem;">Enterprise Control Plane</p>
+                <p>The SaaS monetization layer. Centralizes policy management, aggregates out-of-band ZK-audit trails, hooks into enterprise SIEMs (Datadog/Splunk), and automates HIPAA compliance reporting.</p>
                 <a href="#contact" style="color: var(--color-brand-secondary); font-family: var(--font-mono); font-size: 0.85rem; font-weight: 700; text-decoration: none;">Contact for Enterprise Pricing &rarr;</a>
             </div>
         </div>
@@ -205,7 +205,7 @@
             <div class="text-center">
                 <span class="meta-label">The Validation Lifecycle</span>
                 <h2>How The Integrity Protocol Works</h2>
-                <p class="section-desc">LLMs are probabilistic &mdash; you cannot guarantee what they will say or do. The Integrity Protocol doesn't try to make them deterministic. Instead, it wraps every agent action in a cryptographic validation loop where <strong style="color: var(--text-primary);">non-compliance destroys the agent's ability to operate.</strong></p>
+                <p class="section-desc">LLMs are probabilistic &mdash; you cannot guarantee what they will say or do. The Integrity Protocol doesn't try to make them deterministic. Instead, it intercepts every agent action in a local pre-execution loop, ensuring <strong style="color: var(--text-primary);">non-compliant actions are blocked instantly before any transaction occurs.</strong></p>
             </div>
             
             <div class="enforcement-loop">
@@ -249,8 +249,8 @@
                         <div class="loop-line"></div>
                     </div>
                     <div class="loop-content">
-                        <h3>Authorized Execution &amp; Proof Generation</h3>
-                        <p>If all four gates pass, the BCC generates an HMAC-SHA256 verification token and the action executes. Simultaneously, Xibalba Shield generates a zero-knowledge proof (Aztec Noir, UltraPlonk) that cryptographically verifies the reasoning was valid &mdash; <em>without ever exposing the raw prompt, logprobs, or PHI</em>. The proof and audit record are written to the provenance ledger.</p>
+                        <h3>Authorized Execution &amp; Asynchronous Proof Generation</h3>
+                        <p>If all four gates pass, the BCC generates a verification token and the action executes instantly. Asynchronously, Xibalba Shield generates a zero-knowledge proof (Aztec Noir, UltraPlonk) that cryptographically verifies the reasoning path &mdash; <em>without exposing PHI or adding execution latency</em>. The proof is written to the audit ledger.</p>
                         <div class="loop-tags"><span>HMAC-SHA256</span><span>ZK-ML (Aztec Noir)</span><span>Xibalba Shield</span><span>Provenance Ledger</span></div>
                     </div>
                 </div>
@@ -262,9 +262,9 @@
                         <div class="loop-line"></div>
                     </div>
                     <div class="loop-content">
-                        <h3>Telemetry &rarr; Oracle &rarr; AIS Update</h3>
-                        <p>Every action outcome &mdash; success or failure &mdash; is streamed as telemetry to the Rust Axum Oracle via OTLP/gRPC. The Oracle recalculates the agent's <strong>Tri-Metric Agent Integrity Score (AIS)</strong> in real-time across three axes: behavioral entropy, human grounding, and computational sacrifice. The updated global reputation state is Merkle-root anchored to Base L2 every 24 hours.</p>
-                        <div class="loop-tags"><span>Rust Axum Oracle</span><span>OTLP/gRPC</span><span>Tri-Metric AIS</span><span>Base L2 Anchor</span></div>
+                        <h3>Telemetry &rarr; Security Oracle &rarr; Risk Profile</h3>
+                        <p>Every action outcome is streamed as telemetry to the Rust Axum engine via OTLP/gRPC. The engine recalculates the agent's <strong>Tri-Metric Agent Integrity Score (AIS)</strong> in real-time. The updated integrity states are cryptographically anchored to a secure, private corporate ledger or standard SIEM for immutable auditing.</p>
+                        <div class="loop-tags"><span>Rust Axum Oracle</span><span>OTLP/gRPC</span><span>Tri-Metric AIS</span><span>Audit Anchor</span></div>
                     </div>
                 </div>
 
@@ -275,20 +275,20 @@
                         <div class="loop-line" style="background: transparent;"></div>
                     </div>
                     <div class="loop-content" style="border-color: rgba(239, 68, 68, 0.3);">
-                        <h3 style="color: #EF4444;">Hallucinate or Expose PHI? Lose Everything.</h3>
-                        <p>This is the enforcement mechanism that makes the entire lifecycle work. If an agent hallucinates, exposes PHI, or drifts from its Alignment Card, the Oracle slashes its <strong>AIS</strong> in real-time. AIS isn't cosmetic &mdash; it's the agent's operating license:</p>
+                        <h3 style="color: #EF4444;">Policy Violation? Instant Circuit Breaking.</h3>
+                        <p>This is the active gating that guarantees compliance. If an agent attempts to execute an action that drifts from its Alignment Card or exposes PHI, the local middleware triggers a circuit breaker, immediately revoking access permissions and isolating the agent:</p>
                         <div class="penalty-grid">
                             <div class="penalty-item">
-                                <span class="penalty-score">Below 600</span>
-                                <span class="penalty-desc">Demoted to Tier 1 (Sovereign). Restricted to pseudonymous, sandboxed operations only. No access to production systems.</span>
+                                <span class="penalty-score">Real-time Gating</span>
+                                <span class="penalty-desc">Pre-execution intent check blocks the action in &lt;15ms before it reaches any external database or system.</span>
                             </div>
                             <div class="penalty-item">
-                                <span class="penalty-score">Below 400</span>
-                                <span class="penalty-desc">Locked out of A2A service contracts. No institutional counterparty will transact with this agent.</span>
+                                <span class="penalty-score">Instant Isolation</span>
+                                <span class="penalty-desc">The agent's session is isolated and permissions are downgraded automatically. Human-in-the-loop sign-off is required to resume.</span>
                             </div>
                             <div class="penalty-item">
-                                <span class="penalty-score">Below 200</span>
-                                <span class="penalty-desc">Effectively dead. The agent cannot pass AIS threshold gating for any meaningful action on the network.</span>
+                                <span class="penalty-score">Immutable Logs</span>
+                                <span class="penalty-desc">Detailed incident reports are cryptographically signed and piped to enterprise SIEM platforms for instant compliance officer review.</span>
                             </div>
                         </div>
                         <p style="margin-top: 1.25rem; font-size: 0.9rem;">Compliance isn't enforced by hoping the model behaves. It's enforced by making non-compliance economically and operationally catastrophic. <strong>The agent's reputation <em>is</em> its ability to function.</strong></p>
@@ -312,15 +312,15 @@
                     <div class="arch-node">01</div>
                     <div class="arch-detail">
                         <h3 class="arch-row-title">Infrastructure Foundation</h3>
-                        <p style="margin: 0; font-size: 0.9rem;">Smart contracts on Base L2 (EVM). <code><a href="https://github.com/XibalbaTechSol/integrity-protocol" target="_blank" style="color: inherit; text-decoration: underline;">SovereignAgent.sol</a></code> handles identity &amp; access control. <code><a href="https://github.com/XibalbaTechSol/integrity-protocol" target="_blank" style="color: inherit; text-decoration: underline;">StateAnchor.sol</a></code> anchors Merkle roots for global reputation state every 24h.</p>
+                        <p style="margin: 0; font-size: 0.9rem;">Cryptographic Ledger Foundation. Decentralized or on-premise execution logs. Anchors Merkle roots of agent state history every 24 hours to guarantee tamper-proof historical audits.</p>
                     </div>
-                    <div class="arch-tags"><span>Solidity</span><span>Base L2</span><span>Foundry</span></div>
+                    <div class="arch-tags"><span>Merkle Roots</span><span>Ledger</span><span>Foundry</span></div>
                 </div>
                 <div class="arch-row">
                     <div class="arch-node">02</div>
                     <div class="arch-detail">
                         <h3 class="arch-row-title">Identity &amp; Security Layer</h3>
-                        <p style="margin: 0; font-size: 0.9rem;">Hardware-bound agent identity via TEE (AWS Nitro / Intel SGX). W3C DID Documents (<code>did:intg:&lt;address&gt;</code>) with hardware fingerprinting. AWS KMS (FIPS 140-2 Level 3 HSM) for Oracle signing. ECC keypairs &rarr; deterministic Secp256k1 EVM wallets.</p>
+                        <p style="margin: 0; font-size: 0.9rem;">Hardware-bound agent identity via TEE (AWS Nitro / Intel SGX). W3C DID Documents (<code>did:intg:&lt;address&gt;</code>) with hardware fingerprinting. Secure enclave key storage ensures agents cannot be impersonated.</p>
                     </div>
                     <div class="arch-tags"><span>W3C DID</span><span>TEE</span><span>AWS KMS</span></div>
                 </div>
@@ -344,7 +344,7 @@
                     <div class="arch-node">05</div>
                     <div class="arch-detail">
                         <h3 class="arch-row-title">Reputation &amp; Compliance Observability</h3>
-                        <p style="margin: 0; font-size: 0.9rem;"><a href="https://github.com/XibalbaTechSol/integrity-oracle" target="_blank" style="color: inherit; text-decoration: underline; font-weight: 500;">Rust Axum Oracle</a> ingests high-throughput telemetry via OTLP/gRPC. Calculates the Tri-Metric Agent Integrity Score (AIS, 0&ndash;1000). Enables A2A markets: agents with 700+ AIS access institutional credit and service contracts.</p>
+                        <p style="margin: 0; font-size: 0.9rem;"><a href="https://github.com/XibalbaTechSol/integrity-oracle" target="_blank" style="color: inherit; text-decoration: underline; font-weight: 500;">Telemetry Engine</a> ingests high-throughput execution traces via OTLP/gRPC. Calculates the Tri-Metric Agent Integrity Score (AIS, 0&ndash;1000) based on stability, grounding, and performance to proactively manage agent risk profiles.</p>
                     </div>
                     <div class="arch-tags"><span>Rust</span><span>Axum</span><span>PostgreSQL</span></div>
                 </div>
@@ -538,43 +538,43 @@ result = <span class="code-kw">await</span> client.execute_with_integrity(
         </div>
     </section>
 
-    <footer style="background: #0B0F19; padding: 5rem 0 2rem 0; color: #fff; border-top: 1px solid rgba(255,255,255,0.05);">
-        <div class="container" style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem;">
-            <div style="display: flex; flex-direction: column; align-items: center; text-align: center;">
-                <img src="XibalbaSolutionsLogo.png" alt="Xibalba Solutions Logo" style="height: 48px; filter: brightness(0) invert(1); margin-bottom: 1.5rem;">
-                <p style="color: #94A3B8; font-size: 0.95rem; max-width: 320px; line-height: 1.7; margin-bottom: 2rem;">Building the trust layer for autonomous medical AI agents.</p>
-                <div class="social-links" style="display: flex; gap: 1rem;">
-                    <a href="https://x.com/jacobvickers" target="_blank" aria-label="X (Twitter)" style="color: #94A3B8; transition: color 0.2s;">
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="footer-info">
+                <img src="XibalbaSolutionsLogo.png" alt="Xibalba Solutions Logo" class="footer-logo">
+                <p class="footer-desc">Building the trust layer for autonomous medical AI agents.</p>
+                <div class="social-links">
+                    <a href="https://x.com/jacobvickers" target="_blank" aria-label="X (Twitter)" class="footer-social-link">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
                     </a>
-                    <a href="https://linkedin.com/in/jacobvickers" target="_blank" aria-label="LinkedIn" style="color: #94A3B8; transition: color 0.2s;">
+                    <a href="https://linkedin.com/in/jacobvickers" target="_blank" aria-label="LinkedIn" class="footer-social-link">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
                     </a>
-                    <a href="https://github.com/XibalbaTechSol" target="_blank" aria-label="GitHub" style="color: #94A3B8; transition: color 0.2s;">
+                    <a href="https://github.com/XibalbaTechSol" target="_blank" aria-label="GitHub" class="footer-social-link">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
                     </a>
                 </div>
             </div>
-            <div style="display: flex; justify-content: space-around;">
-                <div>
-                    <h4 style="color: #fff; margin-bottom: 1.5rem; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.1em;">Protocol</h4>
-                    <ul style="list-style: none; padding: 0;">
-                        <li style="margin-bottom: 0.75rem;"><a href="#value-prop" style="color: #94A3B8; text-decoration: none; font-size: 0.95rem; transition: color 0.2s;">Platform</a></li>
-                        <li style="margin-bottom: 0.75rem;"><a href="#how-it-works" style="color: #94A3B8; text-decoration: none; font-size: 0.95rem; transition: color 0.2s;">Validation Loop</a></li>
-                        <li style="margin-bottom: 0.75rem;"><a href="#architecture" style="color: #94A3B8; text-decoration: none; font-size: 0.95rem; transition: color 0.2s;">Architecture</a></li>
-                        <li style="margin-bottom: 0.75rem;"><a href="https://xibalbatechsol.github.io/docs/whitepaper.pdf" target="_blank" style="color: #94A3B8; text-decoration: none; font-size: 0.95rem; transition: color 0.2s;">Whitepaper</a></li>
+            <div class="footer-links-group">
+                <div class="footer-links-col">
+                    <h4 class="footer-col-title">Protocol</h4>
+                    <ul class="footer-links-list">
+                        <li><a href="#value-prop">Platform</a></li>
+                        <li><a href="#how-it-works">Validation Loop</a></li>
+                        <li><a href="#architecture">Architecture</a></li>
+                        <li><a href="https://xibalbatechsol.github.io/docs/whitepaper.pdf" target="_blank">Whitepaper</a></li>
                     </ul>
                 </div>
-                <div>
-                    <h4 style="color: #fff; margin-bottom: 1.5rem; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.1em;">Company</h4>
-                    <ul style="list-style: none; padding: 0;">
-                        <li style="margin-bottom: 0.75rem;"><a href="#about" style="color: #94A3B8; text-decoration: none; font-size: 0.95rem; transition: color 0.2s;">The Founder</a></li>
-                        <li style="margin-bottom: 0.75rem;"><a href="#contact" style="color: #94A3B8; text-decoration: none; font-size: 0.95rem; transition: color 0.2s;">Request Pilot</a></li>
+                <div class="footer-links-col">
+                    <h4 class="footer-col-title">Company</h4>
+                    <ul class="footer-links-list">
+                        <li><a href="#about">The Founder</a></li>
+                        <li><a href="#contact">Request Pilot</a></li>
                     </ul>
                 </div>
             </div>
         </div>
-        <div class="container" style="border-top: 1px solid rgba(255,255,255,0.1); margin-top: 4rem; padding-top: 2rem; display: flex; justify-content: space-between; align-items: center; color: #64748B; font-size: 0.85rem;">
+        <div class="container footer-bottom">
             <span>&copy; 2026 Xibalba Solutions LLC. All rights reserved.</span>
             <span>Founded by Jacob Vickers</span>
         </div>
