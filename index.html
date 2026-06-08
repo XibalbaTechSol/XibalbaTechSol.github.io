@@ -54,10 +54,11 @@
                     <div class="terminal-title">app.py</div>
                 </div>
                 <div class="terminal-body">
-                    <span style="color: #F472B6;">from</span> xibalba.shield <span style="color: #F472B6;">import</span> AgentShield<br><br>
-                    <span style="color: #94A3B8;"># Wrap your LLM agent in 2 lines</span><br>
-                    shield = AgentShield(api_key=<span style="color: #A7F3D0;">"YOUR_KEY"</span>, policy=<span style="color: #A7F3D0;">"HIPAA_STRICT"</span>)<br>
-                    safe_response = shield.execute(agent.run, patient_data)
+                    <div class="typewriter-line line-1"><span style="color: #F472B6;">from</span> xibalba.shield <span style="color: #F472B6;">import</span> AgentShield</div>
+                    <div class="typewriter-line line-2" style="opacity: 0;">.</div>
+                    <div class="typewriter-line line-3"><span style="color: #94A3B8;"># Wrap your LLM agent in 2 lines</span></div>
+                    <div class="typewriter-line line-4">shield = AgentShield(api_key=<span style="color: #A7F3D0;">"YOUR_KEY"</span>, policy=<span style="color: #A7F3D0;">"HIPAA_STRICT"</span>)</div>
+                    <div class="typewriter-line line-5">safe_response = shield.execute(agent.run, patient_data)</div>
                 </div>
             </div>
             
@@ -125,8 +126,14 @@
         <!-- Product Screenshot -->
         <div style="margin-top: 4rem; text-align: center;">
             <h3 style="margin-bottom: 1.5rem; font-size: 1.1rem; color: var(--text-secondary);">Xibalba Shield Command Center</h3>
-            <div class="screenshot-wrapper">
-                <img src="dashboard.png" alt="Xibalba Shield Dashboard" style="width: 100%; border-radius: 8px; border: 1px solid var(--border-main);">
+            <div class="browser-mockup">
+                <div class="browser-header">
+                    <div class="browser-dots">
+                        <span></span><span></span><span></span>
+                    </div>
+                    <div class="browser-url">app.xibalba.com/dashboard</div>
+                </div>
+                <img src="dashboard.png" alt="Xibalba Shield Dashboard">
             </div>
         </div>
 
@@ -505,20 +512,9 @@ result = <span class="code-kw">await</span> client.execute_with_integrity(
                 <h2>Join the Developer Beta</h2>
                 <p style="color: var(--text-secondary); margin: 1rem 0 2.5rem;">We are currently opening early access to the Python SDK for AI healthcare startups. Sign up below to get your API key.</p>
                 
-                <form class="contact-form" action="https://xibalba-api.onrender.com/contact" method="POST">
-                    <div class="form-group">
-                        <label for="name">Name</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Work Email</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Use Case</label>
-                        <textarea id="message" name="message" rows="4" required></textarea>
-                    </div>
-                    <button type="submit" class="btn" style="width: 100%;">Submit Inquiry &rarr;</button>
+                <form class="waitlist-form" action="https://xibalba-api.onrender.com/contact" method="POST">
+                    <input type="email" name="email" placeholder="Enter your work email" required class="waitlist-input">
+                    <button type="submit" class="btn waitlist-btn">Get API Key &rarr;</button>
                 </form>
             </div>
         </div>
