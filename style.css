@@ -205,6 +205,15 @@
     scrollbar-color: var(--border-bright) var(--bg-body);
 }
 
+/* Accessibility Focus Indicator */
+:focus-visible {
+    outline: 2px solid var(--color-brand-primary);
+    outline-offset: 4px;
+}
+a:focus, button:focus {
+    outline: none;
+}
+
 html { scroll-behavior: smooth; }
 body { 
     font-family: var(--font-body); 

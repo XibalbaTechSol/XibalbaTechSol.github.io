@@ -36,8 +36,9 @@ document.addEventListener("DOMContentLoaded", () => {
     
     if (hamburger && navLinks) {
         hamburger.addEventListener("click", () => {
-            hamburger.classList.toggle("active");
+            const isActive = hamburger.classList.toggle("active");
             navLinks.classList.toggle("active");
+            hamburger.setAttribute("aria-expanded", isActive ? "true" : "false");
         });
         
         // Close menu on link click
@@ -45,6 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
             link.addEventListener("click", () => {
                 hamburger.classList.remove("active");
                 navLinks.classList.remove("active");
+                hamburger.setAttribute("aria-expanded", "false");
             });
         });
     }
