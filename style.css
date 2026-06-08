@@ -490,7 +490,7 @@ footer { text-align: center; padding: 3rem 1.5rem; border-top: 1px solid var(--b
 }
 
 /* Monogram Avatar */
-.monogram-avatar { width: 120px; height: 120px; border-radius: 50%; background: linear-gradient(135deg, var(--color-brand-primary), var(--color-brand-secondary)); color: #fff; display: flex; align-items: center; justify-content: center; font-family: var(--font-mono); font-size: 3rem; font-weight: 700; margin: 0 auto; border: 4px solid var(--bg-body); box-shadow: 0 0 0 1px var(--border-main); }
+.founder-avatar { width: 120px; height: 120px; border-radius: 50%; object-fit: cover; margin: 0 auto; border: 4px solid var(--bg-body); box-shadow: 0 0 0 1px var(--border-main); }
 
 /* Contact Waitlist Form */
 .waitlist-form {
