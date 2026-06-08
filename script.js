@@ -7,8 +7,6 @@ document.addEventListener("DOMContentLoaded", () => {
     // Check localStorage
     if (localStorage.getItem("theme") === "light") {
         document.documentElement.classList.add("light-mode");
-        iconMoon.style.display = "none";
-        iconSun.style.display = "inline";
     }
 
     if (themeToggle) {
@@ -16,12 +14,8 @@ document.addEventListener("DOMContentLoaded", () => {
             document.documentElement.classList.toggle("light-mode");
             if (document.documentElement.classList.contains("light-mode")) {
                 localStorage.setItem("theme", "light");
-                iconMoon.style.display = "none";
-                iconSun.style.display = "inline";
             } else {
                 localStorage.setItem("theme", "dark");
-                iconMoon.style.display = "inline";
-                iconSun.style.display = "none";
             }
         });
     }

@@ -23,9 +23,9 @@
                 <a href="#contact">Contact</a>
             </div>
             <div style="display: flex; align-items: center; gap: 1rem;">
-                <button id="theme-toggle" aria-label="Toggle Theme" style="background: none; border: none; color: var(--text-primary); cursor: pointer; font-size: 1.25rem;">
+                <button id="theme-toggle" aria-label="Toggle Theme" class="theme-toggle-btn">
                     <span class="icon-moon">🌙</span>
-                    <span class="icon-sun" style="display: none;">☀️</span>
+                    <span class="icon-sun">☀️</span>
                 </button>
                 <button class="hamburger" aria-label="Toggle Menu" style="margin-left: 0;">
                     <span></span><span></span><span></span>
@@ -38,9 +38,9 @@
     <header class="hero">
         <div class="hero-content animate-in">
             <img src="XibalbaSolutionsLogo.png" alt="Xibalba Solutions Logo" class="hero-logo">
-            <h1 style="font-size: 2.25rem; margin-bottom: 1rem; font-weight: 700; line-height: 1.1; letter-spacing: -0.02em;">Ship Autonomous Medical AI.<br><span class="gradient-text">Pass HIPAA Audits Instantly.</span></h1>
+            <h1 class="hero-title">Ship Autonomous Medical AI.<br><span class="gradient-text">Pass HIPAA Audits Instantly.</span></h1>
             
-            <p style="font-size: 1.25rem; font-weight: 500; color: var(--text-secondary); max-width: 700px; margin: 0 auto 2rem; line-height: 1.5;">
+            <p class="hero-subtitle">
                 The developer SDK that generates cryptographic audit trails for LLM agents. Stop building custom compliance infrastructure and get back to building your product.
             </p>
 
@@ -58,7 +58,7 @@
                     <div class="typewriter-line line-2" style="opacity: 0;">.</div>
                     <div class="typewriter-line line-3"><span style="color: #94A3B8;"># Wrap your LLM agent in 2 lines</span></div>
                     <div class="typewriter-line line-4">shield = AgentShield(api_key=<span style="color: #A7F3D0;">"YOUR_KEY"</span>, policy=<span style="color: #A7F3D0;">"HIPAA_STRICT"</span>)</div>
-                    <div class="typewriter-line line-5">safe_response = shield.execute(agent.run, patient_data)</div>
+                    <div class="typewriter-line line-5">safe_response = shield.execute(agent.run, patient_data)<span class="cursor-blink">_</span></div>
                 </div>
             </div>
             
@@ -71,8 +71,8 @@
 
     <section id="problem" class="container animate-in">
         <div class="text-center" style="max-width: 800px; margin: 0 auto;">
-            <h2 style="font-size: 2rem; margin-bottom: 1.5rem;">Why AWS GovCloud Isn't Enough for Agents</h2>
-            <p style="color: var(--text-secondary); font-size: 1.15rem; line-height: 1.7;">
+            <h2>Why AWS GovCloud Isn't Enough for Agents</h2>
+            <p class="lead-text">
                 Standard logging and BAAs cover your database, but they <strong>fail completely</strong> when an LLM takes autonomous action. When a medical agent makes a stochastic decision, hospital compliance officers need mathematical certainty of its reasoning path. Without cryptographic execution proofs, your agent is legally undeployable.
             </p>
         </div>
@@ -125,7 +125,7 @@
 
         <!-- Product Screenshot -->
         <div style="margin-top: 4rem; text-align: center;">
-            <h3 style="margin-bottom: 1.5rem; font-size: 1.1rem; color: var(--text-secondary);">Xibalba Shield Command Center</h3>
+            <h3 class="section-subtitle">Xibalba Shield Command Center</h3>
             <div class="browser-mockup">
                 <div class="browser-header">
                     <div class="browser-dots">
@@ -139,7 +139,7 @@
 
         <!-- Competitive Comparison -->
         <div style="margin-top: 5rem;">
-            <h3 style="text-align: center; margin-bottom: 2rem;">How Xibalba Shield Compares</h3>
+            <h3 class="text-center" style="margin-bottom: var(--space-lg);">How Xibalba Shield Compares</h3>
             <div class="compare-table-wrapper">
                 <table class="compare-table">
                     <thead>
@@ -154,45 +154,45 @@
                     <tbody>
                         <tr>
                             <td>Pre-execution Intent Gating</td>
-                            <td>Partial</td>
-                            <td>Partial</td>
-                            <td>&#10003;</td>
-                            <td class="highlight-col">&#10003;</td>
+                            <td><span class="badge-partial">Partial</span></td>
+                            <td><span class="badge-partial">Partial</span></td>
+                            <td><span class="badge-check">✓</span></td>
+                            <td class="highlight-col"><span class="badge-check">✓</span></td>
                         </tr>
                         <tr>
                             <td>HIPAA-Specific Policy Engine</td>
-                            <td>&#10007;</td>
-                            <td>Partial</td>
-                            <td>&#10003;</td>
-                            <td class="highlight-col">&#10003;</td>
+                            <td><span class="badge-cross">✗</span></td>
+                            <td><span class="badge-partial">Partial</span></td>
+                            <td><span class="badge-check">✓</span></td>
+                            <td class="highlight-col"><span class="badge-check">✓</span></td>
                         </tr>
                         <tr>
                             <td>Cryptographic Audit Proofs</td>
-                            <td>&#10007;</td>
-                            <td>&#10007;</td>
-                            <td>&#10007;</td>
-                            <td class="highlight-col">&#10003;</td>
+                            <td><span class="badge-cross">✗</span></td>
+                            <td><span class="badge-cross">✗</span></td>
+                            <td><span class="badge-cross">✗</span></td>
+                            <td class="highlight-col"><span class="badge-check">✓</span></td>
                         </tr>
                         <tr>
                             <td>Tamper-proof Log Anchoring</td>
-                            <td>&#10007;</td>
-                            <td>&#10007;</td>
-                            <td>&#10007;</td>
-                            <td class="highlight-col">&#10003;</td>
+                            <td><span class="badge-cross">✗</span></td>
+                            <td><span class="badge-cross">✗</span></td>
+                            <td><span class="badge-cross">✗</span></td>
+                            <td class="highlight-col"><span class="badge-check">✓</span></td>
                         </tr>
                         <tr>
                             <td>Hardware-bound Identity (TEE)</td>
-                            <td>&#10007;</td>
-                            <td>&#10007;</td>
-                            <td>&#10007;</td>
-                            <td class="highlight-col">&#10003;</td>
+                            <td><span class="badge-cross">✗</span></td>
+                            <td><span class="badge-cross">✗</span></td>
+                            <td><span class="badge-cross">✗</span></td>
+                            <td class="highlight-col"><span class="badge-check">✓</span></td>
                         </tr>
                         <tr>
                             <td>Agent Reputation Scoring</td>
-                            <td>&#10007;</td>
-                            <td>&#10007;</td>
-                            <td>&#10007;</td>
-                            <td class="highlight-col highlight-col-bottom">&#10003;</td>
+                            <td><span class="badge-cross">✗</span></td>
+                            <td><span class="badge-cross">✗</span></td>
+                            <td><span class="badge-cross">✗</span></td>
+                            <td class="highlight-col highlight-col-bottom"><span class="badge-check">✓</span></td>
                         </tr>
                     </tbody>
                 </table>
@@ -205,7 +205,7 @@
             <div class="text-center">
                 <span class="meta-label">The Validation Lifecycle</span>
                 <h2>How The Integrity Protocol Works</h2>
-                <p style="color: var(--text-secondary); max-width: 700px; margin: 1rem auto 4rem;">LLMs are probabilistic &mdash; you cannot guarantee what they will say or do. The Integrity Protocol doesn't try to make them deterministic. Instead, it wraps every agent action in a cryptographic validation loop where <strong style="color: var(--text-primary);">non-compliance destroys the agent's ability to operate.</strong></p>
+                <p class="section-desc">LLMs are probabilistic &mdash; you cannot guarantee what they will say or do. The Integrity Protocol doesn't try to make them deterministic. Instead, it wraps every agent action in a cryptographic validation loop where <strong style="color: var(--text-primary);">non-compliance destroys the agent's ability to operate.</strong></p>
             </div>
             
             <div class="enforcement-loop">
@@ -304,14 +304,14 @@
         <div class="container animate-in">
             <span class="meta-label">Under The Hood</span>
             <h2>Protocol Architecture</h2>
-            <p style="max-width: 750px; margin-bottom: 3rem;">The Integrity Protocol is a 5-node validation lifecycle that bridges stochastic LLM reasoning with deterministic on-chain finality. Every layer is production-grade.</p>
+            <p style="max-width: 750px; margin-bottom: var(--space-xl);">The Integrity Protocol is a 5-node validation lifecycle that bridges stochastic LLM reasoning with deterministic on-chain finality. Every layer is production-grade.</p>
 
             <!-- 5-Node Architecture Table -->
             <div class="arch-table">
                 <div class="arch-row">
                     <div class="arch-node">01</div>
                     <div class="arch-detail">
-                        <h3 style="font-size: 1.1rem; margin-bottom: 0.25rem;">Infrastructure Foundation</h3>
+                        <h3 class="arch-row-title">Infrastructure Foundation</h3>
                         <p style="margin: 0; font-size: 0.9rem;">Smart contracts on Base L2 (EVM). <code><a href="https://github.com/XibalbaTechSol/integrity-protocol" target="_blank" style="color: inherit; text-decoration: underline;">SovereignAgent.sol</a></code> handles identity &amp; access control. <code><a href="https://github.com/XibalbaTechSol/integrity-protocol" target="_blank" style="color: inherit; text-decoration: underline;">StateAnchor.sol</a></code> anchors Merkle roots for global reputation state every 24h.</p>
                     </div>
                     <div class="arch-tags"><span>Solidity</span><span>Base L2</span><span>Foundry</span></div>
@@ -319,7 +319,7 @@
                 <div class="arch-row">
                     <div class="arch-node">02</div>
                     <div class="arch-detail">
-                        <h3 style="font-size: 1.1rem; margin-bottom: 0.25rem;">Identity &amp; Security Layer</h3>
+                        <h3 class="arch-row-title">Identity &amp; Security Layer</h3>
                         <p style="margin: 0; font-size: 0.9rem;">Hardware-bound agent identity via TEE (AWS Nitro / Intel SGX). W3C DID Documents (<code>did:intg:&lt;address&gt;</code>) with hardware fingerprinting. AWS KMS (FIPS 140-2 Level 3 HSM) for Oracle signing. ECC keypairs &rarr; deterministic Secp256k1 EVM wallets.</p>
                     </div>
                     <div class="arch-tags"><span>W3C DID</span><span>TEE</span><span>AWS KMS</span></div>
@@ -327,7 +327,7 @@
                 <div class="arch-row">
                     <div class="arch-node">03</div>
                     <div class="arch-detail">
-                        <h3 style="font-size: 1.1rem; margin-bottom: 0.25rem;">Behavioral Commitment Chain (BCC)</h3>
+                        <h3 class="arch-row-title">Behavioral Commitment Chain (BCC)</h3>
                         <p style="margin: 0; font-size: 0.9rem;">Pre-execution gating: agents cryptographically commit to an <code>intended_state_hash</code> before any action executes. OPA policy evaluation, SHA-256 intent drift detection, TTL-based commitment expiration (60s default), and AIS threshold gating.</p>
                     </div>
                     <div class="arch-tags"><span>FastAPI</span><span>OPA</span><span>SHA-256</span></div>
@@ -335,7 +335,7 @@
                 <div class="arch-row">
                     <div class="arch-node">04</div>
                     <div class="arch-detail">
-                        <h3 style="font-size: 1.1rem; margin-bottom: 0.25rem;">Zero-Knowledge Verification (ZK-ML)</h3>
+                        <h3 class="arch-row-title">Zero-Knowledge Verification (ZK-ML)</h3>
                         <p style="margin: 0; font-size: 0.9rem;">Aztec Noir circuits with UltraPlonk backend for zero-knowledge proofs of inference correctness. Proves an AI's reasoning was valid without exposing raw data &mdash; prompts, logprobs, or PHI never leave the edge.</p>
                     </div>
                     <div class="arch-tags"><span>Aztec Noir</span><span>UltraPlonk</span><span>WASM</span></div>
@@ -343,7 +343,7 @@
                 <div class="arch-row">
                     <div class="arch-node">05</div>
                     <div class="arch-detail">
-                        <h3 style="font-size: 1.1rem; margin-bottom: 0.25rem;">Reputation &amp; Compliance Observability</h3>
+                        <h3 class="arch-row-title">Reputation &amp; Compliance Observability</h3>
                         <p style="margin: 0; font-size: 0.9rem;"><a href="https://github.com/XibalbaTechSol/integrity-oracle" target="_blank" style="color: inherit; text-decoration: underline; font-weight: 500;">Rust Axum Oracle</a> ingests high-throughput telemetry via OTLP/gRPC. Calculates the Tri-Metric Agent Integrity Score (AIS, 0&ndash;1000). Enables A2A markets: agents with 700+ AIS access institutional credit and service contracts.</p>
                     </div>
                     <div class="arch-tags"><span>Rust</span><span>Axum</span><span>PostgreSQL</span></div>
