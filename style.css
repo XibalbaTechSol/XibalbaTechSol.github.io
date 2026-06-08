@@ -749,8 +749,9 @@ nav.scrolled { background: var(--bg-nav-scrolled); border-bottom-color: var(--bo
     margin-top: 4rem;
     padding-top: 2rem;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    text-align: center;
     color: #64748B;
     font-size: 0.85rem;
 }
