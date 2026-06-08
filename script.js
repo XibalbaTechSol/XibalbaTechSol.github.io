@@ -68,4 +68,32 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll('.animate-in').forEach((el) => {
         observer.observe(el);
     });
+
+    // Scrollspy Navigation Highlights
+    const sections = document.querySelectorAll("section, header.hero");
+    const navItems = document.querySelectorAll(".nav-links a");
+
+    const scrollspyOptions = {
+        root: null,
+        rootMargin: "-25% 0px -55% 0px",
+        threshold: 0
+    };
+
+    const scrollspyObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const id = entry.target.getAttribute("id");
+                navItems.forEach(link => {
+                    const href = link.getAttribute("href");
+                    if (href === `#${id}` || (id === "problem" && href === "#value-prop") || (!id && href === "#")) {
+                        link.classList.add("active");
+                    } else {
+                        link.classList.remove("active");
+                    }
+                });
+            }
+        });
+    }, scrollspyOptions);
+
+    sections.forEach(sec => scrollspyObserver.observe(sec));
 });
