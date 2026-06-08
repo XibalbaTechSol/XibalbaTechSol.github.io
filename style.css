@@ -191,7 +191,7 @@ nav.scrolled { background: var(--bg-nav-scrolled); border-bottom-color: var(--bo
 /* Hero */
 .hero { min-height: 85vh; display: flex; align-items: center; justify-content: center; position: relative; padding: 6rem 1.5rem; text-align: center; }
 .hero-content { max-width: 900px; position: relative; z-index: 2; }
-.hero-logo { max-height: 120px; margin-bottom: 2rem; transition: var(--t-smooth); }
+.hero-logo { max-height: 180px; margin-bottom: 2.5rem; transition: var(--t-smooth); }
 .hero-badges { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; margin-top: 1rem; }
 .hero-badge { background: var(--color-brand-primary-dim); border: 1px solid var(--border-accent); padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.85rem; font-family: var(--font-mono); color: var(--color-brand-primary); }
 
