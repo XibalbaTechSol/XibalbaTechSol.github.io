@@ -13,6 +13,10 @@
     </script>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" crossorigin="anonymous">
+    <!-- Math Visualization Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
 </head>
 <body>
     <nav>
@@ -70,11 +74,11 @@
             </div>
             
             <div class="hero-badges">
-                <a href="#contact" class="btn" style="text-decoration: none;">Join Developer Beta &rarr;</a>
-                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" class="btn-outline" style="text-decoration: none; border-color: var(--color-brand-secondary); color: var(--color-brand-secondary); display: inline-flex; align-items: center; justify-content: center; height: 50px;">Watch Demo (1 Min) &rarr;</a>
-                <a href="https://github.com/XibalbaTechSol/integrity-master/tree/master/docs/wiki" target="_blank" class="btn-outline" style="text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem; justify-content: center; height: 50px;">
+                <a href="#contact" class="btn btn-primary-glow" style="text-decoration: none;">Join Developer Beta &rarr;</a>
+                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" class="btn-secondary-glass" style="text-decoration: none;">Watch Demo (1 Min) &rarr;</a>
+                <a href="https://github.com/XibalbaTechSol/integrity-latest/tree/master/docs/wiki" target="_blank" class="btn-secondary-glass" style="text-decoration: none;">
                     View Docs on GitHub
-                    <span class="license-badge" style="background: var(--color-brand-primary-dim); border: 1px solid var(--border-accent); font-size: 0.7rem; padding: 0.2rem 0.5rem; border-radius: 4px; font-weight: 700; color: var(--color-brand-primary); margin-left: 0.25rem; font-family: var(--font-mono);">Apache-2.0</span>
+                    <span class="license-badge" style="background: rgba(59, 130, 246, 0.15); border: 1px solid var(--border-accent); font-size: 0.7rem; padding: 0.2rem 0.5rem; border-radius: 4px; font-weight: 700; color: var(--color-brand-primary); font-family: var(--font-mono);">Apache-2.0</span>
                 </a>
             </div>
             
@@ -144,7 +148,7 @@
 
         <!-- Product Screenshot -->
         <div style="margin-top: 4rem; text-align: center;">
-            <h3 class="section-subtitle">Xibalba Shield Command Center</h3>
+            <h3 class="section-subtitle">Xibalba Shield Dashboard</h3>
             <div class="browser-mockup">
                 <div class="browser-header">
                     <div class="browser-dots">
@@ -158,7 +162,9 @@
 
         <div style="margin-top: 5rem;">
             <h3 class="text-center" style="margin-bottom: var(--space-lg);">How Xibalba Compares</h3>
-            <div class="compare-table-wrapper">
+            
+            <!-- Desktop Comparison Table -->
+            <div class="compare-table-wrapper desktop-only">
                 <table class="compare-table">
                     <thead>
                         <tr>
@@ -214,6 +220,48 @@
                         </tr>
                     </tbody>
                 </table>
+            </div>
+
+            <!-- Mobile Comparison Bento Cards -->
+            <div class="compare-bento-mobile mobile-only">
+                <div class="compare-card">
+                    <div class="compare-card-header">
+                        <h4>Pre-execution Intent Gating</h4>
+                        <span class="badge-check">Xibalba Lead ✓</span>
+                    </div>
+                    <p class="compare-card-desc">Intercepts and verifies agent execution traces before on-chain state changes take effect.</p>
+                    <div class="compare-card-matrix">
+                        <div><span>Ritual</span><span class="badge-cross">✗</span></div>
+                        <div><span>Autonolas</span><span class="badge-cross">✗</span></div>
+                        <div><span>Fetch.ai</span><span class="badge-partial">Partial</span></div>
+                    </div>
+                </div>
+
+                <div class="compare-card">
+                    <div class="compare-card-header">
+                        <h4>Hardware-bound Identity (TEE/DID)</h4>
+                        <span class="badge-check">Xibalba Exclusive ✓</span>
+                    </div>
+                    <p class="compare-card-desc">Cryptographically links agent state to enclave memory & W3C DID keypairs.</p>
+                    <div class="compare-card-matrix">
+                        <div><span>Ritual</span><span class="badge-cross">✗</span></div>
+                        <div><span>Autonolas</span><span class="badge-cross">✗</span></div>
+                        <div><span>Fetch.ai</span><span class="badge-cross">✗</span></div>
+                    </div>
+                </div>
+
+                <div class="compare-card">
+                    <div class="compare-card-header">
+                        <h4>Vertical Compliance (HIPAA, SOC 2)</h4>
+                        <span class="badge-check">Xibalba Exclusive ✓</span>
+                    </div>
+                    <p class="compare-card-desc">Automated audit trail generation for enterprise & healthcare agent deployment.</p>
+                    <div class="compare-card-matrix">
+                        <div><span>Ritual</span><span class="badge-cross">✗</span></div>
+                        <div><span>Autonolas</span><span class="badge-cross">✗</span></div>
+                        <div><span>Fetch.ai</span><span class="badge-cross">✗</span></div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -670,24 +718,106 @@ allow {
 
             <!-- AIS Scoring Math -->
             <div style="margin-top: 4rem;">
-                <h3 style="margin-bottom: 1.5rem;">Agent Integrity Score (AIS) &mdash; The Math</h3>
-                <div class="split" style="gap: 2rem; align-items: start;">
-                    <div class="card katex-card">
-                        <div class="katex-eq">
-                            <p class="eq-label">ENTROPY (Behavioral Stability)</p>
+                <h3 style="margin-bottom: 0.5rem;">Agent Integrity Score (AIS) &mdash; Interactive Mathematical Models</h3>
+                <p style="color: var(--text-secondary); margin-bottom: 2rem; max-width: 800px;">Explore the quantitative foundations governing autonomous agent trust. Adjust parameters in real-time across individual component 2D graphs or rotate the composite 3D AIS manifold.</p>
+
+                <!-- Equation 2D Cards Grid -->
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; margin-bottom: 2.5rem;">
+                    
+                    <!-- Card 1: Entropy 2D Graph -->
+                    <div class="card katex-card" style="padding: 1.5rem; border: 1px solid var(--border-main); background: rgba(15, 23, 42, 0.6);">
+                        <div class="katex-eq" style="margin-bottom: 1rem;">
+                            <p class="eq-label" style="color: var(--color-brand-primary); font-weight: 700;">ENTROPY CARD (Behavioral Stability)</p>
                             <div class="eq-render">$$S_{entropy} = e^{\,-1.5\,\cdot\,\sigma^2} \times 1000$$</div>
-                            <p class="eq-note">where <span class="eq-inline">\(\sigma^2\)</span> is the variance derived from latency and success rate</p>
                         </div>
-                        <div class="katex-eq">
-                            <p class="eq-label">GROUNDING (Human Accountability)</p>
-                            <div class="eq-render">$$S_{grounding} = HGI \times 1000$$</div>
+                        <div style="position: relative; height: 180px; width: 100%; margin-bottom: 1rem;">
+                            <canvas id="entropyChartCanvas"></canvas>
                         </div>
-                        <div class="katex-eq">
-                            <p class="eq-label">FINAL AGENT INTEGRITY SCORE (AIS)</p>
-                            <div class="eq-render">$$AIS_{final} = (S_{entropy} \cdot w_E + S_{grounding} \cdot w_G + S_{sacrifice} \cdot w_S + S_{compliance} \cdot w_C) \times ZK_{boost}$$</div>
-                            <p class="eq-note">Domain-weighted aggregation across <strong>four axes</strong>: Entropy, Grounding, Sacrifice, and Compliance.</p>
+                        <div style="background: rgba(0,0,0,0.3); padding: 0.75rem 1rem; border-radius: 8px; border: 1px solid var(--border-subtle);">
+                            <div style="display: flex; justify-content: space-between; font-size: 0.8rem; font-family: var(--font-mono); margin-bottom: 0.25rem;">
+                                <span style="color: var(--text-secondary);">Variance (\(\sigma^2\)):</span>
+                                <span id="entropyVarVal" style="color: var(--color-brand-primary); font-weight: 700;">0.25</span>
+                            </div>
+                            <input type="range" id="entropyVarSlider" min="0" max="1" step="0.01" value="0.25" style="width: 100%; accent-color: var(--color-brand-primary); cursor: pointer;">
+                            <div style="display: flex; justify-content: space-between; font-size: 0.75rem; color: var(--text-muted); margin-top: 0.25rem;">
+                                <span>Output \(S_{entropy}\): <strong id="entropyScoreOut" style="color: #fff;">687</strong> / 1000</span>
+                            </div>
                         </div>
                     </div>
+
+                    <!-- Card 2: Grounding 2D Graph -->
+                    <div class="card katex-card" style="padding: 1.5rem; border: 1px solid var(--border-main); background: rgba(15, 23, 42, 0.6);">
+                        <div class="katex-eq" style="margin-bottom: 1rem;">
+                            <p class="eq-label" style="color: var(--color-brand-secondary); font-weight: 700;">GROUNDING CARD (Human Accountability)</p>
+                            <div class="eq-render">$$S_{grounding} = HGI \times 1000$$</div>
+                        </div>
+                        <div style="position: relative; height: 180px; width: 100%; margin-bottom: 1rem;">
+                            <canvas id="groundingChartCanvas"></canvas>
+                        </div>
+                        <div style="background: rgba(0,0,0,0.3); padding: 0.75rem 1rem; border-radius: 8px; border: 1px solid var(--border-subtle);">
+                            <div style="display: flex; justify-content: space-between; font-size: 0.8rem; font-family: var(--font-mono); margin-bottom: 0.25rem;">
+                                <span style="color: var(--text-secondary);">Human Grounding Index (HGI):</span>
+                                <span id="groundingVal" style="color: var(--color-brand-secondary); font-weight: 700;">0.85</span>
+                            </div>
+                            <input type="range" id="groundingSlider" min="0" max="1" step="0.01" value="0.85" style="width: 100%; accent-color: var(--color-brand-secondary); cursor: pointer;">
+                            <div style="display: flex; justify-content: space-between; font-size: 0.75rem; color: var(--text-muted); margin-top: 0.25rem;">
+                                <span>Output \(S_{grounding}\): <strong id="groundingScoreOut" style="color: #fff;">850</strong> / 1000</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 3: Sacrifice 2D Graph -->
+                    <div class="card katex-card" style="padding: 1.5rem; border: 1px solid var(--border-main); background: rgba(15, 23, 42, 0.6);">
+                        <div class="katex-eq" style="margin-bottom: 1rem;">
+                            <p class="eq-label" style="color: #F59E0B; font-weight: 700;">SACRIFICE CARD (Sybil Resistance)</p>
+                            <div class="eq-render">$$S_{sacrifice} = \min\left(1000,\, \frac{GPU_{\text{hours}}}{500} \cdot 1000\right)$$</div>
+                        </div>
+                        <div style="position: relative; height: 180px; width: 100%; margin-bottom: 1rem;">
+                            <canvas id="sacrificeChartCanvas"></canvas>
+                        </div>
+                        <div style="background: rgba(0,0,0,0.3); padding: 0.75rem 1rem; border-radius: 8px; border: 1px solid var(--border-subtle);">
+                            <div style="display: flex; justify-content: space-between; font-size: 0.8rem; font-family: var(--font-mono); margin-bottom: 0.25rem;">
+                                <span style="color: var(--text-secondary);">Verified GPU Hours:</span>
+                                <span id="gpuHoursVal" style="color: #F59E0B; font-weight: 700;">250 hrs</span>
+                            </div>
+                            <input type="range" id="gpuHoursSlider" min="0" max="1000" step="25" value="250" style="width: 100%; accent-color: #F59E0B; cursor: pointer;">
+                            <div style="display: flex; justify-content: space-between; font-size: 0.75rem; color: var(--text-muted); margin-top: 0.25rem;">
+                                <span>Output \(S_{sacrifice}\): <strong id="sacrificeScoreOut" style="color: #fff;">500</strong> / 1000</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Composite 3D Volume Manifold Section -->
+                <div style="background: rgba(15, 23, 42, 0.7); border: 1px solid var(--border-accent); border-radius: 12px; padding: 2rem; margin-bottom: 3rem; box-shadow: 0 20px 50px rgba(0,0,0,0.5);">
+                    <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.5rem;">
+                        <div>
+                            <span class="meta-label" style="color: var(--color-brand-primary); font-weight: 800;">3D COMPOSITE MANIFOLD</span>
+                            <h3 style="margin: 0; font-size: 1.4rem;">Interactive AIS Vector Volume (\(X: \sigma^2, Y: HGI, Z: AIS\))</h3>
+                            <p style="margin: 0.25rem 0 0; font-size: 0.85rem; color: var(--text-secondary);">Click &amp; drag mouse to orbit 3D space. Adjust sliders to manipulate real-time trajectory vector.</p>
+                        </div>
+                        <div style="background: rgba(0,0,0,0.5); padding: 0.75rem 1.5rem; border-radius: 8px; border: 1px solid var(--border-main); text-align: right;">
+                            <div style="font-size: 0.7rem; color: var(--text-muted); text-transform: uppercase; font-weight: 700; letter-spacing: 0.1em;">COMPOSITE AIS SCORE</div>
+                            <div id="compositeAisBadge" style="font-family: var(--font-mono); font-size: 1.8rem; font-weight: 800; color: var(--color-brand-primary);">785 <span style="font-size: 0.9rem; color: var(--text-muted);">/ 1000</span></div>
+                            <div id="compositeTierLabel" style="font-size: 0.75rem; color: #10B981; font-weight: 700;">TIER 2 &mdash; LINKED CREDIT READY</div>
+                        </div>
+                    </div>
+
+                    <div style="position: relative; width: 100%; height: 420px; border-radius: 8px; overflow: hidden; background: #070A12; border: 1px solid rgba(255,255,255,0.08);">
+                        <canvas id="ais3dCanvas" style="width: 100%; height: 100%; display: block; cursor: grab;"></canvas>
+                        
+                        <!-- 3D Controls overlay -->
+                        <div style="position: absolute; bottom: 12px; left: 12px; background: rgba(11, 15, 25, 0.85); backdrop-filter: blur(8px); padding: 8px 14px; border-radius: 6px; border: 1px solid rgba(255,255,255,0.1); font-size: 0.75rem; font-family: var(--font-mono); color: var(--text-muted);">
+                            <span>🖱️ Click &amp; Drag: Orbit 3D Manifold</span> &bull; 
+                            <span style="color: #60A5FA;">X-Axis: Variance (\(\sigma^2\))</span> &bull; 
+                            <span style="color: #F472B6;">Y-Axis: HGI</span> &bull; 
+                            <span style="color: #10B981;">Z-Axis: Composite AIS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="split" style="gap: 2rem; align-items: start;">
                     <div>
                         <p style="font-size: 0.95rem; margin-bottom: 1rem;">Every agent is continuously scored on four axes:</p>
                         <ul style="font-size: 0.95rem; margin-bottom: 1.5rem; padding-left: 1.25rem; color: var(--text-secondary); line-height: 1.7;">
@@ -799,7 +929,7 @@ result = <span class="code-kw">await</span> client.execute_with_integrity(
             <!-- CTA Buttons -->
             <div class="text-center" style="margin-top: 4rem; display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
                 <a href="https://xibalbatechsol.github.io/docs/xibalba_shield_proposal.pdf" target="_blank" class="btn">Read the Whitepaper &rarr;</a>
-                <a href="https://github.com/XibalbaTechSol/integrity-master/tree/master/docs/wiki" target="_blank" class="btn-outline">View Docs on GitHub &rarr;</a>
+                <a href="https://github.com/XibalbaTechSol/integrity-latest/tree/master/docs/wiki" target="_blank" class="btn-outline">View Docs on GitHub &rarr;</a>
             </div>
         </div>
     </section>

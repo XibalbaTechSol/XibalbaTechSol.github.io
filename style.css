@@ -456,9 +456,45 @@ nav.scrolled { background: var(--bg-nav-scrolled); border-bottom-color: var(--bo
 }
 
 /* Buttons */
-.btn { display: inline-block; background: var(--color-brand-primary); color: #fff; font-weight: 600; padding: 0.8rem 2rem; border-radius: 8px; font-size: 1rem; transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.3s ease, box-shadow 0.3s ease; border: none; cursor: pointer; text-transform: uppercase; letter-spacing: 1px; box-shadow: var(--shadow-glow); }
+.btn { display: inline-flex; align-items: center; justify-content: center; height: 50px; background: var(--color-brand-primary); color: #fff; font-weight: 600; padding: 0 1.75rem; border-radius: 8px; font-size: 0.95rem; transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.3s ease, box-shadow 0.3s ease; border: none; cursor: pointer; text-transform: uppercase; letter-spacing: 0.05em; box-shadow: var(--shadow-glow); }
 .btn:hover { background: var(--color-brand-secondary); transform: translateY(-2px) scale(1.02); box-shadow: var(--shadow-glow-hover); }
 .btn:active { transform: translateY(0) scale(0.98); }
+
+.btn-primary-glow {
+    background: linear-gradient(135deg, #2563EB, #0EA5E9);
+    box-shadow: 0 0 30px rgba(37, 99, 235, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+.btn-primary-glow:hover {
+    box-shadow: 0 0 45px rgba(14, 165, 233, 0.6);
+}
+
+.btn-secondary-glass {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    height: 50px;
+    padding: 0 1.5rem;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--border-bright);
+    backdrop-filter: blur(12px);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: var(--t-fast);
+}
+.btn-secondary-glass:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: var(--color-brand-primary);
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
 .btn-outline { display: inline-block; background: transparent; color: var(--text-primary); font-weight: 600; padding: 0.8rem 2rem; border-radius: 8px; font-size: 1rem; transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease; border: 1px solid var(--border-main); cursor: pointer; text-transform: uppercase; letter-spacing: 1px; }
 .btn-outline:hover { border-color: var(--color-brand-primary); color: var(--color-brand-primary); background: var(--bg-card-hover); transform: translateY(-2px) scale(1.02); box-shadow: var(--shadow-glow); }
 .btn-outline:active { transform: translateY(0) scale(0.98); }
@@ -897,7 +933,64 @@ nav.scrolled { background: var(--bg-nav-scrolled); border-bottom-color: var(--bo
     display: inline-block;
     border: 1px solid rgba(239, 68, 68, 0.15);
 }
-.badge-partial {
+/* Responsive Display Toggles */
+.desktop-only { display: block; }
+.mobile-only { display: none; }
+
+@media (max-width: 768px) {
+    .desktop-only { display: none !important; }
+    .mobile-only { display: flex !important; }
+}
+
+/* Mobile Comparison Bento Cards */
+.compare-bento-mobile {
+    flex-direction: column;
+    gap: 1.25rem;
+    width: 100%;
+}
+.compare-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-main);
+    border-radius: 12px;
+    padding: 1.5rem;
+    backdrop-filter: var(--glass-blur);
+    box-shadow: var(--shadow-md);
+}
+.compare-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+}
+.compare-card-header h4 {
+    font-size: 1rem;
+    color: var(--text-primary);
+    margin: 0;
+}
+.compare-card-desc {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+.compare-card-matrix {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 0.75rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-subtle);
+}
+.compare-card-matrix div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.35rem;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
     color: #F59E0B;
     font-weight: 700;
     background: rgba(245, 158, 11, 0.12);
