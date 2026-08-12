@@ -1,21 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // Theme Toggle
-    const themeToggle = document.getElementById("theme-toggle");
-    const iconMoon = document.querySelector(".icon-moon");
-    const iconSun = document.querySelector(".icon-sun");
-
-
-    if (themeToggle) {
-        themeToggle.addEventListener("click", () => {
-            document.documentElement.classList.toggle("light-mode");
-            if (document.documentElement.classList.contains("light-mode")) {
-                localStorage.setItem("theme", "light");
-            } else {
-                localStorage.setItem("theme", "dark");
-            }
-        });
-    }
-
     // Navigation Scroll Effect
     const nav = document.querySelector("nav");
     window.addEventListener("scroll", () => {
@@ -95,6 +78,47 @@ document.addEventListener("DOMContentLoaded", () => {
 
     sections.forEach(sec => scrollspyObserver.observe(sec));
 
+    // Scenario Card — tap-to-toggle on touch/mobile devices
+    const scenarioCards = document.querySelectorAll(".scenario-card");
+    scenarioCards.forEach(card => {
+        card.addEventListener("click", () => {
+            const wasExpanded = card.classList.contains("expanded");
+            // Close all other expanded cards
+            scenarioCards.forEach(other => other.classList.remove("expanded"));
+            // Toggle current card
+            if (!wasExpanded) {
+                card.classList.add("expanded");
+            }
+        });
+    });
+
+    // Technical Deep-Dive Toggle (How It Works + Architecture)
+    const techToggle = document.getElementById("techDetailsToggle");
+    const techPanel = document.getElementById("techDetailsPanel");
+    let techVizInitialized = false;
+
+    if (techToggle && techPanel) {
+        techToggle.addEventListener("click", () => {
+            const isHidden = techPanel.hasAttribute("hidden");
+            if (isHidden) {
+                techPanel.removeAttribute("hidden");
+                techToggle.setAttribute("aria-expanded", "true");
+                techToggle.querySelector(".tech-toggle-label").textContent = "Hide Technical Deep-Dive";
+                techToggle.querySelector(".tech-toggle-arrow").textContent = "↑";
+                if (!techVizInitialized) {
+                    techVizInitialized = true;
+                    // Defer until the panel has laid out so Chart.js/Three.js read correct canvas dimensions
+                    requestAnimationFrame(() => requestAnimationFrame(initTechVisualizations));
+                }
+            } else {
+                techPanel.setAttribute("hidden", "");
+                techToggle.setAttribute("aria-expanded", "false");
+                techToggle.querySelector(".tech-toggle-label").textContent = "Show Technical Deep-Dive";
+                techToggle.querySelector(".tech-toggle-arrow").textContent = "↓";
+            }
+        });
+    }
+
     // FAQ Accordion Toggle Behavior
     const faqTriggers = document.querySelectorAll(".faq-trigger");
     faqTriggers.forEach(trigger => {
@@ -129,20 +153,9 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // Scenario Card — tap-to-toggle on touch/mobile devices
-    const scenarioCards = document.querySelectorAll(".scenario-card");
-    scenarioCards.forEach(card => {
-        card.addEventListener("click", () => {
-            const wasExpanded = card.classList.contains("expanded");
-            // Close all other expanded cards
-            scenarioCards.forEach(other => other.classList.remove("expanded"));
-            // Toggle current card
-            if (!wasExpanded) {
-                card.classList.add("expanded");
-            }
-        });
-    });
+});
 
+function initTechVisualizations() {
     // ==========================================
     // INTERACTIVE MATHEMATICAL 2D GRAPHS & 3D MANIFOLD
     // ==========================================
@@ -517,4 +530,4 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         }
     }
-});
+}

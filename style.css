@@ -510,6 +510,9 @@ nav.scrolled { background: var(--bg-nav-scrolled); border-bottom-color: var(--bo
 .split { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
 @media (max-width: 900px) { .split { grid-template-columns: 1fr; gap: 2.5rem; } }
 
+/* 3-Column Proof Grid (Solutions) */
+.grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; }
+
 /* Card & Mockup Components (with Gradient Borders) */
 .card, .bento-card, .terminal-window, .browser-mockup, .compare-table-wrapper {
     position: relative;
