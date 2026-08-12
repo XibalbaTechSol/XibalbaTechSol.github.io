@@ -1,78 +1,51 @@
-# 🚀 YC Launch & Deployment Guide: Xibalba Solutions
+# Xibalba Solutions — Landing Page
 
-This repository contains the landing page introducing the **Integrity Protocol** and **Jacob Vickers** (Founder, Xibalba Solutions) optimized for YC application review. 
+This repository is the public landing page for **Xibalba Solutions**, at [xibalbatechsol.github.io](https://xibalbatechsol.github.io/) (custom domain: `xibalbasolutions.com`). It's a client-facing business page introducing Xibalba Shield, Integrity Core, and Xibalba Cortex, built to get prospective clients to reach out for a free conversation / design-partner engagement — not a developer or investor pitch deck.
 
-Below is the comprehensive checklist of exactly what you need to verify, set up, and configure before submitting your application.
+## Structure
 
----
+- `index.html`, `style.css`, `script.js` — the landing page itself. Hand-written static HTML/CSS/JS, no build step.
+  - Includes a collapsible "Technical Deep-Dive" panel (hidden by default) with the original protocol architecture write-up, code snippets, AIS scoring math (KaTeX), and a Three.js 3D manifold visualizer. Its Chart.js/Three.js visualizations only initialize the first time a visitor expands the panel.
+- `dashboard/`, `integrity/`, `shield/` — pre-built SPA output (Vite/React and Next.js static exports) for the linked sub-apps. Not edited directly here; rebuilt and re-committed from their source repos.
+- `docs/` — supporting static assets (e.g. PDFs). No whitepaper is currently linked from the page — see below.
+- `.nojekyll` — present because paths like `_next/` would otherwise be swallowed by GitHub's default Jekyll processing.
 
-## 📋 YC Application Launch Checklist
+## Local development
 
-### 1. Update the Loom Demo Link
-YC reviewers heavily prioritize 1-minute video walkthroughs.
-1. Record a **1-minute video** showing:
-   * A terminal demonstrating the Python/Rust SDK wrapping a dummy medical LLM agent.
-   * An action execution that triggers a HIPAA boundary violation (e.g., trying to export unencrypted patient data).
-   * The SDK instantly intercepting the action ($<15\text{ms}$), blocking the network request, generating Aztec ZK logs, and downgrading the agent's AIS reputation score.
-2. Upload the video to Loom or YouTube.
-3. Open [index.html](file:///home/xibalba/Desktop/personal-site/index.html) and locate the "Watch Demo" button:
-   ```html
-   <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" class="btn-outline" ...>Watch Demo (1 Min) &rarr;</a>
-   ```
-4. Replace `https://www.youtube.com/watch?v=dQw4w9WgXcQ` with your active video link.
+No build step for the landing page itself — open `index.html` directly, or serve the repo root with any static file server:
 
-### 2. Verify GitHub Organizations & Public Repos
-YC partners will click documentation and protocol links. Ensure the following paths are active:
-* **GitHub Org:** `https://github.com/XibalbaTechSol` must be active.
-* **Repositories:** Create public repos (or redirect placeholders) for:
-  * `https://github.com/XibalbaTechSol/integrity-master/tree/master/docs/wiki` (Docs)
-  * `https://github.com/XibalbaTechSol/integrity-master/tree/master/contracts` (Protocol core)
-  * `https://github.com/XibalbaTechSol/integrity-master/tree/master/integrity-sdk` (SDK wrapper)
-  * `https://github.com/XibalbaTechSol/integrity-master/tree/master/integrity-oracle` (Axum backend telemetry)
+```bash
+python3 -m http.server 8080
+```
 
-### 3. Upload the Whitepaper PDF
-* Ensure your whitepaper is compiled and saved as `whitepaper.pdf`.
-* Place it in the correct public directory matching your deployment (e.g., `/docs/xibalba_shield_proposal.pdf` or host it via GitHub Pages at `https://xibalbatechsol.github.io/docs/xibalba_shield_proposal.pdf`).
+### QA tooling (Playwright)
 
-### 4. Warm Up the Waitlist Backend (Render)
-* The waitlist form uses AJAX to send data to `https://xibalba-api.onrender.com/contact`.
-* **Important:** Since Render free tiers sleep after 15 minutes of inactivity, YC reviewers could experience a 50-second hang if they are the first to submit their email.
-* **Action:** Send a test request to your Render endpoint immediately before YC submission to ensure it is warm.
-
----
-
-## 🛠️ Local Development & QA Commands
-
-If you make modifications to the styling or HTML copy, run the following automated checks to preserve visual quality:
-
-### Prerequisites
-Install Playwright dependencies:
 ```bash
 npm install
+node audit.js               # layout integrity checks — clipping, container width, horizontal scroll regressions
+node capture_verification.js  # regenerate desktop/mobile verification screenshots
 ```
 
-### Run Layout Integrity Audits
-Verify there are no clipping, container width, or horizontal scrollbar regressions:
+## Deployment
+
+**GitHub Pages builds from the `main` branch root** (Settings → Pages → source: `main` / `/`). Pushing to `main` triggers a Pages build automatically — there is no separate `gh-pages` branch step required. (A `gh-pages` branch exists in this repo from an earlier deployment approach but is not what Pages currently serves from; don't rely on it.)
+
+To deploy a change:
 ```bash
-node audit.js
+git add index.html style.css script.js   # or whatever you touched
+git commit -m "..."
+git push origin main
 ```
+Check build status: `gh api repos/XibalbaTechSol/XibalbaTechSol.github.io/pages/builds/latest`
 
-### Regenerate Verification Screenshots
-Re-capture standard desktop and mobile preview screenshots to verify design updates:
-```bash
-node capture_verification.js
-```
+## Contact form
 
----
+The contact form (`#contactForm`) POSTs to `https://integrity-protocol-backend.onrender.com/v1/contact`. If it's on a Render free tier, it may cold-start (~50s) after 15 minutes of inactivity — worth a warm-up request before sending anyone to the page for a first impression.
 
-## 🌐 Deploying to GitHub Pages
-To host the site for free on your GitHub custom domains:
-1. Initialize the git repository and commit all local files.
-2. Create a repository on GitHub named `XibalbaTechSol.github.io` (or your personal username repo).
-3. Push your code:
-   ```bash
-   git remote add origin git@github.com:XibalbaTechSol/XibalbaTechSol.github.io.git
-   git branch -M main
-   git push -u origin main
-   ```
-4. Go to **Settings > Pages** on GitHub and verify your site is active.
+## Repo links referenced on the page
+
+- `github.com/XibalbaTechSol/xibalba-shield`
+- `github.com/XibalbaTechSol/integrity-core` (renamed from `integrity-latest` 2026-08-12)
+- `github.com/XibalbaTechSol/xibalba-cortex` (renamed from `xibalba-graph-memory` 2026-08-12)
+
+The Technical Deep-Dive panel links to `integrity-core/spec/integrity-protocol-v0.4.md` for the current protocol spec, rather than a static whitepaper — the previous whitepaper PDF was healthcare-only and out of sync with the site's current broader positioning, so it was removed rather than left stale.
