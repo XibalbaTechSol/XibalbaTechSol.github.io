@@ -3,3 +3,8 @@ lighthouse_report.report.json
 dashboard.png
 site_screenshot.png
 screenshot.png
+node_modules/
+venv/
+visual_audit/
+visual_audit_verified/
+merged_landing_page_full.png
